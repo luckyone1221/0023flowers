@@ -1,7 +1,16 @@
+// start .topLine
+.topLine {
 
-	// start .topLine
-	.topLine {
-		 
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

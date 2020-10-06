@@ -1,29 +1,122 @@
+// start .sForm
+.sForm {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
 
-	// start .sForm
-	.sForm {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(60)};
+	}
 
+	.arrow:not(:last-child){
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(45);
+		}
+	}
+
+	.section-title{
+		h2{
+			font-family: $default-font;
+
+			margin-bottom: rem(20);
+			font-size: rem(26px);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(24);
+				font-size: rem(30px);
+			}
+		}
+		p{
+			font-weight: 300;
+			line-height: 1.5;
+			font-size: rem(18px);
+		}
+	}
+
+	.form-wrap{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(45);
+		}
+
+		form{
+			width: 560px;
+
+			padding: rem(30) rem(15) rem(35) rem(15);
+			border: 3px solid $green;
+			@include media-breakpoint-up(sm){
+				padding: rem(55) rem(45) rem(70) rem(45);
+				border: 5px solid $green;
+			}
+			max-width: calc(100vw - 30px);
+			margin: 0 auto;
+
+
+			background-color: $light-green;
+		}
+
+		label{
+			position: relative;
+			margin-bottom: rem(30);
+
+			input.not-empty, input:focus{
+				//border: 1px solid $input-border-color;
+			}
+
+			input.not-empty + span, input:focus + span{
+				top: 0!important;
+				transform: translateY(-90%)!important;
+				font-size: rem(14);
+			}
+
+		}
+		&__title{
+			@include mt();
+			position: absolute;
+			top: 16px;
+			left: 0;
+			color: rgba($black, 0.5);
+		}
+		&__input{
+			background-color: transparent!important;
+			//background-color: pink;
+
+			border-top: 1px solid transparent;
+			border-right: 1px solid transparent;
+			border-bottom: 1px solid $input-border-color;
+			border-left: 1px solid transparent;
+
+		}
+		&__btn-cont{
+			text-align: center;
+			margin-bottom: rem(20);
+		}
+
+		&__btn{
+			@extend .btn;
+			@extend .btn-success;
+			text-transform: none;
+			padding: rem(16) rem(40);
+			font-size: rem(16px);
+			font-weight: bold;
+		}
+		&__policy{
+			text-align: center;
+			font-size: rem(14);
+			font-family: $mono;
+			font-weight: 300;
+
+			a{
+				color: $black;
+				text-decoration: underline;
+				&:hover{
+					color: darken($green, 10);
+					text-decoration: none;
+				}
+			}
+		}
+
+	}
+
+	&__{}
 } // end.sForm

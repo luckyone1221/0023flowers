@@ -1,0 +1,177 @@
+// start .sHitMan
+.sHitMan {
+	--sPT: #{0};
+	--sTPB: #{0};
+
+	--sPB: #{rem(30px)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(75px)};
+	}
+
+	.section-title{
+		background-color: $light-green;
+		padding: rem(15) 0;
+		margin-bottom: rem(45);
+		h2{
+			font-size: rem(26);
+			@include media-breakpoint-up(md){
+				font-size: rem(30);
+			}
+			font-weight: 700;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+
+	&__row{
+		@include roww(40px);
+
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(30);
+		}
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(50);
+		}
+	}
+	&__col{
+		margin-bottom: rem(30);
+	}
+	&__item-cont{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		height: 100%;
+
+		@include mt();
+		&:hover{
+
+		}
+	}
+	&__item{
+		width: 100%;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+
+		span{
+			display: block;
+		}
+
+		color: $body-color;
+		&:hover{
+			color: $body-color;
+			img:first-child{
+				opacity: 0;
+			}
+			img:last-child{
+				opacity: 1;
+			}
+		}
+	}
+	&__img-cont{
+		position: relative;
+		padding-top: 109.5%;
+		width: 100%;
+		height: 0;
+
+		img{
+			@include mt();
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		img:first-child{
+			opacity: 1;
+		}
+		img:last-child{
+			opacity: 0;
+		}
+	}
+
+
+	&__descr{
+		padding-top: rem(20);
+		h4{
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: rem(16);
+			margin-bottom: rem(9);
+		}
+		p{
+			font-weight: 300;
+			font-size: rem(14);
+			line-height: 1.55;
+		}
+	}
+	&__size-txt{
+		margin-top: auto;
+		font-weight: 300;
+		font-size: rem(14);
+		line-height: 1.55;
+
+		margin-bottom: rem(14px);
+	}
+	&__price{
+		font-size: rem(16px);
+		line-height: 1.35;
+		margin-bottom: rem(19px);
+	}
+	&__buy-btn{
+		@extend .btn;
+		@extend .btn-success;
+		flex-shrink: 0;
+
+		font-size: rem(14px);
+		font-weight: bold;
+		text-transform: uppercase;
+
+		padding: rem(12px) rem(32px);
+		color: $white;
+		border: 1px solid $black;
+		background-color: $green2;
+		&:hover{
+			color: $white;
+			background-color: $black;
+		}
+	}
+
+	//all-man-flowers
+	&__all-btn-cont{
+		text-align: center;
+	}
+	&__all-btn{
+		@extend .light-g-btn-frame;
+	}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sHitMan
+
+.cart-mark{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: rem(50);
+	height: rem(50);
+	border-radius: 50%;
+
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+
+	text-transform: uppercase;
+	font-size: 12px;
+}

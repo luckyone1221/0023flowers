@@ -1,4 +1,23 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.menu
+				ul
+					li: a(href="#") МУЖЧИНАМ
+					li: a(href="#") ЖЕНЩИНАМ
+					li: a(href="#") НЕВЕСТАМ
+					li: a(href="#") ГЛАВНАЯ
+			+e.A.logo(href='/')
+				img(loading="lazy" src="img/@2x/footer-logo.png" alt="")
+			+e.txt-box
+				+e.txt-item пн-пт09:00 - 20:00
+				+e.txt-item(href="tel:+74993993071") +7 (499) 399-30-71
+				+e.txt-item(href="mailto:hi@zveroboy-flowers.ru") hi@zveroboy-flowers.ru
+			+e.txt-box
+				+e.txt-item г.Москва
+				+e.txt-item ИП Соколова Ксения Федоровна
+				+e.txt-item
+					| ОГРНИП:
+					|
+					a(href="#") 317774600405971
+				+e.txt-item © All Rights Reserved

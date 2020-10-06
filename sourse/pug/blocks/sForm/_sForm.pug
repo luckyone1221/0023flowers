@@ -1,9 +1,26 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
+		+b.arrow
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+		+form-wrap
 			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+				h2 Сочиним особенный букет?
+				p Мы перезвоним в течение 1 часа.
+			label
+				//+input('', 'text', undefined, 'name')
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Как к Вам обращаться
+			label
+				+input('+1 123 456 78 90', 'tel', undefined, 'tel')
+				//+e.SPAN.title +1 123 456 78 90
+			+e.btn-cont
+				+e.BUTTON.btn(type='submit') Отправить
+			+e.policy
+				| *Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+				|
+				a(href="#") политикой конфиденциальности
+		+b.arrow
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+
 	// end sForm

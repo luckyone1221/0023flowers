@@ -1,0 +1,27 @@
+mixin sPartners()
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши партнеры
+				p
+					| Будем рады сотрудничеству.
+					br
+					| Пишите нам с предложениями о партнерстве на наш почтовый ящик.
+		+e.slider
+			.swiper-container.partners-slider-js
+				.swiper-wrapper
+					+partnersSlide(1)
+					+partnersSlide(2)
+					+partnersSlide(3)
+				.partners-prev.partners-prev-js.d-none.d-xl-flex
+					+icon('chevron-left2')
+				.partners-next.partners-next-js.d-none.d-xl-flex
+					+icon('chevron-right2')
+				.partners-pugin.partners-pugin-js.d-md-none
+	// end sPartners
+
+mixin partnersSlide(imgNum)
+	.swiper-slide
+		+e.A.item(href='#')
+			img.swiper-lazy(src="#" data-src=`img/@2x/partners-slide-${imgNum}.jpg` alt="")

@@ -1,0 +1,149 @@
+// start .sNews
+.sNews {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(60)};
+	--sTPB: #{rem(50)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(60px)};
+		--sPT: #{rem(45)};
+		--sTPB: #{rem(90px)};
+	}
+
+	.arrow{
+		margin-bottom: rem(45px);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(90px);
+		}
+	}
+
+	.section-title{
+		max-width: 560px;
+		margin: 0 auto;
+		h2{
+			font-size: rem(30px);
+			@include media-breakpoint-up(md){
+				font-size: rem(42px);
+			}
+
+			line-height: 1.23;
+			margin-bottom: rem(20);
+		}
+		p{
+			font-size: rem(20px);
+			@include media-breakpoint-up(md){
+				font-size: rem(24px);
+			}
+			line-height: 1.5;
+			font-weight: 300;
+		}
+	}
+
+	//slider
+	&__slider{
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+			height: auto;
+			width: 300px;
+			@include media-breakpoint-up(lg){
+				width: calc((100% / 3) - (30px * 2 / 3));
+			}
+		}
+		//pugin
+		.news-pugin{
+			@extend .pugin-frame-dark;
+			height: 60px;
+		}
+	}
+	&__item{
+		overflow: hidden;
+		display: block;
+		width: 100%;
+		position: relative;
+		z-index: 1;
+		padding-top: (257/360) * 100%;
+
+		&:hover{
+			.sNews__item-img{
+				//opacity: .4;
+				transform: scale(1.1);
+				&:after{
+					opacity: .7;
+				}
+			}
+		}
+	}
+	&__item-img{
+		display: block;
+		@include mt();
+		position: absolute;
+		z-index: -2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&:after{
+			content: '';
+			@include mt();
+			background-image: linear-gradient(top, rgba(0,0,0,0.30), rgba(0,0,0,0.60));
+			//background: red;
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__txt{
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		padding: rem(20px) rem(40px);
+		left: 0;
+		top: 0;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		color: $white;
+		h4{
+			font-size: rem(24px);
+			line-height: 1.35;
+			margin-bottom: rem(20px);
+		}
+		p{
+			font-size: rem(16px);
+			line-height: 1.55;
+			font-weight: 300;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sNews

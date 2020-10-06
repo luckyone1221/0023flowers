@@ -14,14 +14,33 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			+mnu()
-					
+		+e.mob-strip.d-xl-none
+			+e.burger.burger-js
+				span
+		+e.container.container.mob-mnu-cont-js
+			+e.top-row.row
+				+e.address-col.col-xl-4
+					+e.address
+						+e.add-name Магазин лесных букетов
+						+e.add-txt г. Москва
+					+b.soc-cont
+						+e.A.item(href="#")
+							+icon('fb')
+						+e.A.item(href="#")
+							+icon('instagram')
+				+e.logo-col.col-xl-4
+					+e.A.logo(href="/")
+						img(src="img/@2x/logo.jpg")
+				+e.contacts-col.col-xl-4
+					+e.contacts
+						+e.A.tell(href="tel:+74993993071") +7 (499) 399-30-71
+						+e.A.mail(href="mailto:hi@zveroboy-flowers.ru") hi@zveroboy-flowers.ru
+				+b.menu-cont
+					+mnu()
 	// end top-nav

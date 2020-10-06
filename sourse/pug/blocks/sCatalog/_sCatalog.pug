@@ -1,0 +1,30 @@
+mixin sCatalog()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Каталог букетов
+				p Какие цветы выбираем сегодня?
+			+e.row.row
+				+catalogItem(1, 'Мужские букеты', 'Он будет сражен наповал')
+				+catalogItem(2, 'Женские букеты', 'Порадуйте любимых')
+				+catalogItem(3, 'Компаниям', 'Ваши пожелания - наш закон')
+			+e.row.row
+				+smallCatalogItem('Авторские букеты')
+				+smallCatalogItem('Букеты на день рождения')
+				+smallCatalogItem('Букеты в корзинах')
+	// end sCatalog
+
+mixin catalogItem(imgNum, title, txt)
+	+e.col.col-lg-4
+		+e.A.item(href="#")
+			+pic(`catalog-item-${imgNum}.jpg`)(class="sCatalog__item-img")
+			+e.item-descr
+				+e.item-title=title
+				+e.item-txt=txt
+
+mixin smallCatalogItem(title)
+	+e.col.col-lg-4
+		+e.A.item(href="#")
+			+e.item-descr--small
+				+e.item-title=title

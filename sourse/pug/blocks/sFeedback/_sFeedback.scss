@@ -1,0 +1,141 @@
+// start .sFeedback
+.sFeedback {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(35)};
+	--sTPB: #{rem(50)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(50px)};
+		--sPT: #{rem(45)};
+		--sTPB: #{rem(90px)};
+	}
+
+	.arrow{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(45);
+		}
+	}
+
+	.section-title{
+		h2{
+			font-weight: bold;
+		}
+	}
+
+	&__slider{
+		padding-bottom: rem(20px);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(55px);
+		}
+
+		.swiper-container{
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+			@include media-breakpoint-up(lg){
+				transform: none!important;
+				flex-wrap: wrap!important;
+			}
+
+		}
+		.swiper-slide{
+			width: rem(300px);
+			@include media-breakpoint-up(lg){
+				//background-color: red;
+				width: calc((100% / 4) - (30px * 3 / 4));
+				height: auto;
+
+				&:nth-child(4n){
+					margin-right: 0!important;
+				}
+				margin-bottom: rem(30);
+			}
+
+			&-duplicate{
+				@include media-breakpoint-up(lg){
+					display: none!important;
+				}
+			}
+
+			@include media-breakpoint-up(lg) {
+				.sFeedback__item {
+					overflow: hidden;
+				}
+
+				&:hover {
+					cursor: zoom-in;
+
+					img {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+		//pugin
+		.feedback-pugin{
+			@extend .pugin-frame-dark;
+			height: 60px;
+		}
+	}
+	&__item{
+		cursor: zoom-in;
+		display: block;
+
+		width: 100%;
+		@include mt();
+		img{
+			@include mt();
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	//txt
+	&__txt{
+
+		text-align: center;
+		border-top: 1px solid $black;
+		border-bottom: 1px solid $black;
+
+		font-size: rem(28px);
+		margin-bottom: rem(30);
+		padding: rem(40) 0;
+		@include media-breakpoint-up(lg){
+			font-size: rem(42px);
+			margin-bottom: rem(60);
+			padding: rem(80) 0;
+		}
+		line-height: 1.23;
+		font-family: $mono;
+		font-weight: 300;
+	}
+
+	//lower-txt
+	&__lower-txt{
+		text-align: center;
+		font-weight: 700;
+		font-family: $mono;
+
+		font-size: rem(30px);
+		@include media-breakpoint-up(lg){
+			font-size: rem(42px);
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sFeedback
+

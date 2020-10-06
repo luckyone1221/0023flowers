@@ -1,0 +1,44 @@
+mixin sHitMan()
+	// start sHitMan
+	+b.SECTION.sHitMan.section#sHitMan&attributes(attributes)
+		+b.section-title.text-center
+			h2 Хиты продаж для него
+		.container
+			+e.row.row
+				+hitManItem(1, 'ОХОТНИК', '4 990')
+					|Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
+					|
+					br
+					|С воспоминаниями о лесных путешествиях в компании близких по духу.
+				+hitManItem(2, 'ТОРЕАДОР', '5 600')
+					|Букет для пылких духом с искрой и хитринкой в глазах.
+					|
+					br
+					|С воспоминаниями о ярких победах.
+				+hitManItem(3, 'КОРОЛЬ АРТУР', '5 900', 'new')
+					| Для благородных и мудрых лидеров,
+					|
+					br
+					| уверенных в успехе своей команды.
+			+e.all-btn-cont
+				+e.A.all-btn(href="#") ВСЕ БУКЕТЫ ДЛЯ НЕГО
+	// end sHitMan
+
+mixin hitManItem(imgGroup, title, price, mark=false, markColor='#ffe629')
+	+e.col.col-sm-6.col-lg-4
+		+e.item-cont
+			//-galery href
+			+e.A.item(href='#')
+				+e.img-cont
+					+e.imgs
+						img(loading='lazy' src=`img/@2x/hitman-${imgGroup}-1.jpg` alt="")
+						img(loading='lazy' src=`img/@2x/hitman-${imgGroup}-2.jpg` alt="")
+					if mark
+						+b.cart-mark(style=`background-color: ${markColor}`)=mark
+				+e.descr
+					h4=title
+					p
+						block
+				+e.size-txt Выберите размер при заказе
+				+e.price= `${price} р.`
+			+e.A.buy-btn(href="#") В КОРЗИНУ

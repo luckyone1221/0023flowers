@@ -1,0 +1,16 @@
+mixin sVideo()
+	// start sVideo
+	+b.SECTION.sVideo.section#sVideo&attributes(attributes)
+		+b.title-img
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+		+e.video-cont
+			+e.A.video(href='#')
+				+pic('video-bg.jpg')(class='sVideo__bg')
+				+e.content
+					+e.txt
+						+e.pretitle Тренды современной флористики
+						h2 Цвет, форма, настроение - интервью с Ксенией Соколовой
+						p Ксения Соколова и Полина Сечкина беседуют о том, как удивлять клиента, передавать настроение с помощью цветов и оставаться в тренде
+					+e.play-btn
+						img(loading="lazy" src='img/svg/play-btn.svg' alt="")
+	// end sVideo

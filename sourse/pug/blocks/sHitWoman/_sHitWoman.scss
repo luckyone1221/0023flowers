@@ -1,0 +1,175 @@
+// start .sHitWoman
+.sHitWoman {
+	--sPT: #{0};
+	--sTPB: #{0};
+
+	--sPB: #{rem(10px)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(30px)};
+	}
+
+	.section-title{
+		background-color: $light-green;
+		padding: rem(14) 0;
+		margin-bottom: rem(42);
+		h2{
+			font-size: rem(26);
+			@include media-breakpoint-up(md){
+				font-size: rem(32);
+			}
+			font-weight: 700;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+
+
+	&__row{
+		padding-bottom: rem(20);
+		@include media-breakpoint-up(md){
+			padding-bottom: rem(50);
+		}
+		@include media-breakpoint-up(lg){
+			@include roww(40px);
+			padding-bottom: rem(170);
+		}
+	}
+	&__col{
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	//item
+	&__item-cont{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		height: 100%;
+
+		@include mt();
+		&:hover{
+
+		}
+	}
+
+	&__item{
+		width: 100%;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+
+		span{
+			display: block;
+		}
+
+		color: $body-color;
+		&:hover{
+			color: $body-color;
+		}
+
+		.img-cont{
+			position: relative;
+			padding-top: 121.07%;
+			width: 100%;
+			height: 0;
+
+			img{
+				@include mt();
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	//galery case
+	&__item--galery{
+
+		.img-cont{
+			img:first-child{
+				opacity: 1;
+			}
+			img:last-child{
+				opacity: 0;
+			}
+		}
+
+		&:hover{
+			.img-cont {
+				img:first-child {
+					opacity: 0;
+				}
+
+				img:last-child {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	//
+	&__descr{
+		padding-top: rem(19);
+		h4{
+			font-size: 16px;
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 1.35;
+			margin-bottom: rem(9);
+		}
+		p{
+			font-size: 14px;
+			line-height: 1.55;
+			font-weight: 300;
+			margin-bottom: rem(13);
+		}
+	}
+
+	&__price{
+		margin-top: auto;
+		margin-bottom: rem(20px);
+	}
+
+	&__buy-btn{
+		@extend .btn;
+		@extend .btn-danger;
+
+		padding: rem(12) rem(30);
+
+		align-self: center;
+
+		background-color: $pink;
+		color: $white;
+		&:hover{
+			background-color: $green2;
+			color: $white;
+		}
+
+		border: none;
+		box-shadow: none;
+
+		font-weight: bold;
+	}
+	//
+	&__all-btn-cont{
+		text-align: center;
+	}
+	&__all-btn{
+		@extend .light-g-btn-frame;
+	}
+
+	&__{}
+	&__{}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sHitWoman

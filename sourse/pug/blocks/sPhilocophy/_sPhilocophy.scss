@@ -1,0 +1,98 @@
+// start .sPhilocophy
+.sPhilocophy {
+	font-family: $mono;
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(50)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(30)};
+		--sPT: #{rem(45)};
+		--sTPB: #{rem(57)};
+	}
+
+	.arrow{
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(57);
+		}
+	}
+
+	.container{
+		@include media-breakpoint-down(sm){
+			padding: 0 15px;
+		}
+	}
+
+	.section-title{
+		h2{
+			font-weight: 700;
+
+			font-size: rem(30);
+			@include media-breakpoint-up(md){
+				font-size: rem(42);
+			}
+
+		}
+	}
+
+	&__row{
+
+	}
+	&__left-col{
+		@include media-breakpoint-up(lg){
+			max-width: rem(464px);
+			margin-left: auto;
+		}
+		//
+		p{
+			line-height: 1.55;
+			font-weight: 300;
+			margin-bottom: rem(30);
+
+			font-size: rem(18px);
+			@include media-breakpoint-up(md){
+				font-size: rem(20px);
+			}
+		}
+		p:last-child{
+			@include media-breakpoint-up(md){
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__right-col{
+
+	}
+	&__rc-inner{
+		@include media-breakpoint-up(lg){
+			max-width: rem(464px);
+		}
+		h4{
+			font-weight: 300;
+			line-height: 1.35;
+
+			margin-bottom: rem(25);
+			font-size: rem(28px);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(43);
+				font-size: rem(32px);
+			}
+
+
+			&:first-child{
+				@include media-breakpoint-up(lg){
+					display: inline-flex;
+					width: auto;
+				}
+				padding-top: rem(24);
+				border-top: 1px solid $black;
+			}
+		}
+
+		h4:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+} // end.sPhilocophy

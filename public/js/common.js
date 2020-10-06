@@ -31,6 +31,12 @@ var JSCCommon = {
 					// ZOOM: "Zoom"
 
 				}
+			},
+			eforeLoad: function eforeLoad() {
+				document.querySelector("html").classList.add("ficed");
+			},
+			afterClose: function afterClose() {
+				document.querySelector("html").classList.remove("ficed");
 			}
 		});
 		$(".modal-close-js").click(function () {
@@ -155,7 +161,7 @@ var JSCCommon = {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 		if (isIE11) {
-			$("body").prepend('<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>');
+			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
 	sendForm: function sendForm() {
@@ -218,7 +224,7 @@ var JSCCommon = {
 	},
 	animateScroll: function animateScroll() {
 		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
+		$(".scroll-link").click(function () {
 			var elementClick = $(this).attr("href");
 			var destination = $(elementClick).offset().top;
 			$('html, body').animate({
@@ -238,11 +244,11 @@ var $ = jQuery;
 function eventHandler() {
 	var _defaultSl;
 
-	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
 	JSCCommon.ifie();
+	JSCCommon.modalCall();
+	JSCCommon.tabscostume('tabs'); //JSCCommon.mobileMenu();
+
+	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
@@ -250,14 +256,22 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = 'main-7.png';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
 	} // /добавляет подложку для pixel perfect
 
 
-	function whenResize() {}
+	function whenResize() {
+		var topH = $("header ").innerHeight();
+
+		if ($(window).scrollTop() > topH) {
+			$('.top-nav  ').addClass('fixed');
+		} else {
+			$('.top-nav  ').removeClass('fixed');
+		}
+	}
 
 	window.addEventListener('resize', function () {
 		whenResize();
@@ -290,6 +304,128 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+	//luckyone js
+	//mnu js
+
+	$('.burger-js').click(function () {
+		$(this).toggleClass('active');
+		$('.mob-mnu-cont-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+
+	function mobMnuBlur() {
+		if (!(event.currentTarget.closest('.sub-menu') === this.parentElement.querySelector('.sub-menu'))) {
+			$(this.parentElement).toggleClass('active');
+		}
+
+		document.body.removeEventListener('click', mobMnuBlurHandler);
+	}
+
+	var mobMnuBlurHandler;
+	$('.menu-item-has-children > a').click(function () {
+		event.preventDefault();
+		$('.menu-item-has-children').removeClass('active');
+		$(this.parentElement).toggleClass('active');
+		event.stopPropagation();
+		document.body.removeEventListener('click', mobMnuBlurHandler);
+		mobMnuBlurHandler = mobMnuBlur.bind(this);
+		document.body.addEventListener('click', mobMnuBlurHandler);
+	}); //
+
+	var headerSlider = new Swiper('.header-slider-js', {
+		slidesPerView: 1,
+		loop: true,
+		autoplay: 5000,
+		//lazy-load
+		lazy: {
+			loadPrevNext: true
+		},
+		//pagination
+		pagination: {
+			el: $(this).find('.header-pugin-js'),
+			clickable: true
+		},
+		//nav
+		navigation: {
+			nextEl: '.header-next-js',
+			prevEl: '.header-prev-js'
+		}
+	}); //feedback slider
+
+	var feedbackSlider = new Swiper('.feedback-slider-js', {
+		slidesPerView: 'auto',
+		//loop: true,
+		//autoplay: 5000,
+		//lazy-load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 120
+		},
+		spaceBetween: 30,
+		//pagination
+		pagination: {
+			el: $(this).find('.feedback-pugin-js'),
+			clickable: true
+		}
+	}); //news slider
+
+	var newsSlider = new Swiper('.news-slider-js', {
+		slidesPerView: 'auto',
+		//loop: true,
+		//autoplay: 5000,
+		//lazy-load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 120
+		},
+		spaceBetween: 30,
+		//pagination
+		pagination: {
+			el: $(this).find('.news-pugin-js'),
+			clickable: true
+		}
+	}); //end luckyone js
+
+	$('input.has-ph-js').blur(checkEmptyVal);
+
+	function checkEmptyVal() {
+		if (this.value !== '') {
+			$(this).addClass('not-empty');
+		} else {
+			$(this).removeClass('not-empty');
+		}
+	} //
+
+
+	var partnersSlider = new Swiper('.partners-slider-js', {
+		slidesPerView: 'auto',
+		//loop: true,
+		//autoplay: 5000,
+		//lazy-load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 12
+		},
+		spaceBetween: 30,
+		//pagination
+		pagination: {
+			el: $(this).find('.partners-pugin-js'),
+			clickable: true
+		},
+		//nav
+		navigation: {
+			nextEl: '.partners-prev-js',
+			prevEl: '.partners-next-js'
+		}
+	}); //.go-top-js
+
+	$('.go-top-js').click(function () {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	});
 }
 
 ;

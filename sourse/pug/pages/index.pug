@@ -1,8 +1,19 @@
 extends layout/main.pug
 
-
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHitMan/_sHitMan.pug
+include ../blocks/sHitWoman/_sHitWoman.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sConvinuent/_sConvinuent.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sOwner/_sOwner.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPhilocophy/_sPhilocophy.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sSeo/_sSeo.pug
 
 block variables
 	- let  mainPage= null
@@ -10,16 +21,22 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-	+mob-mnu()
 	+header()
-
 		+top-nav()
-		+topLine()
+		//+topLine()
 	+headerBlock()
-
+	+sCatalog()
+	+sHitMan()
+	+sHitWoman()
+	+sVideo()
+	+sHowWork()
+	+sConvinuent()
+	+sFeedback()
+	+sOwner()
+	+sNews()
+	+sPhilocophy()
 	+sForm()
+	+sPartners()
+	+sSeo
 	+sContact()
 	+footer()
-
-
-	

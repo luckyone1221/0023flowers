@@ -1,0 +1,31 @@
+mixin sConvinuent()
+	// start sConvinuent
+	+b.SECTION.sConvinuent.section#sConvinuent&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 С нами удобно
+				p Оплата всеми способами
+			+e.row.row
+				+sConvinuentTxtItem(1)
+					| Наличными при получении
+				+sConvinuentTxtItem(2)
+					| Самое удобное - оплата он-лайн по карте на сайте
+				+sConvinuentTxtItem(3)
+					| Банковский перевод для юр.лиц
+			+e.lower-row.row
+				+sConvinuentCardItem(1)
+				+sConvinuentCardItem(2)
+				+sConvinuentCardItem(3)
+	// end sConvinuent
+
+mixin sConvinuentTxtItem(imgNum)
+	+e.top-col.col-lg-4
+		+e.img-cont
+			img(loading="lazy" src=`img/@2x/Convinuent-txt-item-${imgNum}.jpg`)
+		+e.txt
+			block
+
+mixin sConvinuentCardItem(imgNum)
+	+e.lower-col.col-4
+		+e.img-cont
+			img(loading="lazy" src=`img/@2x/Convinuent-card-item-${imgNum}.jpg`)

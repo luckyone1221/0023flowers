@@ -23,111 +23,764 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
-		<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-		</div>
-		<div class="menu-mobile menu-mobile--js d-lg-none">
-			<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-			</div>
-			<div class="menu-mobile__inner">
-				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-					</li>
-				</ul>
-				<div class="text-right"></div>
-			</div>
-		</div>
-		<!--  мобильное меню-->
+	<body>
 		<!-- start header-->
 		<header class="header" id="header">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-						</li>
-					</ul>
+				<div class="top-nav__mob-strip d-xl-none">
+					<div class="top-nav__burger burger-js"><span></span>
+					</div>
+				</div>
+				<div class="top-nav__container container mob-mnu-cont-js">
+					<div class="top-nav__top-row row">
+						<div class="top-nav__address-col col-xl-4">
+							<div class="top-nav__address">
+								<div class="top-nav__add-name">Магазин лесных букетов
+								</div>
+								<div class="top-nav__add-txt">г. Москва
+								</div>
+							</div>
+							<div class="soc-cont"><a class="soc-cont__item" href="#">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a><a class="soc-cont__item" href="#">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a>
+							</div>
+						</div>
+						<div class="top-nav__logo-col col-xl-4"><a class="top-nav__logo" href="/"><img src="img/@2x/logo.jpg"/></a>
+						</div>
+						<div class="top-nav__contacts-col col-xl-4">
+							<div class="top-nav__contacts"><a class="top-nav__tell" href="tel:+74993993071">+7 (499) 399-30-71</a><a class="top-nav__mail" href="mailto:hi@zveroboy-flowers.ru">hi@zveroboy-flowers.ru</a>
+							</div>
+						</div>
+						<div class="menu-cont">
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item"><a href="#" itemprop="url">ДЕНЬ УЧИТЕЛЯ</a></li>
+								<li class="menu-item"><a href="#" itemprop="url">МУЖЧИНАМ</a></li>
+								<li class="menu-item"><a href="#" itemprop="url">ЖЕНЩИНАМ</a></li>
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">НЕВЕСТАМ</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">БУКЕТЫ НЕВЕСТЫ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ВЕНКИ НА СВАДЬБУ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">БУКЕТЫ НА СВАДЬБУ</a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">НА ПРАЗДНИК</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ДЕНЬ МАТЕРИ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">1 СЕНТЯБРЯ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ДЕНЬ УЧИТЕЛЯ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">НОВЫЙ ГОД</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ДЕНЬ РОЖДЕНИЯ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">8 МАРТА</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">23 ФЕВРАЛЯ</a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">ДЛЯ ИНТЕРЬЕРА</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ФИТОДИЗАЙН</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ОЗЕЛЕНЕНИЕ МХОМ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">СУККУЛЕНТЫ И КАКТУСЫ</a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a href="#" itemprop="url">ОФОРМЛЕНИЕ ЦВЕТАМИ</a></li>
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">ЕЩЕ</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ДОСТАВКА И ОПЛАТА</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">БЛОГ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">КОНТАКТЫ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ОБ АВТОРЕ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">ФИЛОСОФИЯ</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">НОВОСТИ</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
+			<!--+topLine()-->
 		</header>
 		<!-- end header-->
-		<div class="block-wrap"><img class="block" src="img/@2x/gar-3.jpg" alt=""></div>
 		<!-- start headerBlock-->
 		<div class="headerBlock section" id="headerBlock">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>headerBlock ds dfsdfdsfsd</h2>
+			<div class="headerBlock__slider">
+				<div class="swiper-container header-slider-js">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="headerBlock__img-cont"><img class="swiper-lazy" src="" data-src="img/@2x/header-slide-1.jpg" alt=""/>
+							</div>
+							<div class="headerBlock__container container">
+								<div class="headerBlock__content blue-txt">
+									<p>закажи лето в подарок</p>
+									<h4>ЦВЕТЫ ОТ СЕРДЦА К СЕРДЦУ</h4>
+									<div class="headerBlock__btn-box"><a class="headerBlock__btn" href="#">ВЫБРАТЬ</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="headerBlock__img-cont"><img class="swiper-lazy" src="" data-src="img/@2x/header-slide-2.jpg" alt=""/>
+							</div>
+							<div class="headerBlock__container container">
+								<div class="headerBlock__content white-txt">
+									<h4>СИНЕВА ОКЕАНА</h4>
+									<p>в букете</p>
+									<div class="headerBlock__btn-box"><a class="headerBlock__btn" href="#">ВЫБРАТЬ</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="headerBlock__img-cont"><img class="swiper-lazy" src="" data-src="img/@2x/header-slide-3.jpg" alt=""/>
+							</div>
+							<div class="headerBlock__container container">
+								<div class="headerBlock__content date-txt">
+									<h4>УДИВИ ИМЕНИННИКА</h4>
+									<div class="headerBlock__btn-box"><a class="headerBlock__btn" href="#">ЗАКАЗАТЬ БУКЕТ</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="headerBlock__img-cont"><img class="swiper-lazy" src="" data-src="img/@2x/header-slide-4.jpg" alt=""/>
+							</div>
+							<div class="headerBlock__container container">
+								<div class="headerBlock__content mans-flowers">
+									<h4>букеты для мужчин</h4>
+									<p>ОН БУДЕТ СРАЖЕН</p>
+									<div class="headerBlock__btn-box"><a class="headerBlock__btn" href="#">Выбрать букет</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header-pugin header-pugin-js"></div>
+					<div class="header-prev header-prev-js d-none d-sm-flex">
+						<svg class="icon icon-chevron-left2 ">
+							<use xlink:href="img/svg/sprite.svg#chevron-left2"></use>
+						</svg>
+					</div>
+					<div class="header-next header-next-js d-none d-sm-flex">
+						<svg class="icon icon-chevron-right2 ">
+							<use xlink:href="img/svg/sprite.svg#chevron-right2"></use>
+						</svg>
+					</div>
 				</div>
-				<div class="row"></div>
+			</div>
+			<div class="headerBlock__vantage">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="headerBlock__item">
+								<div class="headerBlock__item-head">
+									<div class="headerBlock__item-icon"><img loading="lazy" src="img/svg/vantage-1.svg" alt=""/>
+									</div>
+									<div class="headerBlock__item-title">Необычные цветы
+									</div>
+								</div>
+								<div class="headerBlock__item-content">Оригинальные букеты с шишками, суккулентами, перьями, артишоками, розмарином и другими травами. Лесные, ароматные, просто незабываемые! Для мужчин и прекрасных девушек.
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="headerBlock__item">
+								<div class="headerBlock__item-head">
+									<div class="headerBlock__item-icon"><img loading="lazy" src="img/svg/vantage-2.svg" alt=""/>
+									</div>
+									<div class="headerBlock__item-title">Персональный подход
+									</div>
+								</div>
+								<div class="headerBlock__item-content">Соберем букет вашей мечты по вашим пожеланиям.
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="headerBlock__item">
+								<div class="headerBlock__item-head">
+									<div class="headerBlock__item-icon"><img loading="lazy" src="img/svg/vantage-3.svg" alt=""/>
+									</div>
+									<div class="headerBlock__item-title">Доставка в день заказа
+									</div>
+								</div>
+								<div class="headerBlock__item-content">Оперативная доставка к точному времени в день заказа по Москве и в пределах 10 км от МКАД.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- end headerBlock-->
-		<!-- start sForm-->
-		<section class="sForm section" id="sForm">
+		<!-- start sCatalog-->
+		<section class="sCatalog section" id="sCatalog">
 			<div class="container">
 				<div class="section-title text-center">
-					<h2>sForm</h2>
+					<h2>Каталог букетов</h2>
+					<p>Какие цветы выбираем сегодня?</p>
 				</div>
-				<div class="row"></div>
+				<div class="sCatalog__row row">
+					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#">
+						<!-- picture-->
+						<picture class="sCatalog__item-img"> 
+							<source srcset="img/@2x/webp/catalog-item-1.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/catalog-item-1.webp" type="image/webp"/>
+							<source srcset="img/@2x/catalog-item-1.jpg" type="image/jpg" media="(min-width:576px)"/>
+							<source srcset="img/@1x/catalog-item-1.jpg" type="image/jpg"/>
+							<noscript class="loading-lazy"><img src="img/@2x/catalog-item-1.jpg" alt=""/></noscript>
+						</picture>
+						<!-- /picture--><span class="sCatalog__item-descr"><span class="sCatalog__item-title">Мужские букеты</span><span class="sCatalog__item-txt">Он будет сражен наповал</span></span></a>
+					</div>
+					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#">
+						<!-- picture-->
+						<picture class="sCatalog__item-img"> 
+							<source srcset="img/@2x/webp/catalog-item-2.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/catalog-item-2.webp" type="image/webp"/>
+							<source srcset="img/@2x/catalog-item-2.jpg" type="image/jpg" media="(min-width:576px)"/>
+							<source srcset="img/@1x/catalog-item-2.jpg" type="image/jpg"/>
+							<noscript class="loading-lazy"><img src="img/@2x/catalog-item-2.jpg" alt=""/></noscript>
+						</picture>
+						<!-- /picture--><span class="sCatalog__item-descr"><span class="sCatalog__item-title">Женские букеты</span><span class="sCatalog__item-txt">Порадуйте любимых</span></span></a>
+					</div>
+					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#">
+						<!-- picture-->
+						<picture class="sCatalog__item-img"> 
+							<source srcset="img/@2x/webp/catalog-item-3.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/catalog-item-3.webp" type="image/webp"/>
+							<source srcset="img/@2x/catalog-item-3.jpg" type="image/jpg" media="(min-width:576px)"/>
+							<source srcset="img/@1x/catalog-item-3.jpg" type="image/jpg"/>
+							<noscript class="loading-lazy"><img src="img/@2x/catalog-item-3.jpg" alt=""/></noscript>
+						</picture>
+						<!-- /picture--><span class="sCatalog__item-descr"><span class="sCatalog__item-title">Компаниям</span><span class="sCatalog__item-txt">Ваши пожелания - наш закон</span></span></a>
+					</div>
+				</div>
+				<div class="sCatalog__row row">
+					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Авторские букеты</span></span></a>
+					</div>
+					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Букеты на день рождения</span></span></a>
+					</div>
+					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Букеты в корзинах</span></span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sCatalog-->
+		<!-- start sHitMan-->
+		<section class="sHitMan section" id="sHitMan">
+			<div class="section-title text-center">
+				<h2>Хиты продаж для него</h2>
+			</div>
+			<div class="container">
+				<div class="sHitMan__row row">
+					<div class="sHitMan__col col-sm-6 col-lg-4">
+						<div class="sHitMan__item-cont"><a class="sHitMan__item" href="#"><span class="sHitMan__img-cont"><span class="sHitMan__imgs"><img loading="lazy" src="img/@2x/hitman-1-1.jpg" alt=""/><img loading="lazy" src="img/@2x/hitman-1-2.jpg" alt=""/></span></span><span class="sHitMan__descr">
+							<h4>ОХОТНИК</h4>
+							<p>
+								Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
+								<br/>С воспоминаниями о лесных путешествиях в компании близких по духу.
+							</p></span><span class="sHitMan__size-txt">Выберите размер при заказе</span><span class="sHitMan__price">4 990 р.</span></a><a class="sHitMan__buy-btn" href="#">В КОРЗИНУ</a>
+						</div>
+					</div>
+					<div class="sHitMan__col col-sm-6 col-lg-4">
+						<div class="sHitMan__item-cont"><a class="sHitMan__item" href="#"><span class="sHitMan__img-cont"><span class="sHitMan__imgs"><img loading="lazy" src="img/@2x/hitman-2-1.jpg" alt=""/><img loading="lazy" src="img/@2x/hitman-2-2.jpg" alt=""/></span></span><span class="sHitMan__descr">
+							<h4>ТОРЕАДОР</h4>
+							<p>
+								Букет для пылких духом с искрой и хитринкой в глазах.
+								<br/>С воспоминаниями о ярких победах.
+							</p></span><span class="sHitMan__size-txt">Выберите размер при заказе</span><span class="sHitMan__price">5 600 р.</span></a><a class="sHitMan__buy-btn" href="#">В КОРЗИНУ</a>
+						</div>
+					</div>
+					<div class="sHitMan__col col-sm-6 col-lg-4">
+						<div class="sHitMan__item-cont"><a class="sHitMan__item" href="#"><span class="sHitMan__img-cont"><span class="sHitMan__imgs"><img loading="lazy" src="img/@2x/hitman-3-1.jpg" alt=""/><img loading="lazy" src="img/@2x/hitman-3-2.jpg" alt=""/></span><span class="cart-mark" style="background-color: #ffe629">new</span></span><span class="sHitMan__descr">
+							<h4>КОРОЛЬ АРТУР</h4>
+							<p>
+								Для благородных и мудрых лидеров,
+								<br/>уверенных в успехе своей команды.
+							</p></span><span class="sHitMan__size-txt">Выберите размер при заказе</span><span class="sHitMan__price">5 900 р.</span></a><a class="sHitMan__buy-btn" href="#">В КОРЗИНУ</a>
+						</div>
+					</div>
+				</div>
+				<div class="sHitMan__all-btn-cont"><a class="sHitMan__all-btn" href="#">ВСЕ БУКЕТЫ ДЛЯ НЕГО</a>
+				</div>
+			</div>
+		</section>
+		<!-- end sHitMan-->
+		<!-- start sHitWoman-->
+		<section class="sHitWoman section" id="sHitWoman">
+			<div class="section-title text-center">
+				<h2>Хиты продаж для неё</h2>
+			</div>
+			<div class="container">
+				<div class="sHitWoman__row row">
+					<div class="sHitWoman__col col-sm-6 col-lg-3">
+						<div class="sHitWoman__item-cont"><a class="sHitWoman__item" href="#">
+							<div class="img-cont"><img loading="lazy" src="img/@2x/hitwoman-1.jpg" alt=""/><span class="cart-mark" style="background-color: #ffe629">ХИТ</span>
+							</div><span class="sHitWoman__descr">
+							<h4>свежесть</h4>
+							<p>Нежные пионы с яркой зеленью. Прекрасное сочетание и изысканная красота.
+							</p></span><span class="sHitWoman__price">5 990 р.</span></a><a class="sHitWoman__buy-btn" href="#">В КОРЗИНУ</a>
+						</div>
+					</div>
+					<div class="sHitWoman__col col-sm-6 col-lg-3">
+						<div class="sHitWoman__item-cont"><a class="sHitWoman__item" href="#">
+							<div class="img-cont"><img loading="lazy" src="img/@2x/hitwoman-2.jpg" alt=""/>
+							</div><span class="sHitWoman__descr">
+							<h4>коралловый рай</h4>
+							<p>Невероятно шикарный букет с пионами, нежными розами и дельфиниумом.
+							</p></span><span class="sHitWoman__price">9 500 р.</span></a><a class="sHitWoman__buy-btn" href="#">В КОРЗИНУ</a>
+						</div>
+					</div>
+					<div class="sHitWoman__col col-sm-6 col-lg-3">
+						<div class="sHitWoman__item-cont"><a class="sHitWoman__item sHitWoman__item--galery" href="#">
+							<div class="img-cont">
+								<div class="imgs"><img loading="lazy" src="img/@2x/hitwoman-3-1.jpg" alt=""/><img loading="lazy" src="img/@2x/hitwoman-3-2.jpg" alt=""/></div>
+							</div><span class="sHitWoman__descr">
+							<h4>лес в ящике</h4>
+							<p>Лесная композиция подарит радость и будет очень долго радовать.
+							</p></span><span class="sHitWoman__price">7 990 р.</span></a><a class="sHitWoman__buy-btn" href="#">В КОРЗИНУ</a>
+						</div>
+					</div>
+					<div class="sHitWoman__col col-sm-6 col-lg-3">
+						<div class="sHitWoman__item-cont"><a class="sHitWoman__item sHitWoman__item--galery" href="#">
+							<div class="img-cont">
+								<div class="imgs"><img loading="lazy" src="img/@2x/hitwoman-4-1.jpg" alt=""/><img loading="lazy" src="img/@2x/hitwoman-4-2.jpg" alt=""/></div>
+							</div><span class="sHitWoman__descr">
+							<h4>охотница</h4>
+							<p>Букет с ягодами, магнолией и перьями фазана. Может быть выполнен в кашпо из коры дерева.
+							</p></span><span class="sHitWoman__price">5 700 р.</span></a><a class="sHitWoman__buy-btn" href="#">В КОРЗИНУ</a>
+						</div>
+					</div>
+				</div>
+				<div class="sHitWoman__all-btn-cont"><a class="sHitWoman__all-btn" href="#">ВСЕ БУКЕТЫ ДЛЯ неё</a>
+				</div>
+			</div>
+		</section>
+		<!-- end sHitWoman-->
+		<!-- start sVideo-->
+		<section class="sVideo section" id="sVideo">
+			<div class="title-img"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
+			</div>
+			<div class="sVideo__video-cont"><a class="sVideo__video" href="#">
+				<!-- picture-->
+				<picture class="sVideo__bg"> 
+					<source srcset="img/@2x/webp/video-bg.webp" type="image/webp" media="(min-width:576px)"/>
+					<source srcset="img/@1x/webp/video-bg.webp" type="image/webp"/>
+					<source srcset="img/@2x/video-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
+					<source srcset="img/@1x/video-bg.jpg" type="image/jpg"/>
+					<noscript class="loading-lazy"><img src="img/@2x/video-bg.jpg" alt=""/></noscript>
+				</picture>
+				<!-- /picture--><span class="sVideo__content"><span class="sVideo__txt"><span class="sVideo__pretitle">Тренды современной флористики</span>
+				<h2>Цвет, форма, настроение - интервью с Ксенией Соколовой</h2>
+				<p>Ксения Соколова и Полина Сечкина беседуют о том, как удивлять клиента, передавать настроение с помощью цветов и оставаться в тренде</p></span><span class="sVideo__play-btn"><img loading="lazy" src="img/svg/play-btn.svg" alt=""/></span></span></a>
+			</div>
+		</section>
+		<!-- end sVideo-->
+		<!-- start sHowWork-->
+		<section class="sHowWork section" id="sHowWork">
+			<div class="container">
+				<div class="section-title text-center">
+					<h2>Как мы работаем?</h2>
+				</div>
+				<div class="sHowWork__items">
+					<div class="sHowWork__item">
+						<div class="sHowWork__img"><img loading="lazy" src="img/@2x/how-work-1.jpg" img=""/>
+						</div>
+						<div class="sHowWork__content">
+							<h4>Оформление заказа</h4>
+							<p>
+								Заказ можно оформить через сайт, позвонив нам, написав в WhatsApp или на почту - см. раздел
+								<a href="#">
+									КОНТАКТЫ.
+									</a>Вы можете заказать как 1, так и 400 букетов - они будут подготовлены и отгружены в срок.
+							</p>
+						</div>
+					</div>
+					<div class="sHowWork__item">
+						<div class="sHowWork__img"><img loading="lazy" src="img/@2x/how-work-2.jpg" img=""/>
+						</div>
+						<div class="sHowWork__content">
+							<h4>Подтверждение заказа</h4>
+							<p>Перезваниваем в течение 1 часа после получения заявки с сайта и уточняем все детали.</p>
+						</div>
+					</div>
+					<div class="sHowWork__item">
+						<div class="sHowWork__img"><img loading="lazy" src="img/@2x/how-work-3.jpg" img=""/>
+						</div>
+						<div class="sHowWork__content">
+							<h4>Удобная оплата</h4>
+							<p>Способы оплаты:</p>
+							<ul>
+								<li>наличными курьеру</li>
+								<li>оплата он - лайн любой картой и виртуальным кошельком</li>
+								<li>оплата по счёту юридического лица</li>
+							</ul>
+						</div>
+					</div>
+					<div class="sHowWork__item">
+						<div class="sHowWork__img"><img loading="lazy" src="img/@2x/how-work-4.jpg" img=""/>
+						</div>
+						<div class="sHowWork__content">
+							<h4>Доставка</h4>
+							<p>Доставляем в удобные временные интервалы:<br/>9:00-12:00<br/>12:00-15:00<br/>15:00-18:00<br/>18:00-21:00.<br/>Доступна доставка и в другие временные промежутки по запросу.<br/>Пакет необходимых закрывающих документов привозит курьер с заказом.</p>
+							<p>Заказы можно оформить на сайте круглосуточно. Заказы обрабатываются администратором с 9:00 до 18:30. Поэтому заказы, сделанные после 18:30, будут обработаны в 9:00 утра следующего дня и доставлены не ранее 12:00 ( в зависимости от дальности доставки и наличия цветка).</p>
+							<p>Доставка букета до счастливого обладателя:<br/>Через 24 часа и более после заказа - 430 руб.<br/>Доставка в день заказа - 550 руб.<br/>Доставка за пределы МКАД 15 км - 700 руб.<br/>Доставка в точному времени или вне интервалов доставки - дополнительно 500 руб.</p>
+						</div>
+					</div>
+				</div>
+				<div class="sHowWork__btn-cont"><a class="sHowWork__btn" href="#">ЗАКАЗАТЬ ЦВЕТЫ</a>
+				</div>
+			</div>
+		</section>
+		<!-- end sHowWork-->
+		<!-- start sConvinuent-->
+		<section class="sConvinuent section" id="sConvinuent">
+			<div class="container">
+				<div class="section-title text-center">
+					<h2>С нами удобно</h2>
+					<p>Оплата всеми способами</p>
+				</div>
+				<div class="sConvinuent__row row">
+					<div class="sConvinuent__top-col col-lg-4">
+						<div class="sConvinuent__img-cont"><img loading="lazy" src="img/@2x/Convinuent-txt-item-1.jpg"/>
+						</div>
+						<div class="sConvinuent__txt">Наличными при получении
+						</div>
+					</div>
+					<div class="sConvinuent__top-col col-lg-4">
+						<div class="sConvinuent__img-cont"><img loading="lazy" src="img/@2x/Convinuent-txt-item-2.jpg"/>
+						</div>
+						<div class="sConvinuent__txt">Самое удобное - оплата он-лайн по карте на сайте
+						</div>
+					</div>
+					<div class="sConvinuent__top-col col-lg-4">
+						<div class="sConvinuent__img-cont"><img loading="lazy" src="img/@2x/Convinuent-txt-item-3.jpg"/>
+						</div>
+						<div class="sConvinuent__txt">Банковский перевод для юр.лиц
+						</div>
+					</div>
+				</div>
+				<div class="sConvinuent__lower-row row">
+					<div class="sConvinuent__lower-col col-4">
+						<div class="sConvinuent__img-cont"><img loading="lazy" src="img/@2x/Convinuent-card-item-1.jpg"/>
+						</div>
+					</div>
+					<div class="sConvinuent__lower-col col-4">
+						<div class="sConvinuent__img-cont"><img loading="lazy" src="img/@2x/Convinuent-card-item-2.jpg"/>
+						</div>
+					</div>
+					<div class="sConvinuent__lower-col col-4">
+						<div class="sConvinuent__img-cont"><img loading="lazy" src="img/@2x/Convinuent-card-item-3.jpg"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sConvinuent-->
+		<!-- start sFeedback-->
+		<section class="sFeedback section" id="sFeedback">
+			<div class="container">
+				<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
+				</div>
+				<div class="section-title text-center">
+					<h2>Отзывы наших клиентов</h2>
+				</div>
+				<div class="sFeedback__slider">
+					<div class="swiper-container feedback-slider-js">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a class="sFeedback__item" href="img/@2x/feedback-img-1.jpg" data-fancybox="feedbackImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-img-1.jpg"/></a>
+							</div>
+							<div class="swiper-slide"><a class="sFeedback__item" href="img/@2x/feedback-img-2.jpg" data-fancybox="feedbackImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-img-2.jpg"/></a>
+							</div>
+							<div class="swiper-slide"><a class="sFeedback__item" href="img/@2x/feedback-img-3.jpg" data-fancybox="feedbackImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-img-3.jpg"/></a>
+							</div>
+							<div class="swiper-slide"><a class="sFeedback__item" href="img/@2x/feedback-img-4.jpg" data-fancybox="feedbackImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-img-4.jpg"/></a>
+							</div>
+							<div class="swiper-slide"><a class="sFeedback__item" href="img/@2x/feedback-img-5.jpg" data-fancybox="feedbackImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-img-5.jpg"/></a>
+							</div>
+							<div class="swiper-slide"><a class="sFeedback__item" href="img/@2x/feedback-img-6.jpg" data-fancybox="feedbackImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-img-6.jpg"/></a>
+							</div>
+							<div class="swiper-slide"><a class="sFeedback__item" href="img/@2x/feedback-img-7.jpg" data-fancybox="feedbackImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-img-7.jpg"/></a>
+							</div>
+							<div class="swiper-slide"><a class="sFeedback__item" href="img/@2x/feedback-img-8.jpg" data-fancybox="feedbackImgs"><img class="swiper-lazy" src="#" data-src="img/@2x/feedback-img-8.jpg"/></a>
+							</div>
+						</div>
+						<div class="feedback-pugin feedback-pugin-js d-lg-none"></div>
+					</div>
+				</div>
+				<div class="sFeedback__txt">Мы меняем представление о мужских подарках. Превращаем хвою и розмарин, шишки и артишок&nbsp;в&nbsp;ингредиенты букетов
+				</div>
+				<div class="sFeedback__lower-txt">Давайте знакомиться!
+				</div>
+			</div>
+		</section>
+		<!-- end sFeedback-->
+		<!-- start sOwner-->
+		<section class="sOwner section" id="sOwner">
+			<!-- picture-->
+			<picture class="sOwner__bg"> 
+				<source srcset="img/@2x/webp/owner-portrait.webp" type="image/webp" media="(min-width:576px)"/>
+				<source srcset="img/@1x/webp/owner-portrait.webp" type="image/webp"/>
+				<source srcset="img/@2x/owner-portrait.jpg" type="image/jpg" media="(min-width:576px)"/>
+				<source srcset="img/@1x/owner-portrait.jpg" type="image/jpg"/>
+				<noscript class="loading-lazy"><img src="img/@2x/owner-portrait.jpg" alt=""/></noscript>
+			</picture>
+			<!-- /picture-->
+			<div class="sOwner__wraper">
+				<div class="container">
+					<div class="section-title">
+						<h2>Привет, меня зовут<br/>Ксения Соколова</h2>
+						<p>Вы сталкивались с проблемой выбора подарка для мужчины?</p>
+						<p>И я тоже! Более того, если близкому человеку подарок подобрать легче, то коллеге или партнеру по бизнесу – караул. Я не раз и не два участвовала в мозговых штурмах накануне 23 февраля. А что уж говорить про выбор подарка к дню рождения шефа!</p>
+						<p>Теперь решение найдено. Яркий и жесткий букет, выделит дарителя, подчеркнет достоинства одаряемого и будет стоять. Стоять долго, стоять как надо.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sOwner-->
+		<!-- start sNews-->
+		<section class="sNews section" id="sNews">
+			<div class="container">
+				<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
+				</div>
+				<div class="section-title text-center">
+					<h2>Новости</h2>
+					<p>Что с нами происходит и кому дарят наши букеты?</p>
+				</div>
+				<div class="sNews__slider">
+					<div class="swiper-container news-slider-js">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a class="sNews__item" href="#">
+								<!-- picture-->
+								<picture class="sNews__item-img"> 
+									<source srcset="img/@2x/webp/news-img-1.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/news-img-1.webp" type="image/webp"/>
+									<source srcset="img/@2x/news-img-1.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/news-img-1.jpg" type="image/jpg"/>
+									<noscript class="loading-lazy"><img src="img/@2x/news-img-1.jpg" alt=""/></noscript>
+								</picture>
+								<!-- /picture--><span class="sNews__txt">
+								<h4>MEN'STORY</h4>
+								<p>Мужской! Концептуальный! День MEN'STORY</p></span></a>
+							</div>
+							<div class="swiper-slide"><a class="sNews__item" href="#">
+								<!-- picture-->
+								<picture class="sNews__item-img"> 
+									<source srcset="img/@2x/webp/news-img-2.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/news-img-2.webp" type="image/webp"/>
+									<source srcset="img/@2x/news-img-2.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/news-img-2.jpg" type="image/jpg"/>
+									<noscript class="loading-lazy"><img src="img/@2x/news-img-2.jpg" alt=""/></noscript>
+								</picture>
+								<!-- /picture--><span class="sNews__txt">
+								<h4>Outdoor Christmas Market 2017</h4>
+								<p>в Beer and Brut</p></span></a>
+							</div>
+							<div class="swiper-slide"><a class="sNews__item" href="#">
+								<!-- picture-->
+								<picture class="sNews__item-img"> 
+									<source srcset="img/@2x/webp/news-img-3.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/news-img-3.webp" type="image/webp"/>
+									<source srcset="img/@2x/news-img-3.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/news-img-3.jpg" type="image/jpg"/>
+									<noscript class="loading-lazy"><img src="img/@2x/news-img-3.jpg" alt=""/></noscript>
+								</picture>
+								<!-- /picture--><span class="sNews__txt">
+								<h4>МАСТЕР-КЛАСС</h4>
+								<p>новогодний венок</p></span></a>
+							</div>
+						</div>
+						<div class="news-pugin-js news-pugin d-lg-none"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sNews-->
+		<!-- start sPhilocophy-->
+		<section class="sPhilocophy section" id="sPhilocophy">
+			<div class="container">
+				<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
+				</div>
+				<div class="section-title text-center">
+					<h2>Философия</h2>
+				</div>
+				<div class="sPhilocophy__row row">
+					<div class="sPhilocophy__left-col col-md-6">
+						<p>Страстно изобретаем букеты - брутальные и колючие, жесткие и дерзкие. Наши букеты с мужским характером полны ароматов пряных трав. Они живут в сердце и жилищах мужчин долго. Разные, как характеры наших клиентов.</p>
+						<p>Наши букеты наполнены травами и растениями, ветками и шишками. Букеты бурлят непокорностью хвои и суккулентов и пахнут лесом. Букет наполняет комнату ароматом мха и эвкалиптовой рощи, воскрешает в памяти чудесные воспоминания о лете, прогулках на природе, подберезовиках в увесистых корзинах и сосновой смоле в летнем мареве.</p>
+					</div>
+					<div class="sPhilocophy__right-col col-md-6">
+						<div class="sPhilocophy__rc-inner">
+							<h4>Мужской букет</h4>
+							<h4>Брутальный и колючий, терпкий и дерзкий. Стойкий, насыщенный и жесткий</h4>
+							<h4>Букет, который цепляет</h4>
+							<h4>Букет, который запоминается</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sPhilocophy-->
+		<!-- start sForm-->
+		<section class="sForm section" id="sForm">
+			<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
+			</div>
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="section-title text-center">
+						<h2>Сочиним особенный букет?</h2>
+						<p>Мы перезвоним в течение 1 часа.</p>
+					</div>
+					<label>
+						<!--+input('', 'text', undefined, 'name')--><input class="form-wrap__input form-control has-ph-js" type="text" name="name"/><span class="form-wrap__title">Как к Вам обращаться</span>
+					</label>
+					<label>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+1 123 456 78 90" name="tel"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<!--+e.SPAN.title +1 123 456 78 90-->
+					</label>
+					<div class="form-wrap__btn-cont">
+						<button class="form-wrap__btn" type="submit">Отправить
+						</button>
+					</div>
+					<div class="form-wrap__policy">
+						*Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+						<a href="#">политикой конфиденциальности</a>
+					</div>
+				</form>
+			</div>
+			<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
 			</div>
 		</section>
 		<!-- end sForm-->
+		<!-- start sPartners-->
+		<section class="sPartners section" id="sPartners">
+			<div class="container">
+				<div class="section-title text-center">
+					<h2>Наши партнеры</h2>
+					<p>Будем рады сотрудничеству.<br/>Пишите нам с предложениями о партнерстве на наш почтовый ящик.</p>
+				</div>
+			</div>
+			<div class="sPartners__slider">
+				<div class="swiper-container partners-slider-js">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a class="sPartners__item" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/partners-slide-1.jpg" alt=""/></a>
+						</div>
+						<div class="swiper-slide"><a class="sPartners__item" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/partners-slide-2.jpg" alt=""/></a>
+						</div>
+						<div class="swiper-slide"><a class="sPartners__item" href="#"><img class="swiper-lazy" src="#" data-src="img/@2x/partners-slide-3.jpg" alt=""/></a>
+						</div>
+					</div>
+					<div class="partners-prev partners-prev-js d-none d-xl-flex">
+						<svg class="icon icon-chevron-left2 ">
+							<use xlink:href="img/svg/sprite.svg#chevron-left2"></use>
+						</svg>
+					</div>
+					<div class="partners-next partners-next-js d-none d-xl-flex">
+						<svg class="icon icon-chevron-right2 ">
+							<use xlink:href="img/svg/sprite.svg#chevron-right2"></use>
+						</svg>
+					</div>
+					<div class="partners-pugin partners-pugin-js d-md-none"></div>
+				</div>
+			</div>
+		</section>
+		<!-- end sPartners-->
+		<!-- start sSeo-->
+		<section class="sSeo section" id="sSeo">
+			<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
+			</div>
+			<div class="container">
+				<div class="sSeo__txt">
+					<h1>Необычные и оригинальные букеты цветов</h1>
+					<p>"Зверобой" - магазин оригинальных и стильных букетов цветов на заказ. Они цепляют и запоминаются. У каждого - свой характер и свое настроение. Мы создаем авторские букеты, подчеркивающие индивидуальность.</p>
+					<p>Необычные дизайнерские букеты от "Зверобой" дарят, чтобы поделиться чувствами и рассказать о сокровенном и нежном, о самом важном. Мы благодарны каждому клиенту за то, что именно наши арт букеты становятся языком, которым они выражают свое уважение, признание, благодарность и любовь. Мы счастливы быть частью этой магии.</p>
+					<h1>Оригинальные цветы и растения в букетах "Зверобой"</h1>
+					<p>Изюминка наших дизайнерских букетов - оригинальные цветы и растения. Хвоя, мох и шишечки брунии наполняют воспоминаниями и мечтами о бескрайней свободе лесных просторов, сирень - о майских прогулках по улицам города в детстве, суккуленты с их мясистыми листьями - о знойных странах с их диковинным растительным миром, розмарин вносит аромат специй.</p>
+					<p>С первого взгляда бывает неочевидным, но мы используем только натуральные цветы и растения в наших дизайнерских арт букетах. Так, например, серебряные шарики, те самые, будто вязаные - это брунии. Они добавляют припыленной нежности многим нашим стильным букетам.</p>
+					<h1>Оригинальные и необычные букеты на день рождения</h1>
+					<p>Конечно, самый популярный повод для того, чтобы подарить цветы - день рождения, наш любимый праздник со времен детства.</p>
+					<p>Вот несколько советов, которые помогут вам при выборе авторского букета на день рождения:</p>
+					<ul>
+						<li>Подарок должен нравиться имениннику. Подбирайте букет под его характер и вкус.</li>
+						<li>Выделяйтесь. Необычные цветы и растения придадут смелости и оригинальности букету на день рождения. Ваш букет точно не затеряется на фоне других.</li>
+						<li>Сделайте сюрприз. Если вас нет рядом в день рождения вашего близкого человека, закажите арт букет с доставкой и приложите к нему нежную записку. Еще несколько дней после дня рождения ваш необычный букет будет напоминать о вас.</li>
+					</ul>
+					<p>В "Зверобой" вы точно найдете стильный и необычный букет цветов для любимого человека. Поделитесь зарядом счастья и яркой гаммой чувств, собранными в наших авторских букетах.</p>
+				</div>
+				<div class="sSeo__btn-cont">
+					<div class="sSeo__btn go-top-js">Наверх
+					</div>
+				</div>
+				<div class="sSeo__green-strip">
+					<p>Наши авторские букеты могут отличаться от картинки, так как все цветы уникальны. В зависимости от сезона мы можем на свое усмотрение заменять цветы. Букет будет таким же красивым и стильным, также останется в рамках указанной на сайте цены.</p>
+				</div>
+			</div>
+		</section>
+		<!-- end sSeo-->
 		<!-- start sContact-->
 		<section class="sContact section" id="sContact">
 			<div class="container">
 				<div class="section-title text-center">
-					<h2>sContact</h2>
+					<div class="blured-line">
+					</div>
+					<h2>Всегда на связи</h2>
 				</div>
-				<div class="row"></div>
+				<div class="text-center">
+					<div class="sContact__links"><a class="sContact__link" href="tel:+74993993071">+7 (499) 399-30-71</a><a class="sContact__link" href="tel:+79191048449">+7 (919) 104-84-49</a>
+						<div class="sContact__link">(Telegram, WhatsApp:<br class="d-sm-none"/>+7 (925) 043-79-03)
+						</div><a class="sContact__link" href="mailto:hi@zveroboy-flowers.ru">hi@zveroboy-flowers.ru</a>
+					</div>
+					<div class="sContact__address">Г. Москва, ул. Писцовая 16 к.2
+					</div>
+					<div class="soc-cont"><a class="soc-cont__item" href="#">
+						<svg class="icon icon-fb ">
+							<use xlink:href="img/svg/sprite.svg#fb"></use>
+						</svg></a><a class="soc-cont__item" href="#">
+						<svg class="icon icon-instagram ">
+							<use xlink:href="img/svg/sprite.svg#instagram"></use>
+						</svg></a>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- end sContact-->
 		<footer class="footer block-with-lazy">
 			<div class="container">
-				<h2>footer</h2>
+				<div class="footer__menu">
+					<ul>
+						<li><a href="#">МУЖЧИНАМ</a></li>
+						<li><a href="#">ЖЕНЩИНАМ</a></li>
+						<li><a href="#">НЕВЕСТАМ</a></li>
+						<li><a href="#">ГЛАВНАЯ</a></li>
+					</ul>
+				</div><a class="footer__logo" href="/"><img loading="lazy" src="img/@2x/footer-logo.png" alt=""/></a>
+				<div class="footer__txt-box">
+					<div class="footer__txt-item">пн-пт09:00 - 20:00
+					</div><a class="footer__txt-item" href="tel:+74993993071">+7 (499) 399-30-71</a><a class="footer__txt-item" href="mailto:hi@zveroboy-flowers.ru">hi@zveroboy-flowers.ru</a>
+				</div>
+				<div class="footer__txt-box">
+					<div class="footer__txt-item">г.Москва
+					</div>
+					<div class="footer__txt-item">ИП Соколова Ксения Федоровна
+					</div>
+					<div class="footer__txt-item">
+						ОГРНИП:
+						<a href="#">317774600405971</a>
+					</div>
+					<div class="footer__txt-item">© All Rights Reserved
+					</div>
+				</div>
 			</div>
 		</footer>
 		<!--  start modals-->

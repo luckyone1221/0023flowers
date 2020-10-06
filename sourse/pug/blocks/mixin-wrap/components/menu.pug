@@ -25,19 +25,44 @@ mixin mnu()
 
 //- menu
 mixin mnu()
-	-
-		var nav= {
-			"Главная":"/",
-			"Услуги  ":"#",
-			"Подбор септика   ":"#",
-			"Акции ":"#",
-			" О компании  ":"#",
-			" Доставка и оплата ":"#",
-			" Клиентам  ":"#",
-			" Наши работы   ":"#",
-			"Контакты ":"#sContact"
-			}
-	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		li.menu-item
+			a(href="#" itemprop="url") ДЕНЬ УЧИТЕЛЯ
+		li.menu-item
+			a(href="#" itemprop="url") МУЖЧИНАМ
+		li.menu-item
+			a(href="#" itemprop="url") ЖЕНЩИНАМ
+		li.menu-item.menu-item-has-children
+			a(href="#" itemprop="url") НЕВЕСТАМ
+			ul.sub-menu
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") БУКЕТЫ НЕВЕСТЫ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ВЕНКИ НА СВАДЬБУ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") БУКЕТЫ НА СВАДЬБУ
+		li.menu-item.menu-item-has-children
+			a(href="#" itemprop="url") НА ПРАЗДНИК
+			ul.sub-menu
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ДЕНЬ МАТЕРИ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") 1 СЕНТЯБРЯ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ДЕНЬ УЧИТЕЛЯ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") НОВЫЙ ГОД
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ДЕНЬ РОЖДЕНИЯ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") 8 МАРТА
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") 23 ФЕВРАЛЯ
+		li.menu-item.menu-item-has-children
+			a(href="#" itemprop="url") ДЛЯ ИНТЕРЬЕРА
+			ul.sub-menu
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ФИТОДИЗАЙН
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ОЗЕЛЕНЕНИЕ МХОМ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") СУККУЛЕНТЫ И КАКТУСЫ
+		li.menu-item
+			a(href="#" itemprop="url") ОФОРМЛЕНИЕ ЦВЕТАМИ
+		li.menu-item.menu-item-has-children
+			a(href="#" itemprop="url") ЕЩЕ
+			ul.sub-menu
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ДОСТАВКА И ОПЛАТА
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") БЛОГ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") КОНТАКТЫ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ОБ АВТОРЕ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") ФИЛОСОФИЯ
+				li.menu-item(itemprop="item"): a(href="#" itemprop="url") НОВОСТИ
 //- /menu

@@ -1,32 +1,168 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
 	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
 
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
+	//mob mnu
+	&__mob-strip{
+		height: rem(64px);
+		background-color: $dark-black;
+
+	}
+	&__burger{
+		cursor: pointer;
+		height: 64px;
+		width: 64px;
+		margin-left: auto;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		span,
+		span:before,
+		span:after {
+			@include mt();
+			width: 32px;
+			height: 3.4px;
+			background-color: $white;
+		}
+
+		span{
+			position: relative;
+		}
+
+		span:before,
+		span:after {
+			content: '';
+			position: absolute;
+			left: 0;
+		}
+
+		span:before{
+			top: -9px;
+		}
+		span:after{
+			top: 9px;
+		}
+
+
+		&.active{
+			span{
+				background-color: transparent;
+			}
+
+			span:before{
+				transform: rotate(45deg);
+				top: 0;
+			}
+			span:after{
+				transform: rotate(-45deg);
+				top: 0;
+			}
+		}
 	}
 
-	&__nav {
+	&__container{
+		display: none;
+		&.active{
+			display: block;
+		}
+		@include media-breakpoint-up(xl){
+			display: block !important;
+		}
+	}
+	&__top-row{
+		padding: rem(25) 0 0 0;
+		@include media-breakpoint-up(xl){
+			padding: rem(18) 0 0 0;
+		}
+		justify-content: space-between;
+		@include roww(30px);
+	}
+	&__address-col{
 		text-align: center;
-		list-style-type: none;
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			text-align: left;
+			margin-bottom: 0;
+		}
 	}
+	&__address{
+		margin-bottom: rem(20px);
+		line-height: 1.4;
+	}
+	&__add-name{
 
-	&__item {
-		display: inline-block;
-		list-style-type: none;
 	}
+	&__add-txt{
+
+	}
+	&__logo-col{
+		order: -2;
+		@include media-breakpoint-up(xl){
+			order: 0;
+		}
+
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(xl){
+			margin-bottom: 0;
+		}
+	}
+	&__logo{
+		padding-top: 8px;
+		margin: 0 auto;
+		width: rem(180);
+		display: block;
+		img{
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+			@include media-breakpoint-up(xxl){
+				position: relative;
+				left: -8px;
+			}
+		}
+
+	}
+	&__contacts-col{
+		text-align: center;
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			text-align: right;
+			margin-bottom: 0;
+		}
+	}
+	&__contacts{
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		@include media-breakpoint-up(xl){
+			align-items: flex-start;
+		}
+
+		@include media-breakpoint-up(xxl){
+			padding: rem(12px) rem(16px) 0 0;
+		}
+
+		a{
+			@include mt();
+			color: $body-color;
+			&:hover{
+				color: $success;
+			}
+		}
+	}
+	&__tell{
+		font-size: rem(32px);
+		white-space: nowrap;
+	}
+	&__mail{
+		font-size: rem(18px);
+	}
+	&__{}
+	&__{}
+	&__{}
+
 
 	// 
 	@include media-breakpoint-up(xl) {}
@@ -63,4 +199,204 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+}
+
+.menu-cont{
+	order: -1;
+	margin-bottom: rem(40);
+	@include media-breakpoint-up(xl){
+		order: 0;
+		margin-bottom: 0;
+	}
+
+	position: relative;
+	@include media-breakpoint-up(xl){
+		margin-top: rem(16);
+	}
+	&:after{
+		@include media-breakpoint-up(xl){
+			content: '';
+		}
+		position: absolute;
+		top: 0;
+		left: 15px;
+		height: 3px;
+
+		width: calc(100% - 30px);
+		@include media-breakpoint-up(xxl){
+			width: calc(100% - 45px);
+		}
+		background-color: $success;
+	}
+
+	//ul
+	.menu{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		@include media-breakpoint-up(xl){
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+
+		//1 lvl li
+		& > .menu-item{
+			margin: 0 rem(7.5px);
+			& > a{
+				padding: rem(10) 0;
+				@include media-breakpoint-up(xl){
+					padding: rem(16) 0;
+				}
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				font-size: rem(15px);
+				font-weight: 600;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+				@include mt();
+
+				color: $body-color;
+				&:hover{
+					color: $success;
+				}
+			}
+
+		}
+		&-item-has-children{
+			position: relative;
+
+			& > a{
+				&:after{
+					margin-left: rem(5);
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 4px 3px 0 3px;
+					border-color: transparent transparent transparent transparent;
+					border-top-color: inherit;
+				}
+			}
+
+			&:hover{
+				@include media-breakpoint-up(xl){
+					.sub-menu{
+						transform: translateX(-50%) scale(1);
+					}
+				}
+			}
+
+			&.active{
+				@include media-breakpoint-down(xl){
+					.sub-menu{
+						transform: translateX(-50%) scale(1);
+					}
+				}
+			}
+
+			.sub-menu{
+				text-align: left;
+				position: absolute;
+				z-index: 2;
+				top: 100%;
+				left: 50%;
+
+				@include mt();
+				transform-origin: top;
+				transform: translateX(-50%) scale(0);
+
+
+				list-style: none;
+				padding: rem(30) rem(20) rem(20) rem(20);
+				width: auto;
+
+				&:before{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					background-color: $white;
+					box-shadow: 0 3px 10px -5px rgba($black, .5);
+
+					width: 100%;
+					height: calc(100% - 9px);
+					top: 9px;
+					left: 0;
+					border-radius: $border-radius;
+				}
+				&:after{
+					content: '';
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					left: 50%;
+					transform: translateX(-50%);
+
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 10px 10px 10px;
+					border-color: transparent transparent $white transparent;
+				}
+
+				//2 lvl li
+				.menu-item{
+					margin-bottom: rem(12);
+
+					a{
+						display: block;
+						white-space: nowrap;
+						font-weight: 600;
+						line-height: 1.35;
+
+						color: $body-color;
+						&:hover{
+							color: $success;
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+}
+
+
+.soc-cont{
+	display: flex;
+	align-items: center;
+
+	justify-content: center;
+	@include media-breakpoint-up(xl){
+		justify-content: flex-start;
+	}
+
+	&__item{
+		@extend .btn;
+		@extend .btn-success;
+
+		width: rem(30px);
+		height: rem(30px);
+		border: none!important;
+		border-radius: 50%;
+
+		margin-right: rem(10px);
+		&:last-child{
+			margin-right: 0;
+		}
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+
+		.icon{
+			color: $white;
+			font-size: rem(32px);
+		}
+	}
 }

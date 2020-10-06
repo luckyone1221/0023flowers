@@ -1,0 +1,138 @@
+// start .sVideo
+.sVideo {
+	--sTPB: #{0};
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30px)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(60)};
+		--sPB: #{rem(83px)};
+	}
+
+	&__video-cont{
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	&__video{
+		color: $white;
+		&:hover{
+			color: $white;
+		}
+
+		span{
+			display: block;
+		}
+
+		width: 100%;
+		display: block;
+		position: relative;
+		z-index: 1;
+
+		height: 420px;
+		@include media-breakpoint-up(md){
+			height: 0;
+			padding-top: 56.25%;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.40), rgba(0,0,0,0.0));
+			//background-color: red;
+		}
+	}
+	&__bg{
+		position: absolute;
+		z-index: -2;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__content{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		padding: rem(30) rem(20);
+		@include media-breakpoint-up(lg){
+			padding: rem(38px) rem(43px);
+		}
+
+		h2{
+			font-size: rem(24px);
+			line-height: 1.35;
+			font-weight: 700;
+			margin-bottom: rem(10);
+		}
+		p{
+			font-size: 14px;
+			line-height: 1.55;
+			font-weight: 300;
+			margin-bottom: rem(43);
+		}
+	}
+	&__txt{
+		display: block;
+		max-width: 500px;
+	}
+
+	&__pretitle{
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: rem(2.5px);
+		margin-bottom: rem(10);
+	}
+
+	&__play-btn{
+		@include mt();
+		&:hover{
+			transform: scale(1.1);
+		}
+
+		margin: 0 auto;
+		width: rem(90px);
+		height: rem(90px);
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sVideo
+
+.title-img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 90%;
+	margin: 0 auto rem(43) auto;
+
+	img{
+		width: auto;
+		height: auto;
+		max-width: 100%;
+	}
+}

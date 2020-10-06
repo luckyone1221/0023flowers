@@ -1,18 +1,227 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
+	padding: 0;
+	&__slider{
+		//default
+		.swiper-container{
+			position: relative;
+		}
+		.swiper-wrapper{}
 
-	h1 {
-		margin-bottom: 1px;
+		.swiper-slide{
+			height: auto;
+			min-height: 400px;
+			position: relative;
+			z-index: 1;
+		}
+		//pugin
+		.header-pugin{
+			//background-color: red;
+			width: 100%;
+			height: 60px;
+			bottom: 0;
+			left: 0;
+
+			position: absolute;
+			z-index: 10;
+			@extend .pugin-frame;
+
+		}
+		//prev,next
+		.header-prev,
+		.header-next {
+			@extend .swiper-controll-frame;
+		}
+
+		.header-prev{
+			left: 6px;
+			@include media-breakpoint-up(lg){
+				left: 30px;
+			}
+		}
+		.header-next{
+			right: 6px;
+			@include media-breakpoint-up(lg){
+				right: 30px;
+			}
+		}
 	}
 
-	h2 {
-		margin-bottom: 1px;
+	&__img-cont{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
+	&__container{
+		height: 100%;
+
+		padding: 0 15px;
+		@include media-breakpoint-up(sm){
+			padding: 0 40px;
+		}
+		@include media-breakpoint-up(md){
+			padding: 0 rem(50);
+		}
+		@include media-breakpoint-up(lg){
+			padding: 0 rem(70);
+		}
+		@include media-breakpoint-up(xl){
+			padding: 0 rem(100);
+		}
+	}
+	&__content{
+		padding: rem(68) 0 rem(60) 0;
+
+		display: flex;
+		min-height: 100%;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+
+	&__content.blue-txt{
+		p{
+			font-size: rem(14px);
+			color: $dark-purple;
+			text-transform: uppercase;
+			font-weight: 700;
+			//text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.0);
+			margin-bottom: rem(20);
+		}
+		h4{
+			font-size: rem(26px);
+			text-align: left;
+			color: $dark-blue;
+			line-height: 1.55;
+			font-weight: 700;
+		}
+	}
+	&__content.white-txt{
+		text-align: center;
+		h4{
+			font-weight: 700;
+			font-size: rem(30px);
+			color: $white;
+			text-transform: uppercase;
+		}
+		p{
+			font-size: rem(22px);
+			color: $white;
+			font-weight: 300;
+		}
+	}
+	&__content.date-txt{
+		text-align: center;
+		h4{
+			color: $white;
+
+			font-size: rem(40px);
+			@include media-breakpoint-up(md){
+				font-size: rem(52px);
+			}
+
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+	&__content.mans-flowers{
+		text-align: center;
+		h4{
+			color: $white;
+
+			font-size: rem(40px);
+			@include media-breakpoint-up(md){
+				font-size: rem(52px);
+			}
+			font-weight: 700;
+			padding-bottom: 1px;
+			text-transform: uppercase;
+		}
+		p{
+			color: $yellow;
+			font-size: rem(32px);
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+	//btn-box
+	&__btn-box{
+		text-align: center;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		border: 1px solid $white !important;
+		box-shadow: none !important;
+		outline: none !important;
+		color: $white;
+
+		@include mt();
+		&:hover{
+			background-color: $danger;
+			color: $white;
+		}
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: rem(17px) rem(60px);
+
+	}
+	//
+	&__vantage{
+		background-color: $light-green;
+		padding: rem(44px) 0 rem(30px) 0;
+	}
+	&__item{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+		}
+	}
+	&__item-head{
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(12);
+	}
+	&__item-icon{
+		width: rem(35px);
+		height: rem(35px);
+		margin-right: rem(16);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img{
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	&__item-title{
+		font-family: $mono;
+		font-weight: 600;
+
+		font-size: rem(21.5px);
+		line-height: 1.35;
+	}
+	&__item-content{
+		font-weight: 300;
+		line-height: 1.55;
+		font-size: rem(14);
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
 
 	@include media-breakpoint-up(xl) {}
 

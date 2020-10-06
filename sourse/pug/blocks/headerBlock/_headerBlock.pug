@@ -1,10 +1,52 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+		+e.slider
+			.swiper-container.header-slider-js
+				.swiper-wrapper
+					+headerSlide(1, 'ВЫБРАТЬ', 'blue-txt')
+						p закажи лето в подарок
+						h4 ЦВЕТЫ ОТ СЕРДЦА К СЕРДЦУ
+					+headerSlide(2, 'ВЫБРАТЬ', 'white-txt')
+						h4 СИНЕВА ОКЕАНА
+						p в букете
+					+headerSlide(3, 'ЗАКАЗАТЬ БУКЕТ', 'date-txt')
+						h4 УДИВИ ИМЕНИННИКА
+					+headerSlide(4, 'Выбрать букет', 'mans-flowers')
+						h4 букеты для мужчин
+						p ОН БУДЕТ СРАЖЕН
+				.header-pugin.header-pugin-js
+				.header-prev.header-prev-js.d-none.d-sm-flex
+					+icon('chevron-left2')
+				.header-next.header-next-js.d-none.d-sm-flex
+					+icon('chevron-right2')
+		+e.vantage
+			.container
+				.row
+					+vantageItem(1, 'Необычные цветы')
+						| Оригинальные букеты с шишками, суккулентами, перьями, артишоками, розмарином и другими травами. Лесные, ароматные, просто незабываемые! Для мужчин и прекрасных девушек.
+					+vantageItem(2, 'Персональный подход')
+						| Соберем букет вашей мечты по вашим пожеланиям.
+					+vantageItem(3, 'Доставка в день заказа')
+						| Оперативная доставка к точному времени в день заказа по Москве и в пределах 10 км от МКАД.
 	// end headerBlock
+
+mixin headerSlide(imgNum, btnTxt, contentClasses)
+	.swiper-slide
+		+e.img-cont
+			img.swiper-lazy(src="" data-src=`img/@2x/header-slide-${imgNum}.jpg` alt="")
+		+e.container.container
+			+e.content(class=contentClasses)
+				block
+				+e.btn-box
+					+e.A.btn(href="#")=btnTxt
+
+mixin vantageItem(imgNum, titleTxt)
+	.col-lg-4
+		+e.item
+			+e.item-head
+				+e.item-icon
+					img(loading="lazy" src=`img/svg/vantage-${imgNum}.svg` alt="")
+				+e.item-title=titleTxt
+			+e.item-content
+				block

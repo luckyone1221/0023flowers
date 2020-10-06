@@ -3,7 +3,21 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+				+b.blured-line
+				h2 Всегда на связи
+			.text-center
+				+e.links
+					+e.A.link(href='tel:+74993993071') +7 (499) 399-30-71
+					+e.A.link(href='tel:+79191048449') +7 (919) 104-84-49
+					+e.link
+						| (Telegram, WhatsApp:
+						br.d-sm-none
+						|+7 (925) 043-79-03)
+					+e.A.link(href="mailto:hi@zveroboy-flowers.ru") hi@zveroboy-flowers.ru
+				+e.address Г. Москва, ул. Писцовая 16 к.2
+				+b.soc-cont
+					+e.A.item(href="#")
+						+icon('fb')
+					+e.A.item(href="#")
+						+icon('instagram')
 	// end sContact

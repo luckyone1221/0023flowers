@@ -1,12 +1,23 @@
-$default-font: "roboto";
-// $file-form: ($file-formats: woff2 woff ttf);
+$default-font: 'Open Sans';
 $addr: '../fonts/';
 $file-format: woff2 woff;
 
-@include font-face ($default-font, $addr + "Roboto-Regular/Roboto-Regular", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Bold/Roboto-Bold", bold, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
+$mono: 'Georgia';
+
+@include font-face ($default-font, $addr + "OpenSans-Light/OpenSans-Light", 300, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "OpenSans-Regular/OpenSans", 400,$file-formats: $file-format);
+@include font-face ($default-font, $addr + "OpenSans-Semibold/OpenSans-Semibold", 600, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "OpenSans-Bold/OpenSans-Bold", 700, $file-formats: $file-format);
+
+//
+
+//@include font-face ($mono, $addr + "Georgia-SemiBold/Georgia-SemiBold", 600, $file-formats: $file-format);
+
+@include font-face ($mono, $addr + "Georgia-Regular/Georgia-Regular", 300, $file-formats: $file-format);
+@include font-face ($mono, $addr + "Georgia-Regular/Georgia-Regular", 400, $file-formats: $file-format);
+@include font-face ($mono, $addr + "Georgia-Bold/Georgia-Bold", 600, $file-formats: $file-format);
+@include font-face ($mono, $addr + "Georgia-Bold/Georgia-Bold", 700, $file-formats: $file-format);
+
 
 // font-weight helper:
 

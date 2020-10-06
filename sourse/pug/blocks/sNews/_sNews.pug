@@ -1,0 +1,30 @@
+mixin sNews()
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.arrow
+				img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+			+b.section-title.text-center
+				h2 Новости
+				p Что с нами происходит и кому дарят наши букеты?
+			+e.slider
+				.swiper-container.news-slider-js
+					.swiper-wrapper
+						+newsItem(1)
+							h4 MEN'STORY
+							p Мужской! Концептуальный! День MEN'STORY
+						+newsItem(2)
+							h4 Outdoor Christmas Market 2017
+							p в Beer and Brut
+						+newsItem(3)
+							h4 МАСТЕР-КЛАСС
+							p новогодний венок
+					.news-pugin-js.news-pugin.d-lg-none
+	// end sNews
+
+mixin newsItem(imgNum)
+	.swiper-slide
+		+e.A.item(href='#')
+			+pic(`news-img-${imgNum}.jpg`)(class="sNews__item-img")
+			+e.txt
+				block

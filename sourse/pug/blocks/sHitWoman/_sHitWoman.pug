@@ -1,0 +1,50 @@
+mixin sHitWoman()
+	// start sHitWoman
+	+b.SECTION.sHitWoman.section#sHitWoman&attributes(attributes)
+		+b.section-title.text-center
+			h2 Хиты продаж для неё
+		.container
+			+e.row.row
+				+hitWomanItem(1, 'свежесть', '5 990', 'ХИТ')
+					| Нежные пионы с яркой зеленью. Прекрасное сочетание и изысканная красота.
+				+hitWomanItem(2, 'коралловый рай', '9 500')
+					| Невероятно шикарный букет с пионами, нежными розами и дельфиниумом.
+				+hitWomanItemGalery(3, 'лес в ящике', '7 990')
+					| Лесная композиция подарит радость и будет очень долго радовать.
+				+hitWomanItemGalery(4, 'охотница', '5 700')
+					| Букет с ягодами, магнолией и перьями фазана. Может быть выполнен в кашпо из коры дерева.
+			+e.all-btn-cont
+				+e.A.all-btn(href="#") ВСЕ БУКЕТЫ ДЛЯ неё
+	// end sHitWoman
+
+mixin hitWomanItemGalery(imgGroup, title, price, mark=false, markColor='#ff4a4a')
+	+e.col.col-sm-6.col-lg-3
+		+e.item-cont
+			+e.A.item--galery(href='#')
+				.img-cont
+					.imgs
+						img(loading='lazy' src=`img/@2x/hitwoman-${imgGroup}-1.jpg` alt="")
+						img(loading='lazy' src=`img/@2x/hitwoman-${imgGroup}-2.jpg` alt="")
+					if mark
+						+b.cart-mark(style=`background-color: ${markColor}`)=mark
+				+e.descr
+					h4=title
+					p
+						block
+				+e.price= `${price} р.`
+			+e.A.buy-btn(href="#") В КОРЗИНУ
+
+mixin hitWomanItem(imgNum, title, price, mark=false, markColor='#ffe629')
+	+e.col.col-sm-6.col-lg-3
+		+e.item-cont
+			+e.A.item(href="#")
+				.img-cont
+					img(loading='lazy' src=`img/@2x/hitwoman-${imgNum}.jpg` alt="")
+					if mark
+						+b.cart-mark(style=`background-color: ${markColor}`)=mark
+				+e.descr
+					h4=title
+					p
+						block
+				+e.price= `${price} р.`
+			+e.A.buy-btn(href="#") В КОРЗИНУ

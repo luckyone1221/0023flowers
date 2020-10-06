@@ -213,7 +213,7 @@ const JSCCommon = {
 	},
 	animateScroll() {
 		// листалка по стр
-		$(" .top-nav li a, .scroll-link").click(function () {
+		$(".scroll-link").click(function () {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
@@ -234,7 +234,7 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
+	//JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -244,7 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = 'main-7.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -304,6 +304,138 @@ function eventHandler() {
 	});
 	// modal window
 
+	//luckyone js
+
+	//mnu js
+	$('.burger-js').click(function (){
+		$(this).toggleClass('active');
+		$('.mob-mnu-cont-js').slideToggle(function (){
+			$(this).toggleClass('active');
+		});
+	});
+
+
+	function mobMnuBlur(){
+		if (!(event.currentTarget.closest('.sub-menu') === this.parentElement.querySelector('.sub-menu'))) {
+			$(this.parentElement).toggleClass('active');
+		}
+		document.body.removeEventListener('click', mobMnuBlurHandler);
+	}
+
+	let mobMnuBlurHandler;
+	$('.menu-item-has-children > a').click(function (){
+		event.preventDefault();
+		$('.menu-item-has-children').removeClass('active');
+		$(this.parentElement).toggleClass('active');
+
+		event.stopPropagation();
+
+		document.body.removeEventListener('click', mobMnuBlurHandler);
+		mobMnuBlurHandler = mobMnuBlur.bind(this)
+		document.body.addEventListener('click', mobMnuBlurHandler);
+	});
+	//
+
+	let headerSlider = new Swiper('.header-slider-js', {
+		slidesPerView: 1,
+		loop: true,
+		autoplay: 5000,
+
+		//lazy-load
+		lazy: {
+			loadPrevNext: true,
+		},
+		//pagination
+		pagination: {
+			el: $(this).find('.header-pugin-js'),
+			clickable: true,
+		},
+		//nav
+		navigation: {
+			nextEl: '.header-next-js',
+			prevEl: '.header-prev-js',
+		},
+	});
+
+	//feedback slider
+	let feedbackSlider = new Swiper('.feedback-slider-js', {
+		slidesPerView: 'auto',
+		//loop: true,
+		//autoplay: 5000,
+
+		//lazy-load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 120,
+		},
+		spaceBetween: 30,
+		//pagination
+		pagination: {
+			el: $(this).find('.feedback-pugin-js'),
+			clickable: true,
+		},
+
+	});
+
+	//news slider
+	let newsSlider = new Swiper('.news-slider-js', {
+		slidesPerView: 'auto',
+		//loop: true,
+		//autoplay: 5000,
+
+		//lazy-load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 120,
+		},
+		spaceBetween: 30,
+		//pagination
+		pagination: {
+			el: $(this).find('.news-pugin-js'),
+			clickable: true,
+		},
+	});
+	//end luckyone js
+	$('input.has-ph-js').blur(checkEmptyVal);
+
+	function checkEmptyVal() {
+		if (this.value !== ''){
+			$(this).addClass('not-empty');
+		}
+		else {
+			$(this).removeClass('not-empty');
+		}
+	}
+	//
+	let partnersSlider = new Swiper('.partners-slider-js', {
+		slidesPerView: 'auto',
+		//loop: true,
+		//autoplay: 5000,
+
+		//lazy-load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 12,
+		},
+		spaceBetween: 30,
+		//pagination
+		pagination: {
+			el: $(this).find('.partners-pugin-js'),
+			clickable: true,
+		},
+		//nav
+		navigation: {
+			nextEl: '.partners-prev-js',
+			prevEl: '.partners-next-js',
+		},
+	});
+	//.go-top-js
+	$('.go-top-js').click(function (){
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
+	});
 	
 };
 if (document.readyState !== 'loading') {

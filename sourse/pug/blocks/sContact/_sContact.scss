@@ -1,29 +1,118 @@
+// start .sContact
+.sContact {
+	--sPB: #{rem(30)};
+	--sPT: #{rem(35)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(70)};
+		--sPB: #{rem(45)};
+		--sTPB: #{rem(42)};
+	}
+	.section-title{
+		position: relative;
+		padding-top: rem(40);
+		@include media-breakpoint-up(sm){
+			padding-top: rem(60);
+		}
+		@include media-breakpoint-up(lg){
+			padding-top: rem(115);
+		}
 
-	// start .sContact
-	.sContact {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
+		h2{
+			font-size: rem(30px);
+			@include media-breakpoint-up(md){
+				font-size: rem(36px);
+			}
+			font-weight: 700;
+		}
+	}
+
+	&__links{
+
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(35);
+		}
+	}
+	&__link{
+		font-weight: 400;
+		display: block;
+		line-height: 1.5;
+
+		font-size: rem(24px);
+		@include media-breakpoint-up(md){
+			font-size: rem(28px);
+		}
+
+		@include mt();
+		color: $body-color;
+		text-decoration: none;
+		&:hover{
+			color: $green;
+		}
+	}
+	&__address{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(45);
+		}
+
+		font-size: rem(18px);
+		line-height: 1.55;
+		font-weight: 300;
+	}
+
+	.soc-cont{
+		justify-content: center;
+
+		&__item{
+			width: rem(47px);
+			height: rem(47px);
+			background-color: $toxic-green;
+			&:hover{
+				background-color: lighten($toxic-green, 3);
+				box-shadow: 0 0 10px -3px rgba($black, .7);
+			}
+
+			.icon{
+				font-size: rem(47px);
+				margin: 0 5px;
+			}
+		}
+	}
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	&__{}
+	&__{}
 
 } // end.sContact
+
+.blured-line{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	background-color: $black;
+	transform: translateX(-50%);
+	width: 760px;
+	height: 1px;
+	max-width: calc(100vw - 30px);
+	&:before, &:after{
+		content: '';
+		position: absolute;
+		z-index: 2;
+		top: 0;
+
+		width: 50px;
+		height: 100%;
+		@include media-breakpoint-up(md){
+			width: 200px;
+		}
+	}
+	&:before{
+		left: 0;
+		background-image: linear-gradient(to left, #000000, $body-bg);
+	}
+	&:after{
+		right: 0;
+		background-image: linear-gradient(left, #000000, $body-bg);
+	}
+}

@@ -1,0 +1,24 @@
+mixin sFeedback()
+	// start sFeedback
+	+b.SECTION.sFeedback.section#sFeedback&attributes(attributes)
+		.container
+			+b.arrow
+				img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+			+b.section-title.text-center
+				h2 Отзывы наших клиентов
+			+e.slider
+				.swiper-container.feedback-slider-js
+					.swiper-wrapper
+						- for(var i = 1; i <= 8 ; i++)
+							+FeeedBackItem(i)
+					.feedback-pugin.feedback-pugin-js.d-lg-none
+			+e.txt Мы меняем представление о мужских подарках. Превращаем хвою и розмарин, шишки и артишок&nbsp;в&nbsp;ингредиенты букетов
+			+e.lower-txt Давайте знакомиться!
+
+	// end sFeedback
+
+mixin FeeedBackItem(imgNum)
+	.swiper-slide
+		+e.A.item(href=`img/@2x/feedback-img-${imgNum}.jpg` data-fancybox=`feedbackImgs`)
+			img.swiper-lazy(src="#" data-src=`img/@2x/feedback-img-${imgNum}.jpg`)
+
