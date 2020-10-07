@@ -1,7 +1,8 @@
 mixin modal()
 	//  start modals
 
-	+b.modal-win(id="modal-call" class=" " style="display: none" )
+	//not used yet
+	+b.modal-win(id="modal-call" class=" " style="display: none")
 		+form-wrap
 			.text-center
 				+e.title.form-data.h3.ttu Обратный звонок
@@ -9,9 +10,96 @@ mixin modal()
 			+input("Ваше Имя")(required)  
 			+e.BUTTON.btn.btn(type="submit"  ) 
 			+polite()
-	// #modal-call
-	
+	//
+	+b.m-cart#modal-cart(style="display: none")
+		+form-wrap
+			+e.top-txt Ваш заказ
+			+e.order
+				+orderItem(1, 'ТОРЕАДОР', 'Размер: Partner')
+				+orderItem(2, 'ОХОТНИК', 'Размер: Senior')
+			+e.total Сумма: 14 290 р.
+			+e.inputs
+				+input('Иван Иванов', 'text', 'Ваше Имя', 'name')
+				+input('example@gmail.com', 'email', 'Ваш Email')
+				+input('+7 910 123 45 67', 'tel', 'Ваш телефон')
+				+e.radio-group
+					+e.c-title Доставка
+					+customRadio('delivery-type', 'Самовывоз (М. Динамо) - бесплатно')(checked)
+					+customRadio('delivery-type', 'Доставка в пределах МКАД 430р. (заказ более чем за за сутки)')
+					+customRadio('delivery-type', 'Доставка в день заказа в пределах МКАД 550р.')
+					+customRadio('delivery-type', 'Доставка за МКАД в пределах 15 км 700р.')
+				+e.chb-box
+					+chbItem('no-contact','Бесконтактная доставка')
+				+e.address-cont
+					+input('', 'textarea', 'Адрес доставки', 'address')
+				+e.date-box
+					+input('date', 'date', 'Укажите дату доставки')
+					//<input type="date" id="sender_ad_date" name="sender[ad][date]" required="required" class="date" data-role="date" value="31-12-1969">
+				+e.radio-group
+					+e.c-title Время доставки
+					+customRadio('day-time', '9:00-12:00')(checked)
+					+customRadio('day-time', '12:00-15:00')
+					+customRadio('day-time', '15:00-18:00')
+					+customRadio('day-time', '18:00-21:00')
+					+customRadio('day-time', 'Другое время ( дополнительно 500 р.)')
+				+e.radio-group
+					+e.c-title Выберите способ оплаты
+					+customRadio('pay-type', 'Наличными курьеру')(checked)
+					+customRadio('pay-type', 'Безналичная оплата по счету на юр.лицо')
+					+customRadio('pay-type', 'Оплата он-лайн по карте visa, mastercard')
+				+e.results
+					+e.sum Сумма:337 840 р.
+					+e.resutl-sum Итоговая сумма: 337 840 р.
+				+e.BUTTON.order-btn(type="submit") Заказать
+				+e.policy
+					| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
+					|
+					a(href="#") политикой конфиденциальности.
+	//-questions modal
+	+b.questions-modal#questions-modal(style="display: none")
+		+e.cont
+			+e.img
+				img(loading="lazy" src="img/@2x/questions-modal-bg.jpg" alt="")
+			+form-wrap
+				.text-center
+					h2 Есть вопросы?
+					p Заполните ваш номер телефона и мы свяжемся с вами в течение 1 часа, чтобы обсудить все интересующие вопросы.
+				+e.inputs
+					+input('+1 234 567 89 00', 'tel')
+					+e.BUTTON.btn(type="submit") Задать вопрос
+
+
+
 	// end modals
+mixin customRadio(name, txt)
+	+e.LABEL.radio-label
+		input(type="radio" name=name)&attributes(attributes)
+		.radio-circle
+		.radio-txt=txt
+
+mixin chbItem(name, txt)
+	+e.LABEL.radio-label--chb
+		input(type="checkbox" name=name)&attributes(attributes)
+		.radio-circle
+		.radio-txt=txt
+
+mixin orderItem(imgNum, itemName, itemSize)
+	+e.item
+		+e.A.item-img(href='#')
+			img(loading="lazy" src=`img/@2x/hitman-1-${imgNum}.jpg` alt="")
+		+e.item-name-box
+			+e.A.item-name(href='#')=itemName
+			+e.item-size=itemSize
+		+e.item-inp-box
+			+e.A.item-btn.minus-btn(href="#")
+				img(loading="lazy" src="img/svg/minus-btn.svg" alt="")
+			+e.INPUT.amount-input(value='1' type='number')
+			+e.A.item-btn.plus-btn(href="#")
+				img(loading="lazy" src="img/svg/plus-btn.svg" alt="")
+		+e.price 7 190 р.
+		+e.A.item-btn.cross-btn(href='#')
+			img(loading="lazy" src="img/svg/cross-btn.svg" alt="")
+
 mixin callBackWindow()
 	+b.callback-win--js
 		+form-wrap

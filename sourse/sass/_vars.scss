@@ -38,7 +38,7 @@ $grays: ("100": $gray-100,
   "900": $gray-900) !default;
 // fusv-enable
 
-
+$brown: #292929;
 $light-green: #eff5eb;
 $blue: #52a0ff !default;
 $fb-blue: #3b5998;
@@ -48,6 +48,8 @@ $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #eb6f8c !default;
 $red: #f56565 !default;
+$orange: #ff5e00;
+$crimson: #ff0000;
 $deep-red: #bf0254;
 $orange: #fd7e14 !default;
 $yellow: #fcde35 !default;
@@ -80,6 +82,7 @@ $primary: $blue !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
+$warning2: $orange;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;
@@ -89,7 +92,8 @@ $dark: $gray-800 !default;
 $theme-colors: ("primary": $primary,
   "secondary": $secondary,
   "success": $success,
-  "info": $info,
+  //"info": $info,
+  "warning2": $warning2,
   "warning": $warning,
   "danger": $danger,
   "light": $light,

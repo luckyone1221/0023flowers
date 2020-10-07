@@ -19,6 +19,6 @@ mixin sFeedback()
 
 mixin FeeedBackItem(imgNum)
 	.swiper-slide
-		+e.A.item(href=`img/@2x/feedback-img-${imgNum}.jpg` data-fancybox=`feedbackImgs`)
+		+e.A.item.paint-white-js(href=`img/@2x/feedback-img-${imgNum}.jpg` data-fancybox=`feedbackImgs`)
 			img.swiper-lazy(src="#" data-src=`img/@2x/feedback-img-${imgNum}.jpg`)
 

@@ -24,7 +24,12 @@ mixin sNews()
 
 mixin newsItem(imgNum)
 	.swiper-slide
-		+e.A.item(href='#')
-			+pic(`news-img-${imgNum}.jpg`)(class="sNews__item-img")
+		+e.A.item.paint-black-js(href=`img/@2x/news-img-${imgNum}-1.jpg` data-fancybox=`newsImg${imgNum}`)
+			+pic(`news-img-${imgNum}-1.jpg`)(class="sNews__item-img")
+			.d-none
+				div(href=`img/@2x/news-img-${imgNum}-2.jpg` data-fancybox=`newsImg${imgNum}`)
+					img(loading="lazy" src=`img/@2x/news-img-${imgNum}-2.jpg` alt="")
+				div(href=`img/@2x/news-img-${imgNum}-3.jpg` data-fancybox=`newsImg${imgNum}`)
+					img(loading="lazy" src=`img/@2x/news-img-${imgNum}-3.jpg` alt="")
 			+e.txt
 				block

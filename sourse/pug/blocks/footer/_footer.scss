@@ -18,12 +18,18 @@
       padding: 0;
       list-style: none;
 
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      li{
 
+      @include media-breakpoint-up(sm){
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      li{
+        margin-bottom: 10px;
+        @include media-breakpoint-up(sm){
+          margin-bottom: 0;
+        }
       }
       a{
         display: block;
