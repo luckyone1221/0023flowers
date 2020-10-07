@@ -425,6 +425,73 @@ function eventHandler() {
 			top: 0,
 			behavior: "smooth"
 		});
+	}); //wow js
+	//catalog wow
+
+	var dur = .6;
+	var delay = 200;
+	$('.sCatalog__col--js').each(function () {
+		$(this).addClass("wow fadeIn");
+		$(this).attr("data-wow-duration", dur + 's');
+		$(this).attr("data-wow-delay", delay + 'ms');
+		delay += 200;
+	});
+	dur = .5;
+	delay = 100;
+	$('.arrow').each(function () {
+		$(this).addClass("wow slideInLeft");
+		$(this).attr("data-wow-duration", dur + 's');
+		$(this).attr("data-wow-delay", delay + 'ms');
+	}); //
+
+	var wow = new WOW({
+		mobile: false
+	});
+	wow.init(); //end wow
+	//scroll link
+
+	fixedStip();
+
+	function fixedStip() {
+		var fixedStrip = document.querySelector('.scroll-top');
+		if (!fixedStrip) return;
+		window.addEventListener("scroll", toggleFixedStrip.bind(undefined, fixedStrip), {
+			passive: true
+		});
+		toggleFixedStrip(fixedStrip);
+		$(fixedStrip).click(function () {
+			window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		});
+	}
+
+	function toggleFixedStrip(fixedStrip) {
+		if (window.scrollY > calcVh(50)) {
+			$(fixedStrip).addClass('active');
+		} else {
+			$(fixedStrip).removeClass('active');
+		}
+	}
+
+	function calcVh(v) {
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		return v * h / 100;
+	} //callback
+
+
+	function closeCallBackOnMissClick() {
+		if (event.target.closest('.callback-win--js')) return;
+		$('.call-btn--js, .callback-win--js').removeClass('active');
+		document.body.removeEventListener('click', closeCallBackOnMissClick);
+	}
+
+	$('.call-btn--js').click(function () {
+		document.body.removeEventListener('click', closeCallBackOnMissClick);
+		$('.call-btn--js, .callback-win--js').toggleClass('active');
+		event.stopPropagation();
+		document.body.addEventListener('click', closeCallBackOnMissClick);
 	});
 }
 

@@ -1,5 +1,4 @@
-
-mixin modal() 
+mixin modal()
 	//  start modals
 
 	+b.modal-win(id="modal-call" class=" " style="display: none" )
@@ -13,3 +12,12 @@ mixin modal()
 	// #modal-call
 	
 	// end modals
+mixin callBackWindow()
+	+b.callback-win--js
+		+form-wrap
+			+e.title Оставьте свой номер и мы сразу же перезвоним
+			+input('Ваш номер', 'tel')
+			+e.BUTTON.btn(type="submit") Позвонить мне
+			+e.our-tell
+				p Наш номер телефона
+				a(href="tel:+79250437903") +7 925 043 79 03

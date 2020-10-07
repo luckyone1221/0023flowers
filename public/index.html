@@ -19,6 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="js/animate.css/animate.min.css"/>
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
@@ -224,7 +225,7 @@
 					<p>Какие цветы выбираем сегодня?</p>
 				</div>
 				<div class="sCatalog__row row">
-					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#">
+					<div class="sCatalog__col sCatalog__col--js col-lg-4"><a class="sCatalog__item" href="#">
 						<!-- picture-->
 						<picture class="sCatalog__item-img"> 
 							<source srcset="img/@2x/webp/catalog-item-1.webp" type="image/webp" media="(min-width:576px)"/>
@@ -235,7 +236,7 @@
 						</picture>
 						<!-- /picture--><span class="sCatalog__item-descr"><span class="sCatalog__item-title">Мужские букеты</span><span class="sCatalog__item-txt">Он будет сражен наповал</span></span></a>
 					</div>
-					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#">
+					<div class="sCatalog__col sCatalog__col--js col-lg-4"><a class="sCatalog__item" href="#">
 						<!-- picture-->
 						<picture class="sCatalog__item-img"> 
 							<source srcset="img/@2x/webp/catalog-item-2.webp" type="image/webp" media="(min-width:576px)"/>
@@ -246,7 +247,7 @@
 						</picture>
 						<!-- /picture--><span class="sCatalog__item-descr"><span class="sCatalog__item-title">Женские букеты</span><span class="sCatalog__item-txt">Порадуйте любимых</span></span></a>
 					</div>
-					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#">
+					<div class="sCatalog__col sCatalog__col--js col-lg-4"><a class="sCatalog__item" href="#">
 						<!-- picture-->
 						<picture class="sCatalog__item-img"> 
 							<source srcset="img/@2x/webp/catalog-item-3.webp" type="image/webp" media="(min-width:576px)"/>
@@ -259,11 +260,11 @@
 					</div>
 				</div>
 				<div class="sCatalog__row row">
-					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Авторские букеты</span></span></a>
+					<div class="sCatalog__col sCatalog__col--js col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Авторские букеты</span></span></a>
 					</div>
-					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Букеты на день рождения</span></span></a>
+					<div class="sCatalog__col sCatalog__col--js col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Букеты на день рождения</span></span></a>
 					</div>
-					<div class="sCatalog__col col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Букеты в корзинах</span></span></a>
+					<div class="sCatalog__col sCatalog__col--js col-lg-4"><a class="sCatalog__item" href="#"><span class="sCatalog__item-descr sCatalog__item-descr--small"><span class="sCatalog__item-title">Букеты в корзинах</span></span></a>
 					</div>
 				</div>
 			</div>
@@ -304,7 +305,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="sHitMan__all-btn-cont"><a class="sHitMan__all-btn" href="#">ВСЕ БУКЕТЫ ДЛЯ НЕГО</a>
+				<div class="sHitMan__all-btn-cont fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s"><a class="sHitMan__all-btn" href="#">ВСЕ БУКЕТЫ ДЛЯ НЕГО</a>
 				</div>
 			</div>
 		</section>
@@ -355,14 +356,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="sHitWoman__all-btn-cont"><a class="sHitWoman__all-btn" href="#">ВСЕ БУКЕТЫ ДЛЯ неё</a>
+				<div class="sHitWoman__all-btn-cont fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s"><a class="sHitWoman__all-btn" href="#">ВСЕ БУКЕТЫ ДЛЯ неё</a>
 				</div>
 			</div>
 		</section>
 		<!-- end sHitWoman-->
 		<!-- start sVideo-->
 		<section class="sVideo section" id="sVideo">
-			<div class="title-img"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
+			<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
 			</div>
 			<div class="sVideo__video-cont"><a class="sVideo__video" href="#">
 				<!-- picture-->
@@ -381,7 +382,7 @@
 		<!-- end sVideo-->
 		<!-- start sHowWork-->
 		<section class="sHowWork section" id="sHowWork">
-			<div class="container">
+			<div class="container fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 				<div class="section-title text-center">
 					<h2>Как мы работаем?</h2>
 				</div>
@@ -431,14 +432,14 @@
 						</div>
 					</div>
 				</div>
-				<div class="sHowWork__btn-cont"><a class="sHowWork__btn" href="#">ЗАКАЗАТЬ ЦВЕТЫ</a>
+				<div class="sHowWork__btn-cont"><a class="sHowWork__btn fadeInRight wow" href="#" data-wow-duration=".4s" data-wow-delay=".3s">ЗАКАЗАТЬ ЦВЕТЫ</a>
 				</div>
 			</div>
 		</section>
 		<!-- end sHowWork-->
 		<!-- start sConvinuent-->
 		<section class="sConvinuent section" id="sConvinuent">
-			<div class="container">
+			<div class="container fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 				<div class="section-title text-center">
 					<h2>С нами удобно</h2>
 					<p>Оплата всеми способами</p>
@@ -482,7 +483,7 @@
 		<!-- end sConvinuent-->
 		<!-- start sFeedback-->
 		<section class="sFeedback section" id="sFeedback">
-			<div class="container">
+			<div class="container fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 				<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
 				</div>
 				<div class="section-title text-center">
@@ -519,7 +520,7 @@
 		</section>
 		<!-- end sFeedback-->
 		<!-- start sOwner-->
-		<section class="sOwner section" id="sOwner">
+		<section class="sOwner section fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s" id="sOwner">
 			<!-- picture-->
 			<picture class="sOwner__bg"> 
 				<source srcset="img/@2x/webp/owner-portrait.webp" type="image/webp" media="(min-width:576px)"/>
@@ -543,7 +544,7 @@
 		<!-- end sOwner-->
 		<!-- start sNews-->
 		<section class="sNews section" id="sNews">
-			<div class="container">
+			<div class="container fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 				<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
 				</div>
 				<div class="section-title text-center">
@@ -601,7 +602,7 @@
 		<!-- end sNews-->
 		<!-- start sPhilocophy-->
 		<section class="sPhilocophy section" id="sPhilocophy">
-			<div class="container">
+			<div class="container fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 				<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
 				</div>
 				<div class="section-title text-center">
@@ -665,7 +666,7 @@
 		<!-- end sForm-->
 		<!-- start sPartners-->
 		<section class="sPartners section" id="sPartners">
-			<div class="container">
+			<div class="container fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 				<div class="section-title text-center">
 					<h2>Наши партнеры</h2>
 					<p>Будем рады сотрудничеству.<br/>Пишите нам с предложениями о партнерстве на наш почтовый ящик.</p>
@@ -701,7 +702,7 @@
 			<div class="arrow"><img loading="lazy" src="img/@2x/arrow-img.png" alt=""/>
 			</div>
 			<div class="container">
-				<div class="sSeo__txt">
+				<div class="sSeo__txt fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 					<h1>Необычные и оригинальные букеты цветов</h1>
 					<p>"Зверобой" - магазин оригинальных и стильных букетов цветов на заказ. Они цепляют и запоминаются. У каждого - свой характер и свое настроение. Мы создаем авторские букеты, подчеркивающие индивидуальность.</p>
 					<p>Необычные дизайнерские букеты от "Зверобой" дарят, чтобы поделиться чувствами и рассказать о сокровенном и нежном, о самом важном. Мы благодарны каждому клиенту за то, что именно наши арт букеты становятся языком, которым они выражают свое уважение, признание, благодарность и любовь. Мы счастливы быть частью этой магии.</p>
@@ -718,7 +719,7 @@
 					</ul>
 					<p>В "Зверобой" вы точно найдете стильный и необычный букет цветов для любимого человека. Поделитесь зарядом счастья и яркой гаммой чувств, собранными в наших авторских букетах.</p>
 				</div>
-				<div class="sSeo__btn-cont">
+				<div class="sSeo__btn-cont fadeIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 					<div class="sSeo__btn go-top-js">Наверх
 					</div>
 				</div>
@@ -730,7 +731,7 @@
 		<!-- end sSeo-->
 		<!-- start sContact-->
 		<section class="sContact section" id="sContact">
-			<div class="container">
+			<div class="container bounceIn wow" data-wow-duration=".4s" data-wow-delay=".3s">
 				<div class="section-title text-center">
 					<div class="blured-line">
 					</div>
@@ -812,8 +813,34 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
+		<div class="callback-win callback-win--js">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="form-wrap__title">Оставьте свой номер и мы сразу же перезвоним
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер" name="tel"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn" type="submit">Позвонить мне
+					</button>
+					<div class="form-wrap__our-tell">
+						<p>Наш номер телефона</p><a href="tel:+79250437903">+7 925 043 79 03</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="call-btn call-btn--js"><img src="img/svg/call-btn.svg"><img src="img/svg/call-cross.svg">
+		</div><a class="fb-btn d-none d-xl-flex" href="#"><img src="img/svg/fb-btn.svg"></a>
+		<div class="scroll-top d-none d-xl-flex"><img src="img/svg/scroll-top.svg" alt=""></div>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/wowjs/wow.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->

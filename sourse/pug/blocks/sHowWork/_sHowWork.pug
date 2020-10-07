@@ -1,7 +1,7 @@
 mixin sHowWork()
 	// start sHowWork
 	+b.SECTION.sHowWork.section#sHowWork&attributes(attributes)
-		.container
+		.container.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
 			+b.section-title.text-center
 				h2 Как мы работаем?
 			+e.items
@@ -52,7 +52,7 @@ mixin sHowWork()
 						br
 						| Доставка в точному времени или вне интервалов доставки - дополнительно 500 руб.
 			+e.btn-cont
-				+e.A.btn(href='#') ЗАКАЗАТЬ ЦВЕТЫ
+				+e.A.btn.fadeInRight.wow(href='#' data-wow-duration='.4s' data-wow-delay='.3s') ЗАКАЗАТЬ ЦВЕТЫ
 	// end sHowWork
 
 mixin howWorkItem(imgNum)

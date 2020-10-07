@@ -16,7 +16,7 @@ mixin sCatalog()
 	// end sCatalog
 
 mixin catalogItem(imgNum, title, txt)
-	+e.col.col-lg-4
+	+e.col--js.col-lg-4
 		+e.A.item(href="#")
 			+pic(`catalog-item-${imgNum}.jpg`)(class="sCatalog__item-img")
 			+e.item-descr
@@ -24,7 +24,7 @@ mixin catalogItem(imgNum, title, txt)
 				+e.item-txt=txt
 
 mixin smallCatalogItem(title)
-	+e.col.col-lg-4
+	+e.col--js.col-lg-4
 		+e.A.item(href="#")
 			+e.item-descr--small
 				+e.item-title=title
