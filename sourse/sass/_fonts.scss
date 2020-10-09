@@ -3,6 +3,7 @@ $addr: '../fonts/';
 $file-format: woff2 woff;
 
 $mono: 'Georgia';
+$arial: 'Arial', 'Open Sans';
 
 @include font-face ($default-font, $addr + "OpenSans-Light/OpenSans-Light", 300, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "OpenSans-Regular/OpenSans", 400,$file-formats: $file-format);

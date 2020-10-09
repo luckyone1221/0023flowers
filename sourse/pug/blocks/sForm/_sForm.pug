@@ -22,5 +22,29 @@ mixin sForm()
 				a(href="#") политикой конфиденциальности
 		+b.arrow
 			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
-
 	// end sForm
+
+mixin sForm-02()
+	// start sForm
+	+b.SECTION.sForm--teacher.section#sForm&attributes(attributes)
+		//-+b.arrow
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+		+form-wrap
+			+b.section-title.text-center
+				h2 Изобретем букет?
+				p Мы перевоним в течение 1 часа, чтобы создать уникальный букет для вас.
+			label
+				//+input('', 'text', undefined, 'name')
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Как к Вам обращаться
+			label
+				+input('+1 123 456 78 90', 'tel', undefined, 'tel')
+				//+e.SPAN.title +1 123 456 78 90
+			+e.btn-cont
+				+e.BUTTON.btn(type='submit') Отправить
+			+e.policy
+				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+				|
+				a(href="#") политикой конфиденциальности
+		//-+b.arrow
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")

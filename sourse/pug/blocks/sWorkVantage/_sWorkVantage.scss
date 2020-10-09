@@ -1,0 +1,68 @@
+// start .sWorkVantage
+.sWorkVantage {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(50)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(60)};
+		--sPT: #{rem(45)};
+		--sTPB: #{rem(70)};
+	}
+
+
+	.section-title{
+		h2{
+			font-size: rem(30px);
+			@include media-breakpoint-up(md){
+				font-size: rem(34px);
+			}
+		}
+		p{
+
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(xl){
+			@include roww(44px);
+
+			max-width: 900px;
+			margin: 0 auto!important;
+		}
+	}
+	&__col{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(44);
+		}
+
+		display: flex;
+		align-items: flex-start;
+	}
+	&__img{
+		flex-shrink: 0;
+		width: rem(45);
+		height: rem(45);
+		margin-right: rem(20);
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt{
+
+	}
+	&__title{
+		font-size: rem(22px);
+		font-weight: 600;
+		line-height: 1.35;
+		margin-bottom: rem(8);
+	}
+	&__descr{
+		font-size: rem(16px);
+		line-height: 1.55;
+		font-weight: 300;
+	}
+} // end.sWorkVantage

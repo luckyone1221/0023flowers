@@ -5,40 +5,135 @@ mixin sHitMan()
 			h2 Хиты продаж для него
 		.container
 			+e.row.row
-				+hitManItem(1, 'ОХОТНИК', '4 990')
-					|Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
-					|
-					br
-					|С воспоминаниями о лесных путешествиях в компании близких по духу.
-				+hitManItem(2, 'ТОРЕАДОР', '5 600')
-					|Букет для пылких духом с искрой и хитринкой в глазах.
-					|
-					br
-					|С воспоминаниями о ярких победах.
-				+hitManItem(3, 'КОРОЛЬ АРТУР', '5 900', 'new')
-					| Для благородных и мудрых лидеров,
-					|
-					br
-					| уверенных в успехе своей команды.
+				+prodItemGalery('hitman', 1, 'ОХОТНИК', '4 990')(class='col-sm-6 col-lg-4')
+					+hitManDescr('ОХОТНИК', '4 990')
+						| Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
+						|
+						br
+						| С воспоминаниями о лесных путешествиях в компании близких по духу.
+				+prodItemGalery('hitman', 2, 'ТОРЕАДОР', '5 600')(class='col-sm-6 col-lg-4')
+					+hitManDescr('ТОРЕАДОР', '5 600')
+						|Букет для пылких духом с искрой и хитринкой в глазах.
+						|
+						br
+						|С воспоминаниями о ярких победах.
+				+prodItem('hitman', 3, 'КОРОЛЬ АРТУР', '5 900', 'NEW')(class='col-sm-6 col-lg-4')
+					+hitManDescr('КОРОЛЬ АРТУР', '5 900')
+						| Для благородных и мудрых лидеров,
+						|
+						br
+						| уверенных в успехе своей команды.
 			+e.all-btn-cont.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
 				+e.A.all-btn(href="#") ВСЕ БУКЕТЫ ДЛЯ НЕГО
 	// end sHitMan
 
-mixin hitManItem(imgGroup, title, price, mark=false, markColor='#ffe629')
-	+e.col.col-sm-6.col-lg-4
+mixin prodItem(cardName, imgGroup, title, price, mark=false)
+	+b.prod-col.prod-card-parent-js&attributes(attributes)
+		+prodCard(cardName, title, price)
+			+e.A.img.paint-white-js(href=`img/@2x/${cardName}-${imgGroup}-1.jpg` data-fancybox=`${cardName}Galery${imgGroup}`)
+				img(loading="lazy" src=`img/@2x/${cardName}-${imgGroup}-1.jpg` alt="")
 		+e.item-cont
-			//-galery href
-			+e.A.item(href='#')
-				+e.img-cont
-					+e.imgs
-						img(loading='lazy' src=`img/@2x/hitman-${imgGroup}-1.jpg` alt="")
-						img(loading='lazy' src=`img/@2x/hitman-${imgGroup}-2.jpg` alt="")
-					if mark
-						+b.cart-mark(style=`background-color: ${markColor}`)=mark
-				+e.descr
-					h4=title
-					p
-						block
-				+e.size-txt Выберите размер при заказе
-				+e.price= `${price} р.`
-			+e.A.buy-btn(href="#") В КОРЗИНУ
+			+e.A.item.prod-card-link-js(href='#')
+				.img-cont
+					.imgs
+						img(loading='lazy' src=`img/@2x/${cardName}-${imgGroup}-1.jpg` alt="")
+					+mark(mark)
+				block
+			if cardName ==  'hitman'
+				+e.A.buy-btn(href="#") В КОРЗИНУ
+			if cardName == 'hitwoman'
+				.sHitWoman__bb-cont
+					a.sHitWoman__buy-btn(href="#") В КОРЗИНУ
+			if cardName == 'teacher'
+				.sTeachersPresent__bb-cont
+					+e.A.buy-btn(href="#") В КОРЗИНУ
+
+mixin prodItemGalery(cardName, imgGroup, title, price, mark=false)
+	+b.prod-col.prod-card-parent-js&attributes(attributes)
+		+prodCard(cardName, title, price)
+			//-slider case
+			+e.slider--js
+				.swiper-container.prod-card-slider-js
+					.swiper-wrapper
+						+prodCardSlide(`${cardName}-${imgGroup}-1`, `${cardName}Galery${imgGroup}`)
+						+prodCardSlide(`${cardName}-${imgGroup}-2`, `${cardName}Galery${imgGroup}`)
+					+b.prod-card-prev--js.d-none.d-xl-flex
+						+icon('chevron-left2')
+					+b.prod-card-next--js.d-none.d-xl-flex
+						+icon('chevron-right2')
+				+e.thumb--js
+					.swiper-container.prod-thumb-js
+						.swiper-wrapper
+							+prodCardThumb(`${cardName}-${imgGroup}-1`, `${cardName}Galery${imgGroup}`)
+							+prodCardThumb(`${cardName}-${imgGroup}-2`, `${cardName}Galery${imgGroup}`)
+		+e.item-cont
+			+e.A.item--galery.prod-card-link-js(href='#')
+				.img-cont
+					.imgs
+						img(loading='lazy' src=`img/@2x/${cardName}-${imgGroup}-1.jpg` alt="")
+						img(loading='lazy' src=`img/@2x/${cardName}-${imgGroup}-2.jpg` alt="")
+					+mark(mark)
+				block
+			if cardName == 'hitman'
+				+e.A.buy-btn(href="#") В КОРЗИНУ
+			if cardName == 'hitwoman'
+				.sHitWoman__bb-cont
+					a.sHitWoman__buy-btn(href="#") В КОРЗИНУ
+			if cardName == 'teacher'
+				.sTeachersPresent__bb-cont
+					+e.A.buy-btn(href="#") В КОРЗИНУ
+
+mixin prodCard(cardName, nameTxt, priceTxt)
+	+b.prod-card--js
+		+e.header
+			+e.back-txt.d-none.d-md-block
+				span Назад в магазин
+			+e.cross-btn
+				+icon('cross-btn')
+		.container
+			+e.row--js.row
+				+e.img-col.col-md-6
+					block
+				+e.descr-col.col-md-6
+					+e.name=nameTxt
+					+e.price= `${priceTxt} р.`
+					+e.select-cont
+						+e.select-txt Размер
+						select
+							option(value="Senior") Senior
+							option(value="Partner") Partner
+					if cardName == 'hitman'
+						+e.A.btn(href='#') В КОРЗИНУ
+					if cardName == 'hitwoman'
+						+e.A.btn--pink(href='#') В КОРЗИНУ
+					if cardName == 'teacher'
+						+e.A.btn(href='#') В КОРЗИНУ
+					+e.descr
+						p Бродя по лесу в высоких сапогах и с верным другом, охотник подмечает все, что встречается на пути. В осеннем лесу ему обязательно встретится морозник или гелеборус, стойкий осенне-зимний цветок, ветки деревьев и кустов. В мужском букете Охотник вы найдете эти цветы в компании с эрингиумом. Ароматным, синим цветком, символизирующим дружбу и защиту, который еще в древности вешали у входа в дом для защиты от недругов.
+						p Внимательные заметят в букете перья.
+						p Удачной охоты!
+
+mixin prodCardSlide(imgName, dataFancyBox)
+	.swiper-slide
+		+e.A.slide-img.paint-white-js(href=`img/@2x/${imgName}.jpg` data-fancybox=dataFancyBox)
+			img.swiper-lazy(src="#" data-src=`img/@2x/${imgName}.jpg` alt="")
+
+mixin prodCardThumb(imgName, dataFancyBox)
+	.swiper-slide
+		+e.thumb-img
+			img.swiper-lazy(src="#" data-src=`img/@2x/${imgName}.jpg` alt="")
+
+mixin hitManDescr(title, price)
+	+b.hitManDescr&attributes(attributes)
+		+e.descr
+			h4=title
+			p
+				block
+		+e.size-txt Выберите размер при заказе
+		+e.price= `${price} р.`
+
+mixin mark(mark)
+	if mark == 'NEW'
+		+b.cart-mark--new=mark
+	if mark == 'ХИТ'
+		+b.cart-mark--hit=mark

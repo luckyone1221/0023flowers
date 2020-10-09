@@ -1,0 +1,99 @@
+// start .sTeachersPresent
+.sTeachersPresent {
+	--sPT: #{rem(30)};
+	--sTPB: #{rem(35)};
+	--sPB: #{rem(30px)};
+
+	@include media-breakpoint-up(lg){
+		//--sPB: #{rem(75px)};
+	}
+
+	.section-title{
+		max-width: 960px;
+		margin: 0 auto;
+		h2{
+			margin-bottom: rem(20px);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(40px);
+			}
+
+			font-size: rem(30px);
+			font-family: $default-font;
+		}
+		p{
+			font-size: rem(18px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(20px);
+			}
+			line-height: 1.55;
+			font-weight: 300;
+		}
+
+	}
+
+
+	&__bb-cont{
+		text-align: center;
+		width: 100%;
+	}
+	.prod-col{
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(60);
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(100);
+		}
+	}
+
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sTeachersPresent
+
+.teacherDescr{
+	display: flex!important;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
+	height: 100%;
+
+	&__descr{
+		padding-top: rem(20);
+		h4{
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: rem(16);
+			margin-bottom: rem(9);
+		}
+		p{
+			font-weight: 300;
+			font-size: rem(14);
+			line-height: 1.55;
+		}
+	}
+	&__size-txt{
+		margin-top: auto;
+		font-weight: 300;
+		font-size: rem(14);
+		line-height: 1.55;
+
+		margin-bottom: rem(14px);
+	}
+	&__price{
+		font-size: rem(16px);
+		line-height: 1.35;
+		margin-bottom: rem(19px);
+	}
+}
+
+.prod-custom-descr{
+	text-align: center;
+	padding-top: rem(20);
+	p{
+		max-width: 202px;
+		margin: 0 auto rem(15) auto;
+		font-size: 14px;
+		font-weight: 300;
+	}
+}

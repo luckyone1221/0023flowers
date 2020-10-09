@@ -1,0 +1,85 @@
+// start .sMoreFlowers
+.sMoreFlowers {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(50)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(60)};
+		--sPT: #{rem(45)};
+		--sTPB: #{rem(70)};
+	}
+
+	.section-title{
+		position: relative;
+		z-index: 2;
+		color: $black;
+		h2{
+			font-size: rem(30px);
+			@include media-breakpoint-up(md){
+				font-size: rem(48px);
+			}
+			line-height: 1.23;
+			margin-bottom: rem(25);
+		}
+
+		p{
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+
+			font-size: rem(24px);
+			line-height: 1.5;
+			font-weight: 300;
+		}
+	}
+	&__btn-cont{
+		text-align: center;
+
+		padding-bottom: rem(45);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(105);
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+
+		font-weight: 700;
+		color: $white!important;
+		font-size: rem(16);
+		padding: rem(15px) rem(60px);
+
+		background-color: $deep-blue;
+		border: 1px solid $black;
+		&:hover{
+			background-color: lighten($deep-blue, 5);
+			border: 1px solid $black;
+		}
+
+		position: relative;
+		&:before{
+			@include mt();
+			content: '';
+			position: absolute;
+			right: calc(100% + 30px);
+			bottom: 15px;
+
+			width: rem(40px);
+			height: rem(63px);
+			@include media-breakpoint-up(lg){
+				width: rem(60px);
+				height: rem(95px);
+			}
+
+			background-image: url(../img/@2x/arrow-btn.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+
+		&:hover:before{
+			transform: translateX(6px) translateY(4px) rotate(-6deg) scale(1.1);
+		}
+	}
+	&__{}
+} // end.sMoreFlowers

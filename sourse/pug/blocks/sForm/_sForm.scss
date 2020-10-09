@@ -118,5 +118,23 @@
 
 	}
 
-	&__{}
+	&--teacher{
+		.form-wrap{
+			form{
+				background-color: $white;
+			}
+
+			&__policy{
+				max-width: 370px;
+				margin-left: auto;
+				margin-right: auto;
+
+				font-size: 15px;
+				line-height: 1.55;
+			}
+			&__btn{
+				border-radius: rem(24);
+			}
+		}
+	}
 } // end.sForm

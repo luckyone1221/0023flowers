@@ -1,0 +1,16 @@
+mixin sHeaderTimer()
+	// start sHeaderTimer
+	+b.SECTION.sHeaderTimer#sHeaderTimer&attributes(attributes)
+		+pic('headerTimer-bg.jpg')(class="sHeaderTimer__bg")
+		+e.content
+			.container
+				+b.section-title.text-center
+					h2 Успей заказать роскошные букеты для любимых учителей.
+					p до дня учителя осталось
+				//-import 0013krez
+				+e.timer-box.timer-box-js
+					span.days 00
+					span.hours 00
+					span.minutes 00
+					span.seconds 09
+	// end sHeaderTimer

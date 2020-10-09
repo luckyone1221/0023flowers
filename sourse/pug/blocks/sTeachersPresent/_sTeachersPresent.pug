@@ -1,0 +1,55 @@
+mixin sTeachersPresent()
+	// start sTeachersPresent
+	+b.SECTION.sTeachersPresent.section#sTeachersPresent&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Букет цветов учителю
+				p Дарить цветы учителю — замечательная традиция и хороший способ выразить свое уважение и признательность. Неважно, какой для этого повод — 1 сентября, день рождения, День учителя или последний звонок, — у нас вы найдете изысканные цветочные композиции на любой случай. Мы составляем букеты из редких растений и наполняем их смыслом: такой подарок точно не затеряется среди охапок цветов и покажет ваше внимание. Композиции собираются только из свежих растений, поэтому простоят долго.
+			.row
+				+teacherSampleRow()
+				+teacherSampleRow()
+				+teacherSampleRow()
+				+teacherSampleRow()
+				+teacherSampleRow()
+				+teacherSampleRow()
+				//-price discount
+				+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990', 'ХИТ')(class='col-sm-6 col-lg-4')
+					+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
+						| Яркий, как ваш школьник, радостный, как последние дни лета, удобный - таким должен быть подарок учителю на 1 сентября.
+				+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990')(class='col-sm-6 col-lg-4')
+					+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
+						| Крафтовая коробка с яркими цветами осени - отличный подарок учителю.
+				+prodItemCustom()(class='col-sm-6 col-lg-4')
+	// end sTeachersPresent
+		
+mixin teacherDescr(title, price)
+	+b.teacherDescr&attributes(attributes)
+		+e.descr
+			h4=title
+			p
+				block
+		+e.size-txt Выберите размер при заказе
+		+e.price= `${price} р.`
+
+mixin teacherSampleRow()
+	+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990', 'ХИТ')(class='col-sm-6 col-lg-4')
+		+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
+			| Яркий, как ваш школьник, радостный, как последние дни лета, удобный - таким должен быть подарок учителю на 1 сентября.
+	+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990')(class='col-sm-6 col-lg-4')
+		+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
+			| Крафтовая коробка с яркими цветами осени - отличный подарок учителю.
+	+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990')(class='col-sm-6 col-lg-4')
+		+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
+			| Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
+
+mixin prodItemCustom()
+	+b.prod-col&attributes(attributes)
+		+e.item-cont
+			+e.A.item--galery(href='#')
+				.img-cont
+					.imgs
+						img(loading='lazy' src=`img/@2x/custom-1.jpg` alt="")
+						img(loading='lazy' src=`img/@2x/custom-2.jpg` alt="")
+				+b.prod-custom-descr
+					p Перезвоним в течение 1 часа!
+					p Создадим уникальный букет специально для вас.

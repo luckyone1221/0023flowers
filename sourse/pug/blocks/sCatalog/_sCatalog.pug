@@ -15,6 +15,13 @@ mixin sCatalog()
 				+smallCatalogItem('Букеты в корзинах')
 	// end sCatalog
 
+mixin sCatalog-02()
+	// start sCatalog
+	+b.SECTION.sCatalog--top-links.section#sCatalog&attributes(attributes)
+		.container
+			+e.row.row
+				+smallCatalogItem('Оригинальные букеты на 1 сентября')
+
 mixin catalogItem(imgNum, title, txt)
 	+e.col--js.col-lg-4
 		+e.A.item(href="#")

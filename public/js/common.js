@@ -536,7 +536,147 @@ function eventHandler() {
 				passive: true
 			});
 		}
+	} //prod-card-js
+	//open popup
+
+
+	$('.prod-card-link-js').click(function () {
+		event.preventDefault();
+		var parent = this.closest('.prod-card-parent-js');
+		if (!parent) return;
+		$(parent).find('.prod-card--js').addClass('active');
+		$('body').addClass('fixed2');
+		$('html').addClass('fixed');
+		var thisSlider = parent.querySelector('.prod-card-slider-js');
+		var thisThumb = parent.querySelector('.prod-thumb-js');
+
+		if (thisSlider && thisThumb) {
+			thisSlider.swiper.update();
+			thisThumb.swiper.update();
+		} //close popup
+
+
+		event.stopPropagation();
+		document.body.removeEventListener('click', popUpMissClickHandler); //??
+
+		document.body.addEventListener('click', popUpMissClickHandler);
+	});
+
+	function popUpMissClickHandler() {
+		if (!event.target.closest('.prod-card__row--js') && !event.target.closest('.fancybox-inner')) {
+			$('.prod-card--js').removeClass('active');
+			$('body').removeClass('fixed2');
+			$('html').removeClass('fixed');
+			document.body.removeEventListener('click', popUpMissClickHandler); //??
+		}
+	} //prod card sliders
+
+
+	$(".prod-card__slider--js").each(function () {
+		var prodThumbSl = new Swiper($(this).find(".prod-thumb-js"), {
+			slidesPerView: 'auto',
+			spaceBetween: 5,
+			//lazy load
+			lazy: {
+				loadPrevNext: true
+			}
+		});
+		var prodCardSlider = new Swiper($(this).find(".prod-card-slider-js"), {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			//lazy load
+			lazy: {
+				loadPrevNext: true
+			},
+			//nav
+			navigation: {
+				nextEl: $(this).find('.prod-card-next--js'),
+				prevEl: $(this).find('.prod-card-prev--js')
+			},
+			//thumb
+			thumbs: {
+				swiper: prodThumbSl
+			}
+		});
+	}); //tik tak
+
+	function tikTak(parentQselector) {
+		//html elements
+		var parent = document.querySelector(parentQselector);
+		if (!parent) return;
+		var days = parent.querySelector('.days');
+		var hours = parent.querySelector('.hours');
+		var minutes = parent.querySelector('.minutes');
+		var seconds = parent.querySelector('.seconds'); //date elements
+
+		var now = new Date(); // d === days.innerHtml + now.getDate... others the same way
+
+		var d = getTime(days, now.getDate());
+		var h = getTime(hours, now.getHours());
+		var m = getTime(minutes, now.getMinutes());
+		var s = getTime(seconds, now.getSeconds());
+		var targetDate = new Date(now.getFullYear(), now.getMonth(), d, h, m, s); //force date
+		//let targetDate = new Date(2020, 7,21);
+		//interval
+
+		tikTakReadOut(parent, targetDate, ThisReadOutID, days, hours, minutes, seconds);
+		var ThisReadOutID = window.setInterval(tikTakReadOut.bind(null, parent, targetDate, ThisReadOutID, days, hours, minutes, seconds), 1000);
+		console.log(ThisReadOutID, '//');
 	}
+
+	tikTak('.timer-box-js'); //additional funcs to tikTak
+
+	function tikTakReadOut(parent, targetDate, ReadOutID, days, hours, minutes, seconds) {
+		var now = new Date();
+		var timeLeft = (targetDate - now) / 1000;
+
+		if (timeLeft < 0) {
+			//window.clearInterval(ReadOutID);
+			//to do something after timer ends
+			//$(parent).fadeOut();
+			return;
+		}
+
+		days.innerHTML = addZero(Math.floor(timeLeft / 60 / 60 / 24));
+		timeLeft = (timeLeft / 60 / 60 / 24 - Math.floor(timeLeft / 60 / 60 / 24)) * 60 * 60 * 24;
+		hours.innerHTML = addZero(Math.floor(timeLeft / 60 / 60));
+		timeLeft = (timeLeft / 60 / 60 - Math.floor(timeLeft / 60 / 60)) * 60 * 60;
+		minutes.innerHTML = addZero(Math.floor(timeLeft / 60));
+		timeLeft = (timeLeft / 60 - Math.floor(timeLeft / 60)) * 60;
+		seconds.innerHTML = addZero(Math.floor(timeLeft));
+	}
+
+	function getTime(htmlEl, currentTimeItem) {
+		var timeItem = Number(htmlEl.innerHTML);
+
+		if (timeItem) {
+			timeItem += currentTimeItem;
+		} else {
+			timeItem = currentTimeItem;
+		}
+
+		return timeItem;
+	}
+
+	function addZero(num) {
+		num = Number(num);
+
+		if (num >= 0 && num <= 9) {
+			num = "0" + num;
+		}
+
+		return num;
+	} //end tik tak
+	//breadcrumbs
+
+
+	var breadSl = new Swiper('.breadcrumb-slider-js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 30,
+		freeMode: true,
+		freeModeMomentum: true,
+		watchOverflow: true
+	});
 }
 
 ;
