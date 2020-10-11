@@ -5,8 +5,8 @@ mixin sHitMan()
 			h2 Хиты продаж для него
 		.container
 			+e.row.row
-				+prodItemGalery('hitman', 1, 'ОХОТНИК', '4 990')(class='col-sm-6 col-lg-4')
-					+hitManDescr('ОХОТНИК', '4 990')
+				+prodItemGalery('hitman', 1, 'ОХОТНИК', 'discount')(class='col-sm-6 col-lg-4')
+					+hitManDescr('ОХОТНИК', 'discount')
 						| Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
 						|
 						br
@@ -39,14 +39,8 @@ mixin prodItem(cardName, imgGroup, title, price, mark=false)
 						img(loading='lazy' src=`img/@2x/${cardName}-${imgGroup}-1.jpg` alt="")
 					+mark(mark)
 				block
-			if cardName ==  'hitman'
-				+e.A.buy-btn(href="#") В КОРЗИНУ
-			if cardName == 'hitwoman'
-				.sHitWoman__bb-cont
-					a.sHitWoman__buy-btn(href="#") В КОРЗИНУ
-			if cardName == 'teacher'
-				.sTeachersPresent__bb-cont
-					+e.A.buy-btn(href="#") В КОРЗИНУ
+			+prodItemBtn(cardName)
+
 
 mixin prodItemGalery(cardName, imgGroup, title, price, mark=false)
 	+b.prod-col.prod-card-parent-js&attributes(attributes)
@@ -74,14 +68,7 @@ mixin prodItemGalery(cardName, imgGroup, title, price, mark=false)
 						img(loading='lazy' src=`img/@2x/${cardName}-${imgGroup}-2.jpg` alt="")
 					+mark(mark)
 				block
-			if cardName == 'hitman'
-				+e.A.buy-btn(href="#") В КОРЗИНУ
-			if cardName == 'hitwoman'
-				.sHitWoman__bb-cont
-					a.sHitWoman__buy-btn(href="#") В КОРЗИНУ
-			if cardName == 'teacher'
-				.sTeachersPresent__bb-cont
-					+e.A.buy-btn(href="#") В КОРЗИНУ
+			+prodItemBtn(cardName)
 
 mixin prodCard(cardName, nameTxt, priceTxt)
 	+b.prod-card--js
@@ -96,7 +83,7 @@ mixin prodCard(cardName, nameTxt, priceTxt)
 					block
 				+e.descr-col.col-md-6
 					+e.name=nameTxt
-					+e.price= `${priceTxt} р.`
+					+price(priceTxt, 'hitManDescr-pr')
 					+e.select-cont
 						+e.select-txt Размер
 						select
@@ -130,10 +117,33 @@ mixin hitManDescr(title, price)
 			p
 				block
 		+e.size-txt Выберите размер при заказе
-		+e.price= `${price} р.`
+		+price(price, 'hitManDescr-pr')
 
 mixin mark(mark)
 	if mark == 'NEW'
 		+b.cart-mark--new=mark
 	if mark == 'ХИТ'
 		+b.cart-mark--hit=mark
+	if mark == 'discountMark'
+		+b.cart-mark--discount - 400 руб.
+
+mixin prodItemBtn(cardName)
+	if cardName == 'hitman'
+		+e.A.buy-btn(href="#") В КОРЗИНУ
+	if cardName == 'hitwoman'
+		.sHitWoman__bb-cont
+			a.sHitWoman__buy-btn(href="#") В КОРЗИНУ
+	if cardName == 'teacher'
+		.sTeachersPresent__bb-cont
+			+e.A.buy-btn(href="#") В КОРЗИНУ
+	if cardName == 'womanUn'
+		.sHitWoman__bb-cont
+			+e.A.buy-btn(href="#") В КОРЗИНУ
+
+mixin price(price, modificator='')
+	+b.price-cont(class=modificator)
+		if price === 'discount'
+				+e.item 4400 p.
+				+e.item--old 4800 p.
+		else
+				+e.item=`${price} р.`

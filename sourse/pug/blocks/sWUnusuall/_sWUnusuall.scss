@@ -1,0 +1,23 @@
+// start .sWUnusuall
+.sWUnusuall {
+	--sPT: #{rem(30px)};
+	--sTPB: #{rem(35px)};
+	--sPB: #{rem(30px)};
+
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(80px)};
+	}
+	.section-title{
+		h2{
+			font-size: 30px;
+			font-family: $default-font;
+		}
+	}
+
+	.prod-col{
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(90);
+		}
+	}
+	&__{}
+} // end.sWUnusuall

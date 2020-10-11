@@ -29,11 +29,11 @@ mixin teacherDescr(title, price)
 			p
 				block
 		+e.size-txt Выберите размер при заказе
-		+e.price= `${price} р.`
+		+price(price)
 
 mixin teacherSampleRow()
-	+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990', 'ХИТ')(class='col-sm-6 col-lg-4')
-		+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
+	+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', 'discount', 'ХИТ')(class='col-sm-6 col-lg-4')
+		+teacherDescr('ОХОТНИК', 'discount')(class="text-center")
 			| Яркий, как ваш школьник, радостный, как последние дни лета, удобный - таким должен быть подарок учителю на 1 сентября.
 	+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990')(class='col-sm-6 col-lg-4')
 		+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
@@ -42,14 +42,14 @@ mixin teacherSampleRow()
 		+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
 			| Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
 
-mixin prodItemCustom()
+mixin prodItemCustom(imgMod='')
 	+b.prod-col&attributes(attributes)
 		+e.item-cont
 			+e.A.item--galery(href='#')
 				.img-cont
 					.imgs
-						img(loading='lazy' src=`img/@2x/custom-1.jpg` alt="")
-						img(loading='lazy' src=`img/@2x/custom-2.jpg` alt="")
+						img(loading='lazy' src=`img/@2x/custom${imgMod}-1.jpg` alt="")
+						img(loading='lazy' src=`img/@2x/custom${imgMod}-2.jpg` alt="")
 				+b.prod-custom-descr
 					p Перезвоним в течение 1 часа!
 					p Создадим уникальный букет специально для вас.

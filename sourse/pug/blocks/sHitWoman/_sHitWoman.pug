@@ -5,8 +5,8 @@ mixin sHitWoman()
 			h2 Хиты продаж для неё
 		.container
 			+e.row.row
-				+prodItem('hitwoman', 1, 'свежесть', '5 990', 'ХИТ')(class='col-sm-6 col-lg-3')
-					+hitWomanDescr('свежесть', '5 990')
+				+prodItem('hitwoman', 1, 'свежесть', 'discount', 'ХИТ')(class='col-sm-6 col-lg-3')
+					+hitWomanDescr('свежесть', 'discount')
 						| Нежные пионы с яркой зеленью. Прекрасное сочетание и изысканная красота.
 				+prodItem('hitwoman', 2, 'коралловый рай', '9 500')(class='col-sm-6 col-lg-3')
 					+hitWomanDescr('коралловый рай', '9 500')
@@ -27,4 +27,4 @@ mixin hitWomanDescr(title, price)
 			h4=title
 			p
 				block
-		+e.price= `${price} р.`
+		+price(price)

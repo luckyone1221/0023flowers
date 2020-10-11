@@ -1,0 +1,84 @@
+// start .sVase
+.sVase {
+	--sTPB: #{rem(0)};
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(30)};
+		--sPB: #{rem(30)};
+	}
+
+
+	&__row{
+		flex-direction: column-reverse;
+		@include media-breakpoint-up(md){
+			flex-direction: row;
+		}
+	}
+
+	.section-title{
+		margin: 0 auto;
+		@include media-breakpoint-up(md){
+			margin: 0;
+		}
+		width: 280px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		h2{
+			font-size: 18px;
+			line-height: (23/18);
+			font-weight: 600;
+			font-family: $default-font;
+			text-transform: uppercase;
+			margin-bottom: rem(16);
+		}
+
+		a{
+			display: inline-block;
+			margin: 0 auto;
+			font-weight: 700;
+			font-size: rem(26px);
+
+			color: darken($toxic-green, 10);
+			&:hover{
+				color: darken($toxic-green, 5);
+			}
+		}
+
+	}
+	//img-col
+	&__img-col{
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(lg){
+			max-width: 470px;
+		}
+	}
+	&__img{
+		display: flex;
+		justify-content: center;
+		@include media-breakpoint-up(md){
+			display: block;
+		}
+		width: 100%;
+		//
+
+		img{
+			@include mt();
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
+	&__{}
+
+} // end.sVase

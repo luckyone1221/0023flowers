@@ -22,6 +22,37 @@ mixin sCatalog-02()
 			+e.row.row
 				+smallCatalogItem('Оригинальные букеты на 1 сентября')
 
+mixin sCatalog-03-1()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+e.row.row
+				+smallCatalogItem03('Монобукеты')
+				+smallCatalogItem03('Букеты из роз')
+				+smallCatalogItem03('Букеты из пионов')
+				+smallCatalogItem03('Букет из пионовидных роз')
+
+				+smallCatalogItem03('Букеты из тюльпанов')
+				+smallCatalogItem03('Букеты из калл')
+				+smallCatalogItem03('Элитные букеты')
+				//+smallCatalogItem('')
+
+mixin sCatalog-03-2()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			+e.row.row
+				+smallCatalogItem03('Букеты из хлопка')
+				+smallCatalogItem03('Букеты в корзинах	')
+				+smallCatalogItem03('Букет полевых цветов')
+				+smallCatalogItem03('Букеты из сухоцветов')
+
+				+smallCatalogItem03('Букеты лаванды')
+				+smallCatalogItem03('Букеты из подсолнухов')
+				+smallCatalogItem03('Букеты осенних цветов')
+				+smallCatalogItem03('Экзотические букеты')
+
+
 mixin catalogItem(imgNum, title, txt)
 	+e.col--js.col-lg-4
 		+e.A.item(href="#")
@@ -35,3 +66,9 @@ mixin smallCatalogItem(title)
 		+e.A.item(href="#")
 			+e.item-descr--small
 				+e.item-title=title
+
+mixin smallCatalogItem03(title)
+	+e.col--js.col-sm-6.col-lg-4.col-xl-3
+		+e.A.item(href="#")
+			+e.item-descr--small
+				+e.item-title--xs=title

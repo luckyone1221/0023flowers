@@ -13,6 +13,14 @@
 			min-height: 400px;
 			position: relative;
 			z-index: 1;
+
+			&.woman-slide{
+				min-height: 450px;
+				background-color: $black;
+				img{
+					opacity: .6;
+				}
+			}
 		}
 		//pugin
 		.header-pugin{
@@ -153,6 +161,112 @@
 			text-transform: uppercase;
 		}
 	}
+	//woman
+	&__content.woman-summer{
+		color: $white;
+		text-align: right;
+
+		display: flex!important;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+
+		.headerBlock__btn-box{
+			text-align: right;
+		}
+
+		h4{
+			font-weight: 700;
+			font-size: rem(24);
+			margin-bottom: rem(35);
+		}
+		p{
+			font-weight: 700;
+			font-size: rem(20);
+			margin-bottom: rem(60);
+		}
+	}
+	&__content.woman-surprise{
+		color: $white;
+		text-align: right;
+
+		display: flex!important;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+
+		.headerBlock__btn-box{
+			text-align: right;
+		}
+
+		h4{
+			font-weight: 700;
+			font-size: rem(30);
+			@include media-breakpoint-up(md){
+				font-size: rem(52);
+			}
+			margin-bottom: rem(36);
+		}
+		p{
+			font-weight: 300;
+			font-size: rem(18);
+			margin-bottom: rem(60);
+		}
+	}
+	&__content.woman-poem{
+		color: $white;
+		text-align: center;
+
+		display: flex!important;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		.headerBlock__btn-box{
+			text-align: right;
+		}
+
+		h4{
+			font-family: $mono;
+
+			font-weight: 600;
+			font-size: rem(30);
+			@include media-breakpoint-up(md){
+				font-size: rem(36);
+			}
+			margin-bottom: rem(36);
+		}
+		p{
+			font-family: $mono;
+			font-size: rem(22);
+			line-height: 1;
+			font-weight: 300;
+		}
+
+	}
+	&__content.woman-cactus{
+		color: $white;
+		text-align: right;
+
+		display: flex!important;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		.headerBlock__btn-box{
+			text-align: right;
+		}
+
+		h4{
+			font-weight: 600;
+			font-size: rem(30);
+			@include media-breakpoint-up(md){
+				font-size: rem(52);
+			}
+			margin-bottom: rem(36);
+		}
+	}
+
 	//btn-box
 	&__btn-box{
 		text-align: center;
@@ -173,7 +287,22 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		padding: rem(17px) rem(60px);
+	}
 
+	&__btn-red{
+		@extend .btn;
+		@extend .btn-danger;
+
+		padding: 18px 60px;
+		color: $white;
+		font-weight: bold;
+
+		background-color: darken($crimson, 10);
+		border: 1px solid darken($crimson, 10);
+		&:hover{
+			background-color: darken($crimson, 5);
+			border: 1px solid darken($crimson, 5);
+		}
 	}
 	//
 	&__vantage{

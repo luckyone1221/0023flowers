@@ -1,0 +1,18 @@
+mixin sVegeterian()
+	// start sVegeterian
+	+b.sVegeterian(style='background-image: url(img/@2x/VegeterianStrip-bg.jpg);')#sVegeterian&attributes(attributes)
+		.container
+			+e.row.row
+				+e.btn-col.d-none.d-lg-flex.col-lg-auto.col-xl-4
+					+e.btn(href="#") Узнать подробности
+				+e.txt-col.col-md-6.col-lg-auto
+					h4
+						| Теперь мы принимаем карты
+						|
+						br.d-none.d-sm-block
+						| VEGETERIAN
+					+e.btn.d-lg-none(href="#") Узнать подробности
+				+e.img-col.col-lg-auto
+					+e.A.img(href='#')
+						img(loading="lazy" src="img/@2x/VegeterianStrip.jpg" alt="")
+	// end sVegeterian

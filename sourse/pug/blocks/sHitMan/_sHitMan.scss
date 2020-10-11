@@ -174,9 +174,7 @@
 	}
 }
 
-//
-
-
+//.cart-mark
 .cart-mark{
 	position: absolute;
 	top: 10px;
@@ -198,6 +196,12 @@
 	&--hit{
 		background-color: $light-red;
 		color: $white;
+	}
+	&--discount{
+		background-color: $light-red;
+		color: $white;
+		text-align: center;
+		text-transform: none;
 	}
 }
 
@@ -433,6 +437,7 @@
 		font-weight: 400;
 		margin-bottom: rem(10);
 	}
+
 	&__select-cont{
 		margin-bottom: rem(20);
 
@@ -487,4 +492,32 @@
 			font-weight: 300;
 		}
 	}
+}
+
+.price-cont{
+	display: flex!important;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+
+	&__item{
+		font-size: rem(20px);
+		line-height: 1.35;
+		font-weight: 400;
+		margin-bottom: rem(15);
+		&--old{
+			text-decoration: line-through;
+			color: $gray-400;
+		}
+	}
+
+	&.hitManDescr-pr{
+		height: auto;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: rem(10);
+	}
+
+
 }

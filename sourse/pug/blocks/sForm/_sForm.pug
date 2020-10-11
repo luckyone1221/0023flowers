@@ -48,3 +48,22 @@ mixin sForm-02()
 				a(href="#") политикой конфиденциальности
 		//-+b.arrow
 			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+
+mixin sForm-03()
+	// start sForm
+	+b.SECTION.sForm--teacher.section#sForm&attributes(attributes)
+		+form-wrap
+			+b.section-title.text-center
+				h2 Изобретем оригинальный букет?
+				p Оставьте заявку — и мы перезвоним в течение часа, чтобы создать необычный женский букет для вас!
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Как к Вам обращаться
+			label
+				+input('+1 123 456 78 90', 'tel', undefined, 'tel')
+			+e.btn-cont
+				+e.BUTTON.btn(type='submit') Отправить
+			+e.policy
+				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+				|
+				a(href="#") политикой конфиденциальности

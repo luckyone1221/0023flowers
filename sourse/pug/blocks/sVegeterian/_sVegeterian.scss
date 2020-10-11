@@ -1,0 +1,109 @@
+// start .sVegeterian
+.sVegeterian {
+	margin: rem(30) 0;
+
+	background-position: 0 0 ;
+	background-repeat: repeat;
+	background-size: contain;
+	@include media-breakpoint-down(md){
+		background-image: unset!important;
+	}
+
+
+	&__row{
+		@include media-breakpoint-up(md){
+			flex-wrap: nowrap;
+			min-height: 174px;
+		}
+	}
+
+	&__btn-col{
+		display: flex;
+		align-items: center;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-success;
+
+		background-color: darken($toxic-green, 10);
+		border: 1px solid darken($toxic-green, 10);
+		&:hover{
+			background-color: darken($toxic-green, 5);
+			border: 1px solid darken($toxic-green, 5);
+		}
+
+		padding: rem(15px) rem(25px);
+		@include media-breakpoint-up(xl){
+			padding: rem(20px) rem(65px);
+		}
+		font-size: rem(16px);
+		font-weight: bold;
+	}
+
+	&__txt-col{
+		text-align: center;
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+			flex-grow: 1!important;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			flex-direction: column;
+		}
+
+		h4{
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(md) {
+				text-align: right;
+				margin-bottom: rem(20);
+			}
+
+			font-size: rem(24);
+			@include media-breakpoint-up(sm){
+				font-size: rem(27);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(30);
+			}
+			font-weight: bold;
+			font-family: $arial;
+			color: lighten($brown, 1);
+		}
+	}
+	&__img-col{
+		flex-shrink: 0;
+
+		margin: 0 auto;
+		@include media-breakpoint-up(md){
+			margin: 0;
+		}
+
+		width: 300px;
+		height: 174px;
+		@include media-breakpoint-up(lg){
+			min-width: 300px;
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__img{
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 1;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+	}
+}
+// end.sVegeterian

@@ -9,16 +9,29 @@
 		--sTPB: #{rem(70)};
 	}
 
+	.arrow{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(45);
+		}
+	}
 
 	.section-title{
 		h2{
+			font-family: $default-font;
 			font-size: rem(30px);
+			margin-bottom: rem(30);
 			@include media-breakpoint-up(md){
 				font-size: rem(34px);
+				margin-bottom: rem(40);
 			}
 		}
 		p{
-
+			font-size: rem(18);
+			max-width: 560px;
+			font-weight: 300;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	&__row{

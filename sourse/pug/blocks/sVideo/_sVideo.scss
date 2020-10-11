@@ -83,6 +83,7 @@
 			font-weight: 700;
 			margin-bottom: rem(10);
 		}
+
 		p{
 			font-size: 14px;
 			line-height: 1.55;
@@ -93,6 +94,10 @@
 	&__txt{
 		display: block;
 		max-width: 500px;
+
+		&--wider{
+			max-width: 600px;
+		}
 	}
 
 	&__pretitle{

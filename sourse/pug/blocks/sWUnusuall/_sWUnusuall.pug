@@ -1,0 +1,47 @@
+mixin sWUnusuall()
+	// start sWUnusuall
+	+b.SECTION.sWUnusuall.section#sWUnusuall&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Необычные букеты для женщин
+			+e.row.row
+				+sWUnusuallRowFrame()
+				+sWUnusuallRowFrame()
+				+sWUnusuallRowFrame()
+				+sWUnusuallRowFrame()
+				+sWUnusuallRowFrame()
+				+prodItem('womanUn', 1, 'МИСТЕРИЯ', 'discount', 'discountMark')(class='col-sm-6 col-lg-3')
+					+WUDescr('свежесть', 'discount')(class="text-center")
+						| Такой яркий и мистический букет для прекрасной леди.
+						| Выберите размер при заказе
+				+prodItem('womanUn', 1, 'ЛЕСНАЯ КОРОБКА', '9 500')(class='col-sm-6 col-lg-3')
+					+WUDescr('коралловый рай', '9 500')(class="text-center")
+						| Лесная композиция, которая будет радовать долго.
+				+prodItemGalery('womanUn', 1, 'БАРХАТ', '7 990')(class='col-sm-6 col-lg-3')
+					+WUDescr('лес в ящике', '7 990')(class="text-center")
+						| Лесная композиция подарит радость и будет очень долго радовать.
+				+prodItemCustom()(class='col-sm-6 col-lg-3')
+	// end sWUnusuall
+
+mixin WUDescr(title, price)
+	+b.hitManDescr&attributes(attributes)
+		+e.descr
+			h4=title
+			p
+				block
+		+price(price)
+
+mixin sWUnusuallRowFrame()
+	+prodItem('womanUn', 1, 'МИСТЕРИЯ', 'discount', 'discountMark')(class='col-sm-6 col-lg-3')
+		+WUDescr('свежесть', 'discount')(class="text-center")
+			| Такой яркий и мистический букет для прекрасной леди.
+			| Выберите размер при заказе
+	+prodItem('womanUn', 1, 'ЛЕСНАЯ КОРОБКА', '9 500')(class='col-sm-6 col-lg-3')
+		+WUDescr('коралловый рай', '9 500')(class="text-center")
+			| Лесная композиция, которая будет радовать долго.
+	+prodItemGalery('womanUn', 1, 'БАРХАТ', '7 990')(class='col-sm-6 col-lg-3')
+		+WUDescr('лес в ящике', '7 990')(class="text-center")
+			| Лесная композиция подарит радость и будет очень долго радовать.
+	+prodItemGalery('womanUn', 1, 'ЛАСТОЧКА', '5 700', 'NEW')(class='col-sm-6 col-lg-3')
+		+WUDescr('охотница', '5 700')(class="text-center")
+			| Букет с ягодами, магнолией и перьями фазана. Может быть выполнен в кашпо из коры дерева.

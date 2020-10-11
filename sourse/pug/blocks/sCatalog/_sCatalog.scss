@@ -67,13 +67,22 @@
 		&--small{
 			height: 100%;
 		}
+
+
 	}
 	&__item-title{
 		font-weight: 600;
 		font-size: rem(24px);
 		line-height: 1.35;
 		margin-bottom: rem(10px);
+
+		&--xs{
+			//background-color: red;
+			font-size: rem(16);
+			font-weight: bold;
+		}
 	}
+
 	&__item-txt{
 		font-size: rem(14px);
 		line-height: 1.55;

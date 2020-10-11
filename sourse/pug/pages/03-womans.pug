@@ -1,0 +1,175 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHitMan/_sHitMan.pug
+include ../blocks/sHitWoman/_sHitWoman.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sConvinuent/_sConvinuent.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sOwner/_sOwner.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPhilocophy/_sPhilocophy.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sSeo/_sSeo.pug
+//-2
+include ../blocks/sHeaderTimer/_sHeaderTimer.pug
+include ../blocks/sTeachersPresent/_sTeachersPresent.pug
+include ../blocks/sTeacherFrame/_sTeacherFrame.pug
+include ../blocks/sMoreFlowers/_sMoreFlowers.pug
+include ../blocks/sWorkVantage/_sWorkVantage.pug
+//-3
+include ../blocks/sWUnusuall/_sWUnusuall.pug
+include ../blocks/sWomanFrame/_sWomanFrame.pug
+include ../blocks/sVase/_sVase.pug
+include ../blocks/sFlowerPot/_sFlowerPot.pug
+include ../blocks/sVegeterian/_sVegeterian.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '03-womans'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+		//+topLine()
+	//-+sHeaderTimer()
+	+headerBlock()
+		+e.slider
+			.swiper-container.header-slider-js
+				.swiper-wrapper
+					+headerSlide(1, 'ВЫБРАТЬ БУКЕТ', 'woman-summer', 'btnRed', 'woman-slide')
+						h4 ЦВЕТЫ ОТ СЕРДЦА К СЕРДЦУ
+						p закажи лето в подарок
+					+headerSlide('w2', 'ВЫБРАТЬ БУКЕТ', 'woman-surprise', 'btnRed', 'woman-slide')
+						h4
+							| БУКЕТ, КОТОРЫЙ
+							br
+							| УМИРОТВОРЯЕ
+						p ОНА ПОЧУВСТВУЕТ СЕБЯ ОСОБЕННОЙ
+					+headerSlide('w3', 'ПОЛУЧИТЬ СТИХОТВОРЕНИЕ', 'woman-poem', 'btnRed', 'woman-slide')
+						h4 Закажите стихотворение к букету
+						p
+							b Получите стихотворение по описанию получательницы.
+							br
+							| Просто напишите нам, какая она?
+					+headerSlide('w4', 'КУПИТЬ ЗЕЛЕНОГО ДРУГА', 'woman-cactus', 'btnRed', 'woman-slide')
+						h4 КАКТУСЫ В СТИЛЬНЫХ КАШПО
+				.header-pugin.header-pugin-js
+				.header-prev.header-prev-js.d-none.d-sm-flex
+					+icon('chevron-left2')
+				.header-next.header-next-js.d-none.d-sm-flex
+					+icon('chevron-right2')
+	+breadcrumb('Главная', 'Женские букеты')
+	+sWUnusuall()
+	+sVase()
+	+sWomanFrame()
+		.row
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+e.txt-split.text-center
+				p Цветы — универсальный способ продемонстрировать уважение, привязанность, любовь, благодарность. Необычные букеты для женщин от «Зверобоя» покажут ваши чувства — ведь мы предлагаем оригинальные флористические композиции, которые обязательно привлекут внимание. Ни один букет не похож на другой, ведь каждый цветок уникален!
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+prodItem('womanUn', 1, 'МИСТЕРИЯ', 'discount', 'discountMark')(class='col-sm-6 col-lg-3')
+				+WUDescr('свежесть', 'discount')(class="text-center")
+					| Такой яркий и мистический букет для прекрасной леди.
+					| Выберите размер при заказе
+			+prodItem('womanUn', 1, 'ЛЕСНАЯ КОРОБКА', '9 500')(class='col-sm-6 col-lg-3')
+				+WUDescr('коралловый рай', '9 500')(class="text-center")
+					| Лесная композиция, которая будет радовать долго.
+			+prodItemGalery('womanUn', 1, 'БАРХАТ', '7 990')(class='col-sm-6 col-lg-3')
+				+WUDescr('лес в ящике', '7 990')(class="text-center")
+					| Лесная композиция подарит радость и будет очень долго радовать.
+			+prodItemCustom('-alt1')(class='col-sm-6 col-lg-3')
+	+sWomanFrame()
+		+b.section-title.text-center
+			h2 Суккуленты и кактусы, композиции в стильных кашпо и флорариумах
+		.row
+			+sWUnusuallRowFrame()
+	+sWomanFrame()
+		+b.section-title.text-center
+			h2 Букеты из сухоцветов, букеты из лаванды
+		.row
+			+sWUnusuallRowFrame()
+			+sWUnusuallRowFrame()
+			+prodItem('womanUn', 1, 'МИСТЕРИЯ', 'discount', 'discountMark')(class='col-sm-6 col-lg-3')
+				+WUDescr('свежесть', 'discount')(class="text-center")
+					| Такой яркий и мистический букет для прекрасной леди.
+					| Выберите размер при заказе
+			+prodItem('womanUn', 1, 'ЛЕСНАЯ КОРОБКА', '9 500')(class='col-sm-6 col-lg-3')
+				+WUDescr('коралловый рай', '9 500')(class="text-center")
+					| Лесная композиция, которая будет радовать долго.
+			+prodItemGalery('womanUn', 1, 'БАРХАТ', '7 990')(class='col-sm-6 col-lg-3')
+				+WUDescr('лес в ящике', '7 990')(class="text-center")
+					| Лесная композиция подарит радость и будет очень долго радовать.
+			+prodItemCustom('-alt2')(class='col-sm-6 col-lg-3')
+	+sMoreFlowers()
+		+b.section-title.text-center
+			h2 Есть еще букеты?
+			p Посмотрите мужскую коллекцию с дерзкими, стильными, самобытными букетами. Они идеально подходят не только для мужчин и руководителей, но и уверенных в себе и ценящих эффектные вещи девушек.
+		+e.btn-cont
+			+e.btn(href="#") Выбрать букет
+	+sFlowerPot()
+	+sVegeterian()
+	+sWorkVantage()
+		+b.arrow
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+	+sCatalog-03-1()
+	+sCatalog-03-2()
+	+sForm-03()
+	+sVideo-03()
+	+sSeo
+		.container
+			+e.txt.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				h1 Будет ли букет на 100% как на картинке?
+				br
+				p Нет. Потому, что цветы, как и люди, все живые и разные. А еще цветы подвержены сезонности. Поэтому мы оставляем за собой право делать замены в букете на ближайшие по внешнему виду и качеству аналоги в букетах. И гарантируем сохранение стиля, объема, красоты и стоимости букета.
+				br
+				p Чем оригинальнее букет, необычнее цветы и сложнее состав букета, тем сложнее его повторить точь в точь. У нас работаю настоящие профессионалы, поэтому каждый букет невероятен,прекрасен, неповторим и сделан с любовью и заботой о Вас.
+				br
+				p При необходимости, мы высылаем фото букета до доставки.
+				h1 Букеты и композиции в кашпо: что подарить женщине?
+				p В нашем каталоге более 45 цветочных композиций, поэтому подобрать презент можно будет даже для самой взыскательной женщины.
+				br
+				p
+					b · Букет из живых растений.
+					|
+					| Наши флористы черпают вдохновение у природы, поэтому многие композиции будто переносят на лесную поляну или покрытую цветами лужайку. При этом мы любим эксперименты, поэтому с орхидеями соседствуют кактусы и суккуленты, а с розами — ягоды илекса и плоды лотоса. У нас есть сезонные букеты в разной цветовой гамме: они создадут настроение и помогут отвлечься от серых будней.
+				br
+				p
+					b · Композиции из живых цветов в кашпо и ящиках.
+					|
+					| Уникальность таких необычных букетов для женщин в том, что растения снизу опущены на специальную флористическую губку. Она пропитана водой, достаточно смачивать ее раз в несколько дней, чтобы поддерживать букет свежим. Такие композиции простоят значительно дольше, чем обычные цветы, вплоть до месяца. Еще один плюс — нет необходимости искать вазу. Закажите букет — и женщина сможет сразу поставить цветы на стол, наслаждаясь идеально сочетающимися друг с другом растениями.
+				br
+				p
+					b · Необычные букеты для женщин из сухоцветов.
+					|
+					| Это композиции из лаванды, лагуруса, эвкалипта, гипсофилы, пшеницы, хлопка, листьев магнолии, плодов лотоса, физалиса, рябины, эрингиума. Такие женские букетики восхитительно смотрятся и могут стать значимым элементом декора. При бережном обращении они простоят в течение многих месяцев, украшая дом и радуя тонким ароматом.
+				br
+				p
+					b · Композиции из суккулентов и кактусов.
+					|
+					| Это модная тенденция последних лет — миниатюрный сад на столе или стене, не требующий практически никакого ухода. Живые растения освежают интерьер и радуют глаз. Такой необычный подарок на день рождения или другой праздник обязательно запомнится!
+				br
+				p
+					| Интернет-магазин «Зверобой» осуществляет доставку по Москве и Московской области. У нас продаются оригинальные женские и
+					|
+					a(href="#") мужские букеты из цветов.
+					|
+					| Вы можете выбрать удобное время, и наш курьер привезет букет точно в назначенный срок. Купите оригинальный букет, чтобы поднять настроение и подарить море положительных эмоций!
+			+e.btn-cont.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				+e.btn.go-top-js Наверх
+			+e.green-strip
+				p Наши авторские букеты могут отличаться от картинки, так как все цветы уникальны. В зависимости от сезона мы можем на свое усмотрение заменять цветы. Букет будет таким же красивым и стильным, также останется в рамках указанной на сайте цены.
+	+sContact()
+	+footer()

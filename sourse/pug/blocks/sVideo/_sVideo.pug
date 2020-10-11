@@ -14,3 +14,20 @@ mixin sVideo()
 					+e.play-btn
 						img(loading="lazy" src='img/svg/play-btn.svg' alt="")
 	// end sVideo
+
+mixin sVideo-03()
+	// start sVideo
+	+b.SECTION.sVideo.section#sVideo&attributes(attributes)
+		+b.arrow
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+		+e.video-cont
+			+e.A.video(href='#')
+				+pic('video-bg2.jpg')(class='sVideo__bg')
+				+e.content
+					+e.txt--wider
+						+e.pretitle Цвет + форма + настроение = вау-эффект
+						h2
+							| Тренды в современном букете или каким должен быть авторский современный букет.
+						p Беседуем в студии Зверобой о том, как с помощью букета рассказать о чувствах, удивить и порадовать получателя и при этом остаться в тренде.
+					+e.play-btn
+						img(loading="lazy" src='img/svg/play-btn.svg' alt="")
