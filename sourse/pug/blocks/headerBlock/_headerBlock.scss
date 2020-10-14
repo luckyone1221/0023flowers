@@ -266,6 +266,82 @@
 			margin-bottom: rem(36);
 		}
 	}
+	//05
+	&__content.fito-wall{
+		text-align: right;
+		h4{
+			font-size: rem(30px);
+			@include media-breakpoint-up(lg){
+				font-size: rem(34px);
+			}
+
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $white;
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.0);
+		}
+		p{
+			color: $white;
+			font-size: rem(20px);
+			line-height: 1.55;
+			font-weight: bold;
+		}
+
+		.headerBlock__btn-box{
+			text-align: right;
+		}
+	}
+
+	&__content.fito-bouquet{
+		text-align: right;
+		h4{
+			font-size: rem(30px);
+			@include media-breakpoint-up(lg){
+				font-size: rem(52px);
+			}
+
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $white;
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.0);
+		}
+		p{
+			color: $white;
+			font-size: rem(20px);
+			line-height: 1.55;
+			font-weight: bold;
+		}
+
+		.headerBlock__btn-box{
+			text-align: right;
+		}
+	}
+	&__content.fito-health{
+		text-align: center;
+		h4{
+			font-size: rem(30px);
+			@include media-breakpoint-up(lg){
+				font-size: rem(52px);
+			}
+
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $white;
+			text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.0);
+		}
+		p{
+			color: $white;
+			font-size: rem(20px);
+			line-height: 1.55;
+			font-weight: bold;
+		}
+
+		.headerBlock__btn-box{
+			text-align: center;
+		}
+	}
+
+	//
 
 	//btn-box
 	&__btn-box{
@@ -302,6 +378,21 @@
 		&:hover{
 			background-color: darken($crimson, 5);
 			border: 1px solid darken($crimson, 5);
+		}
+	}
+	&__btn-green{
+		@extend .btn;
+		@extend .btn-success;
+
+		padding: 18px 60px;
+		color: $white;
+		font-weight: bold;
+
+		background-color: darken($toxic-green, 10);
+		border: 1px solid darken($toxic-green, 10);
+		&:hover{
+			background-color: darken($toxic-green, 5);
+			border: 1px solid darken($toxic-green, 5);
 		}
 	}
 	//

@@ -21,7 +21,16 @@ mixin sTeachersPresent()
 						| Крафтовая коробка с яркими цветами осени - отличный подарок учителю.
 				+prodItemCustom()(class='col-sm-6 col-lg-4')
 	// end sTeachersPresent
-		
+mixin sTeachersPresent-04()
+	// start sTeachersPresent
+	+b.SECTION.sTeachersPresent.section#sTeachersPresent&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Оригинальные букеты на 1 сентября
+				p Невозможно представить начало учебного года без букетов цветов для учителей. Мы в «Зверобое» с удовольствием поддерживаем эту традицию, но подходим к ней совершенно по-новому. Забудьте про стандартные скучные гладиолусы в целлофановой упаковке. Безусловно, это очень красивые цветы, но если начистоту, то получать с десяток одинаковых букетов из года в год надоест кому угодно. Лучше закажите необычную цветочную композицию у нас и порадуйте преподавателя оригинальным букетом на 1 сентября!
+			.row
+				+teacherSampleRow04()
+
 mixin teacherDescr(title, price)
 	+b.teacherDescr&attributes(attributes)
 		+e.descr
@@ -41,6 +50,23 @@ mixin teacherSampleRow()
 	+prodItemGalery('teacher', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990')(class='col-sm-6 col-lg-4')
 		+teacherDescr('ОХОТНИК', '4 990')(class="text-center")
 			| Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
+
+mixin teacherSampleRow04()
+	+prodItemGalery('hitman', 1, 'ОХОТНИК', 'discount', 'ХИТ')(class='col-sm-6 col-lg-4')
+		+hitManDescr('ОХОТНИК', 'discount')
+			| Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
+			|
+			br
+			| С воспоминаниями о лесных путешествиях в компании близких по духу.
+	+prodItemGalery('hitman', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990')(class='col-sm-6 col-lg-4')
+		+hitManDescr('ЩЕДРАЯ ОСЕНЬ', '4 990')
+			| Букет для пылких духом с искрой и хитринкой в глазах.
+			|
+			br
+			| С воспоминаниями о ярких победах.
+	+prodItemGalery('hitman', 1, 'ЩЕДРАЯ ОСЕНЬ', '4 990')(class='col-sm-6 col-lg-4')
+		+hitManDescr('ЩЕДРАЯ ОСЕНЬ', '4 990')
+			| Букет для пылких духом с искрой и хитринкой в глазах.
 
 mixin prodItemCustom(imgMod='')
 	+b.prod-col&attributes(attributes)

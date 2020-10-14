@@ -7,10 +7,28 @@ mixin sHeaderTimer()
 				+b.section-title.text-center
 					h2 Успей заказать роскошные букеты для любимых учителей.
 					p до дня учителя осталось
-				//-import 0013krez
 				+e.timer-box.timer-box-js
 					span.days 00
 					span.hours 00
 					span.minutes 00
 					span.seconds 09
 	// end sHeaderTimer
+
+mixin sHeaderTimer-04()
+	// start sHeaderTimer
+	+b.SECTION.sHeaderTimer--04#sHeaderTimer&attributes(attributes)
+		+pic('header-timer-september.jpg')(class="sHeaderTimer__bg")
+		+e.content
+			.container
+				+e.top-img
+					img(src="img/@2x/footer-logo.png" alt="")
+				+b.section-title.text-center
+					h2 Закажи яркий букет для любимого учителя
+					p до 1 сентября осталось всего
+				+e.timer-box.timer-box-js
+					span.days 00
+					span.hours 00
+					span.minutes 00
+					span.seconds 09
+				.text-center
+					+e.A.btn(href='#') Выбрать букет
