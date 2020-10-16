@@ -1,0 +1,146 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHitMan/_sHitMan.pug
+include ../blocks/sHitWoman/_sHitWoman.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sConvinuent/_sConvinuent.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sOwner/_sOwner.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPhilocophy/_sPhilocophy.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sSeo/_sSeo.pug
+//-2
+include ../blocks/sHeaderTimer/_sHeaderTimer.pug
+include ../blocks/sTeachersPresent/_sTeachersPresent.pug
+include ../blocks/sTeacherFrame/_sTeacherFrame.pug
+include ../blocks/sMoreFlowers/_sMoreFlowers.pug
+include ../blocks/sWorkVantage/_sWorkVantage.pug
+//-3
+include ../blocks/sWUnusuall/_sWUnusuall.pug
+include ../blocks/sWomanFrame/_sWomanFrame.pug
+include ../blocks/sVase/_sVase.pug
+include ../blocks/sFlowerPot/_sFlowerPot.pug
+include ../blocks/sVegeterian/_sVegeterian.pug
+//-5
+include ../blocks/sFitoDesign/_sFitoDesign.pug
+include ../blocks/sReadyDes/_sReadyDes.pug
+include ../blocks/sPerfect/_sPerfect.pug
+include ../blocks/sIdea/_sIdea.pug
+include ../blocks/sDoubts/_sDoubts.pug
+include ../blocks/sPicturedForm/_sPicturedForm.pug
+include ../blocks/sMoreOptions/_sMoreOptions.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '06-moss'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+headerBlock()
+		+e.slider
+			.swiper-container.header-slider-js
+				.swiper-wrapper
+					+headerSlide('05-1', 'ВЫБРАТЬ БУКЕТ', 'fito-wall', 'btnGreen', 'woman-slide')
+						h4
+							| СТЕНА ИЗ
+							br
+							|СТАБИЛИЗИРОВАННОГО ЯГЕЛЯ
+						p ЭФФЕКТНАЯ ИЗЮМИНКА ВАШЕГО ИНТЕРЬЕРА
+					+headerSlide('05-2', 'ВЫБРАТЬ БУКЕТ', 'fito-bouquet', 'btnGreen', 'woman-slide')
+						h4
+							| БУКЕТ НЕДЕЛИ "ПРОМЕТЕЙ"
+						p Закажи со скидкой 10%
+					+headerSlide('3', 'ПОЛУЧИТЬ СТИХОТВОРЕНИЕ', 'fito-health', 'btnGreen', 'woman-slide')
+						h4 ДЕЛАЙ СВОЕ РАБОЧЕЕ ПРОСТРАНСТВО ЗДОРОВЫМ
+						p  Закажи цветок в кашпо за 3 990
+				.header-pugin.header-pugin-js
+				.header-prev.header-prev-js.d-none.d-sm-flex
+					+icon('chevron-left2')
+				.header-next.header-next-js.d-none.d-sm-flex
+					+icon('chevron-right2')
+	+breadcrumb('Главная', 'Стена из мха')
+	+sTeachersPresent-06()
+	+sDoubts()
+
+	//-+sFitoDesign()
+	+sReadyDes()
+	+sPerfect()
+	+sIdea()
+		+e.grid-share-3
+			+sIdeaItem('06-1', 'share-3-col')
+			+sIdeaItem('06-2', 'share-3-col')
+			+sIdeaItem('06-3', 'share-3-col')
+		+e.deafult-grid
+			+sIdeaItem(1)
+			+sIdeaItem(2)
+			+sIdeaItem(3)
+			+sIdeaItem('06-4')
+			+sIdeaItem('06-5')
+			+sIdeaItem('06-6')
+			+sIdeaItem(4)
+			+sIdeaItem(5)
+			+sIdeaItem(6)
+	+sPicturedForm()
+	+sWorkVantage()
+	+sMoreOptions()
+	+sForm-05()
+	+sSeo
+		.container
+			+e.txt.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				h1 Почему стоит выбрать озеленение стабилизированным мхом?
+				p Мы предлагаем вертикальное и горизонтальное озеленение мхом ягель. На самом деле это лишайник, однако устоявшейся традицией стало называть его «оленьим мхом». Его собирают в северных лесах, а затем стабилизируют: заменяют всю жидкость на специальный раствор. В результате растение выглядит, как живое, при этом все биологические процессы заморожены. Мху не нужна влага или солнечный свет, он не может сгнить, в нем не заведутся вредители. В то же время он остается таким же мягким и красивым, как живой.
+				br
+				p Наша компания предлагает вертикальное озеленение мхом в Москве и Московской области нескольких оттенках. Ягель подходит для создания живых стен, зеленых логотипов компании, использования в качестве декора интерьера. Ключевые преимущества ягеля — это:
+				ul
+					li
+						b Полное отсутствие необходимости ухода.
+						|
+						|	Единственное условие для того, чтобы картина или стена из ягеля висела много лет, — поддерживать влажность воздуха в помещении в диапазоне 40-70%.
+					li
+						b Звукоизоляция.
+						|
+						| Стена изо мха будет поглощать шумы. Идеальный вариант для зонирования в офисе типа open space.
+					li
+						b  Простота монтажа и доступная стоимость.
+						|
+						| По сравнению с организацией живой стены из растений с системой полива озеленение мхом стоит дешево. Панели с ягелем весят совсем немного, поэтому монтаж простой и быстрый.
+					li
+						b Многообразие вариантов использования.
+						|
+						| Фитодизайнеры «Зверобоя» много лет работают со стабилизированным мхом и умеют делать из него стены, логотипы, картины, кочки, элементы декора.
+					li
+						b Безопасность.
+						|
+						| Ягель гипоаллергенен, безопасен для детей и животных. В нем не заводятся вредители, он не статичен. Озеленение мхом одинаково хорошо подходит для использования дома или в офисе.
+				br
+				h1 Озеленение мхом от «Зверобоя»
+				p Компания «Зверобой» воплотит в жизнь любые ваши идеи по озеленению дома или офиса при помощи ягеля. Мы предлагаем два варианта:
+				br
+				ol
+					li
+						b Готовые композиции.
+						| Это картины и островки из ягеля. Цена композиций из стабилизированного мха начинается от 7000 рублей. Их главное достоинство заключается в том, что на изготовление не требуется времени: вы просто выбираете размер и добавляете товар в корзину, после чего наш менеджер связывается с вами для уточнения деталей заказа.
+					li
+						a(href='#') Фитодизайн на заказ.
+						|
+						| Наш фитодизайнер выедет на ваш объект для замеров, создаст и согласует с вами макет, а после приедет для монтажа готового решения. В результате вы получите уникальный элемент дизайна, который сразу же сделает офис или дом более ярким, уютным и стильным.
+				p Мы предлагаем вертикальное и горизонтальное озеленение мхом недорого: оставьте заявку на нашем сайте, и в течение часа менеджер свяжется с вами, чтобы уточнить стоимость и согласовать время выезда специалиста.
+				br
+				p Самые популярные заказы от наших клиентов — вертикальное озеленение, создание эко-логотипов, оформление зон отдыха с использованием стабилизированного мха. Особенно красиво он смотрится с подсветкой. Мы ответственно относимся к каждому проекту, продумывая до мелочей визуальное решение. На все работы мы предоставляем гарантии.
+				br
+				p Озеленение мхом стен — великолепный способ сделать интерьер более живым, разнообразным, интересным. Закажите фитодизайн или готовые решения в «Зверобое» — и зеленые детали в декоре будут радовать вас каждый день!
+				br
+			+e.btn-cont.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				+e.btn.go-top-js Наверх
+			+e.green-strip
+				p Наши авторские букеты могут отличаться от картинки, так как все цветы уникальны. В зависимости от сезона мы можем на свое усмотрение заменять цветы. Букет будет таким же красивым и стильным, также останется в рамках указанной на сайте цены.
+	+sContact()
+	+footer()

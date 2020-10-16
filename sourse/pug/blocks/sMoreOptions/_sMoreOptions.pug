@@ -1,0 +1,21 @@
+mixin sMoreOptions()
+	// start sMoreOptions
+	+b.SECTION.sMoreOptions.section#sMoreOptions&attributes(attributes)
+		.container
+			+arrowStrip()
+			+b.section-title.text-center
+				h2 А есть еще варианты озеленения?
+				+e.A.btn(href="#") Смотреть еще
+			+arrowStrip()
+	// end sMoreOptions
+
+mixin sMoreOptions07()
+	// start sMoreOptions
+	+b.SECTION.sMoreOptions--add-txt.section#sMoreOptions&attributes(attributes)
+		.container
+			+arrowStrip()
+			+b.section-title.text-center
+				h2 А есть еще букеты?
+				+e.A.btn(href="#") Смотреть еще
+				+e.change-txt Мы меняем представление о мужских подарках. Превращаем хвою и розмарин, шишки и артишок в ингредиенты букетов
+			+arrowStrip()

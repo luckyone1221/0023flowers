@@ -1,0 +1,26 @@
+mixin sPicturedForm()
+	// start sPicturedForm
+	+b.SECTION.sPicturedForm.section#sPicturedForm&attributes(attributes)
+		+e.container.container
+			+pic('sPicturedForm-bg.jpg')(class="sPicturedForm__bg")
+			+b.section-title.text-center
+				h2 ЗАКАЗАТЬ СТЕНУ ИЗ МХА
+				p Предложим варианты специально для Вашего интерьера
+			+form-wrap
+				+input('Ваш номер телефона', 'tel')
+				+e.BUTTON.btn(type='submit') Обсудить дизайн моей стены из мха
+			+e.lower-txt.text-center Перезвоним в течение 1 часа
+	// end sPicturedForm
+
+mixin sPicturedForm07()
+	// start sPicturedForm
+	+b.SECTION.sPicturedForm--uniq.section#sPicturedForm&attributes(attributes)
+		+e.container.container
+			+pic('sPicturedForm-bg2.jpg')(class="sPicturedForm__bg")
+			+b.section-title.text-center
+				h2 ЗАКАЗАТЬ УНИКАЛЬНУЮ КОМПОЗИЦИЮ
+				p Создадим уникальный букет специально для вас.
+			+form-wrap
+				+input('Ваш номер телефона', 'tel')
+				+e.BUTTON.btn(type='submit') Заказать букет
+			+e.lower-txt.text-center Перезвоним в течение 1 часа

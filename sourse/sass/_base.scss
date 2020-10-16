@@ -473,13 +473,20 @@ iframe {
 //pugin-frame
 .pugin-frame, .pugin-frame-dark{
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 
 	.swiper-pagination-bullet{
-		width: 10px;
-		height: 10px;
-		margin: 0 10px;
+		margin: 0 5px;
+		width: 8px;
+		height: 8px;
+		@include media-breakpoint-up(sm){
+			margin: 0 10px;
+			width: 10px;
+			height: 10px;
+		}
+
 		border-radius: 50%;
 		border: 2px solid $white;
 		@include mt();
@@ -839,5 +846,22 @@ iframe {
 			border-width: 9px 0 9px 10px;
 			border-color: transparent transparent transparent $brown;
 		}
+	}
+}
+
+//
+.btn-green-dark-frame{
+	@extend .btn;
+	@extend .btn-success;
+
+	padding: 18px 60px;
+	color: $white;
+	font-weight: bold;
+
+	background-color: darken($toxic-green, 10);
+	border: 1px solid darken($toxic-green, 10);
+	&:hover{
+		background-color: darken($toxic-green, 5);
+		border: 1px solid darken($toxic-green, 5);
 	}
 }

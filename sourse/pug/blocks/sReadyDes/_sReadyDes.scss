@@ -1,0 +1,30 @@
+// start .sReadyDes
+.sReadyDes {
+	--sTPB: #{rem(35)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(55)};
+		--sPT: #{rem(40)};
+		--sPB: #{rem(30)};
+	}
+
+	.section-title{
+		h2{
+			font-size: rem(30);
+			@include media-breakpoint-up(lg){
+				font-size: rem(46);
+			}
+			font-family: $mono;
+			font-weight: 300;
+		}
+	}
+	.arrow{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(45);
+		}
+	}
+
+
+} // end.sReadyDes

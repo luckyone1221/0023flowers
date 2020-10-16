@@ -1,0 +1,81 @@
+// start .sDoubts
+.sDoubts {
+	--sTPB: #{rem(35)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(50)};
+		--sPT: #{rem(40)};
+		--sPB: #{rem(60)};
+	}
+
+	.arrow{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(45);
+		}
+	}
+	.section-title{
+		h2{
+			font-family: $default-font;
+		}
+	}
+
+	&__row{
+		@include media-breakpoint-up(lg){
+			@include roww(40px)
+		}
+		@include media-breakpoint-up(xl){
+			@include roww(50px)
+		}
+	}
+	&__item{
+		margin-bottom: rem(35);
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+	}
+	&__item-name{
+		font-family: $mono;
+		color: darken($toxic-green, 10);
+		font-size: rem(20px);
+		font-weight: 300;
+		line-height: 1.55;
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(70);
+		}
+	}
+	&__item-link{
+		display: block;
+		span{
+			display: block;
+		}
+	}
+	&__img{
+		position: relative;
+		padding-top: (40/56) * 100%;
+		margin-bottom: rem(25);
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__txt{
+		margin-bottom: rem(20);
+		font-size: 14px;
+		font-family: $default-font;
+		font-weight: 300;
+		color: $body-color;
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sDoubts

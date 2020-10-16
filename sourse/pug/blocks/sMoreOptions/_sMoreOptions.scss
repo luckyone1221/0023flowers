@@ -1,0 +1,70 @@
+// start .sMoreOptions
+.sMoreOptions {
+	--sTPB: #{rem(30)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(45)};
+		--sPT: #{rem(30)};
+		--sPB: #{rem(40)};
+	}
+
+	.section-title{
+		h2{
+			font-family: $default-font;
+			font-size: rem(28px);
+			@include media-breakpoint-up(md){
+				font-size: rem(34px);
+			}
+
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(70);
+			}
+		}
+		&__btn{
+			@extend .btn-green-dark-frame;
+			text-transform: none;
+		}
+		//07
+		&__change-txt{
+			max-width: 960px;
+			margin: 0 auto;
+
+			font-size: rem(24px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(30px);
+			}
+			@include media-breakpoint-up(lg){
+				font-size: rem(34px);
+			}
+			line-height: (50/34);
+			font-weight: 300;
+		}
+	}
+
+	&--add-txt{
+		.section-title{
+			&__btn{
+				margin-bottom: rem(30);
+				@include media-breakpoint-up(lg){
+					margin-bottom: rem(80);
+				}
+			}
+		}
+	}
+	//end 07
+
+	.arrow:first-child{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(45);
+		}
+	}
+	.arrow:last-child{
+
+	}
+
+	//07
+
+} // end.sMoreOptions

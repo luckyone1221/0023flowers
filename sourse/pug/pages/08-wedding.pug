@@ -1,0 +1,162 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHitMan/_sHitMan.pug
+include ../blocks/sHitWoman/_sHitWoman.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sConvinuent/_sConvinuent.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sOwner/_sOwner.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPhilocophy/_sPhilocophy.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sSeo/_sSeo.pug
+//-2
+include ../blocks/sHeaderTimer/_sHeaderTimer.pug
+include ../blocks/sTeachersPresent/_sTeachersPresent.pug
+include ../blocks/sTeacherFrame/_sTeacherFrame.pug
+include ../blocks/sMoreFlowers/_sMoreFlowers.pug
+include ../blocks/sWorkVantage/_sWorkVantage.pug
+//-3
+include ../blocks/sWUnusuall/_sWUnusuall.pug
+include ../blocks/sWomanFrame/_sWomanFrame.pug
+include ../blocks/sVase/_sVase.pug
+include ../blocks/sFlowerPot/_sFlowerPot.pug
+include ../blocks/sVegeterian/_sVegeterian.pug
+//-5
+include ../blocks/sFitoDesign/_sFitoDesign.pug
+include ../blocks/sReadyDes/_sReadyDes.pug
+include ../blocks/sPerfect/_sPerfect.pug
+include ../blocks/sIdea/_sIdea.pug
+include ../blocks/sDoubts/_sDoubts.pug
+include ../blocks/sPicturedForm/_sPicturedForm.pug
+include ../blocks/sMoreOptions/_sMoreOptions.pug
+//-7
+include ../blocks/sSucculents/_sSucculents.pug
+//-8
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sOurClients/_sOurClients.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '08-wedding'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+headerBlock()
+		+e.slider
+			.swiper-container.header-slider-js
+				.swiper-wrapper
+					+headerSlide('08-1', 'Заказать', 'wedding-uniq', 'btnWedding', 'woman-slide')
+						h4 Ваше событие будет уникальным
+						p Закажите оформление мероприятий у нас!
+					+headerSlide('08-2', 'обсудить мою свадьбу', 'wedding-dream', 'btnWedding', 'woman-slide')
+						h4 СВАДЬБА МЕЧТЫ
+						p Флористика и декор для уникального события
+					+headerSlide('08-3', 'Подробнее', 'wedding-bride', 'btnWedding', 'woman-slide')
+						h4 Букет невесты
+						p стильный и неповторимый
+					+headerSlide('08-4', 'выбрать букет', 'wedding-bridesmaid', 'btnWedding', 'woman-slide')
+						h4 БУКЕТЫ ПОДРУЖЕК НЕВЕСТЫ
+						p закажи букеты для подружек и внеси изюминку в свою свадьбу
+					+headerSlide('08-5', 'Заказать венок невесты', 'wedding-crown', 'btnWedding', 'woman-slide')
+						h4 Дополни образ короной из цветов
+						p великолепный венок в тон букету невесты
+				.header-pugin.header-pugin-js
+				.header-prev.header-prev-js.d-none.d-sm-flex
+					+icon('chevron-left2')
+				.header-next.header-next-js.d-none.d-sm-flex
+					+icon('chevron-right2')
+	+breadcrumb('Главная')
+	+sFitoDesign08()
+	+sEvents()
+	+sPerfect()
+		+b.section-title.text-center
+			h2 Наш подход к оформлению цветами мероприятий
+		+e.row.row
+			+sPerfectItem('08-1', 'Уникальность')
+				| Мы разработаем индивидуальную концепцию украшения вашего мероприятия. За счет использования классических цветов и редких растений в необычных сочетаниях нам удастся создать неповторимый декор. Он запомнится гостям и будет великолепно смотреться на фотографиях.
+			+sPerfectItem('08-2', 'Честность')
+				| Условия сотрудничества обговариваются на первой встрече и прописываются в договоре. Все расчеты прозрачны — вы будете точно знать, сколько и за что заплатили. Бюджет не изменится в процессе работы. Мы предлагаем доступные расценки и удобную систему оплаты.
+			+sPerfectItem('08-3', 'Сроки')
+				| Конечно, мы предпочитаем, чтобы клиенты обращались к нам заранее. Но если вам нужно оформить живыми цветами мероприятие срочно, то мы справимся с задачей на все 100%! Мы всегда укладываемся в сроки, поэтому вы можете быть уверены, что к торжественному событию все будет готово.
+	+sIdea('Наши работы')
+		+e.grid-share-3
+			+sIdeaItem('08-1', 'share-3-col')
+			+sIdeaItem('08-2', 'share-3-col')
+			+sIdeaItem('08-3', 'share-3-col')
+		+e.grid-share-3
+			+sIdeaItem('08-4', 'share-3-col')
+			+sIdeaItem('08-5', 'share-3-col')
+			+sIdeaItem('08-6', 'share-3-col')
+		+sIdeaItem('08-7', 'big-item')
+		+e.grid-share-3
+			+sIdeaItem('08-8', 'share-3-col')
+			+sIdeaItem('08-9', 'share-3-col')
+			+sIdeaItem('08-10', 'share-3-col')
+		+sIdeaItem('08-11', 'big-item')
+		+e.deafult-grid
+			+sIdeaItem('08-12')
+			+sIdeaItem('08-13')
+			+sIdeaItem('08-14')
+	+sWorkVantage08()
+	+sForm-08()
+
+	+sSeo
+		.container
+			+e.txt.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				h1 Флористическое оформление свадьбы
+				p Чаще всего услуги наших флористов по оформлению цветами мероприятия в Москве требуются для организации одного из самых волшебных дней в жизни каждой семьи — свадьбы. Для нас всегда большая радость позаботиться о том, чтобы образ невесты был дополнен ее любимыми цветами, а торжество состоялось в элегантно украшенном зале. У нас можно заказать:
+				br
+				p
+					a(href='#') - букет
+					|
+					| и
+					|
+					a(href='#') венок невесты
+					|
+					| и бутоньерку жениха;
+				p - свадебную арку;
+				p - декор для автомобилей;
+				p - цветочные композиции для украшения welcome-зоны, фотозоны, места проведения свадебной церемонии и банкетного зала для торжественного застолья.
+				br
+				p При оформлении цветами мероприятий мы обязательно заботимся, чтобы все элементы были выполнены в одной цветовой гамме и стиле. Например, если невеста выберет букет с использованием лаванды и эвкалипта, то эти же цветы будут использованы и для веночка, и для украшения столов. Мы продумываем каждую мелочь, чтобы праздник был безупречен со стилистической точки зрения, а настроение гостей было радостным и лиричным, в том числе благодаря нашим композициям.
+				br
+				h1 Наш подход к оформлению цветами мероприятий
+				p Мы уверены: цветы способны многое рассказать об организаторе мероприятия и поднять его статус в глазах гостей. Для официальных событий мы собираем строгие и лаконичные композиции, которые не будут отвлекать внимание, а для праздничных — яркие, неординарные букеты, поднимающие настроение.
+				br
+				p При оформлении цветами мероприятий в Москве мы всегда учитываем предпочтения клиента, тематику, выбранный клиентом стиль, размер столов. Наши флористы принимают во внимание даже аромат цветов: например, для букетов невесты или композиций, которые будут стоять на столах, побираются растения с неярким, нежным запахом.
+				br
+				p Нам важно, чтобы свадьба, юбилей, конференция или вечеринка прошли именно так, как задумывал клиент. Если будет необходимость, наши флористы приедут перед началом мероприятия и помогут расставить композиции и проконтролировать, чтобы весь цветочный декор смотрелся идеально.
+				br
+				h1 5 причин выбрать «Зверобой» для оформления цветами мероприятия в Москве
+				p
+					b 1. Только свежие цветы.
+					|
+					| Мы не закупаем их заранее, а прорабатываем индивидуальный график подготовки к каждому мероприятию. За счет этого композиции отлично держатся, радуя яркими насыщенными красками.
+				p
+					b 2. Необычные растения.
+					| Наши флористы стремятся уйти от обыденности и предложить новый взгляд на оформление цветами мероприятий. При создании букетов мы используем лесные растения, плоды, травы — они смотрятся дерзко и оригинально, приковывают взоры и оставляют сильные впечатления.
+				p
+					b 3. Точное следование срокам.
+					| Курьеры доставят цветы в удобное вам время, а флористы помогут расставить композиции по местам. Все будет готово к торжественному моменту.
+				p
+					b 4. Удобная схема сотрудничества.
+					| У нас огромный выбор растений, множество вариантов оплаты. Флористы на связи в любое время суток, чтобы обсудить заказ или внести в него корректировки.
+				p
+					b 5. Воплощение ваших идей.
+					| У вас есть любимые цветы и вы хотите, чтобы все детали были выполнены с их использованием? Никаких проблем! Опишите, как выглядит оформление цветами мероприятия в ваших мечтах, и наши флористы реализуют их. Мы на одной волне с клиентами, поэтому безупречно понимаем их пожелания.
+				br
+				p Закажите декорирование живыми цветами от «Зверобоя» — создайте торжественную атмосферу и удивите гостей эксклюзивными композициями с использованием лесных растений!
+			+sOurClients()
+			+e.btn-cont.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				+e.btn.go-top-js Наверх
+			+e.green-strip
+				p Наши авторские букеты могут отличаться от картинки, так как все цветы уникальны. В зависимости от сезона мы можем на свое усмотрение заменять цветы. Букет будет таким же красивым и стильным, также останется в рамках указанной на сайте цены.
+	+sContact()
+	+footer()

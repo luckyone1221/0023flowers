@@ -437,6 +437,32 @@ function eventHandler() {
 		});
 	});
 
+	//clients-slider
+	let clientsSlider = new Swiper('.clients-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+
+		//lazy-load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 12,
+		},
+		spaceBetween: 10,
+		//pagination
+		pagination: {
+			el: $(this).find('.clients-pugin-js'),
+			clickable: true,
+		},
+		//nav
+		navigation: {
+			nextEl: '.clients-prev-js',
+			prevEl: '.clients-next-js',
+		},
+	});
+	window.setTimeout(function (){
+		clientsSlider.update();
+	}, 1000)
+
 	//wow js
 
 	//catalog wow

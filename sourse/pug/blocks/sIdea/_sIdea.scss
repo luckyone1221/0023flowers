@@ -1,0 +1,130 @@
+// start .sIdea
+.sIdea {
+	--sTPB: #{rem(35)};
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(100)};
+		--sPT: #{rem(40)};
+		--sPB: #{rem(60)};
+	}
+
+	.arrow{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(45);
+		}
+	}
+	.section-title{
+		h2{
+			font-weight: 300;
+		}
+	}
+	&__main-row,
+	&__deafult-grid,
+	&__grid-share-3{
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+		@include media-breakpoint-up(md) {
+			grid-column-gap: 30px;
+			grid-row-gap: 30px;
+		}
+		@include media-breakpoint-up(lg) {
+			grid-column-gap: 40px;
+			grid-row-gap: 40px;
+		}
+		@include media-breakpoint-up(xl) {
+			grid-column-gap: 50px;
+			grid-row-gap: 50px;
+		}
+	}
+	&__main-row{
+		display: grid;
+	}
+	&__deafult-grid{
+		display: grid;
+
+		@include media-breakpoint-up(sm){
+			grid-template-columns: repeat(2,1fr);
+		}
+		@include media-breakpoint-up(lg) {
+			grid-template-columns: repeat(3,1fr);
+		}
+	}
+	&__grid-share-3{
+		display: grid;
+
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+		@include media-breakpoint-up(sm){
+			grid-template-columns: repeat(2,1fr);
+			grid-template-rows: repeat(2, 1fr);
+		}
+		@include media-breakpoint-up(md) {
+			grid-column-gap: 30px;
+			grid-row-gap: 30px;
+		}
+		@include media-breakpoint-up(lg) {
+			grid-column-gap: 40px;
+			grid-row-gap: 40px;
+		}
+		@include media-breakpoint-up(xl) {
+			grid-column-gap: 50px;
+			grid-row-gap: 50px;
+		}
+
+		.share-3-col{
+			//
+			&:nth-child(1){
+				grid-column-start: 1;
+				grid-column-end: 2;
+				grid-row-start: 1;
+				grid-row-end: 3;
+			}
+			.sIdea__img-link{
+				@include media-breakpoint-up(sm){
+					padding-top: 56.42%;
+				}
+			}
+		}
+	}
+
+	&__col{
+		&.big-item{
+			.sIdea__img-link{
+				@include media-breakpoint-up(sm){
+					padding-top: 56.42%;
+				}
+			}
+		}
+	}
+
+	//
+	&__img-link{
+		cursor: zoom-in;
+		display: block;
+		position: relative;
+		height: 0;
+		padding-top: 100%;
+		min-height: 100%;
+		background-color: $black;
+		overflow: hidden;
+
+		&:hover{
+			img{
+				opacity: .8;
+				transform: scale(1.15);
+			}
+		}
+		img{
+			@include mt();
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+	&__{}
+} // end.sIdea

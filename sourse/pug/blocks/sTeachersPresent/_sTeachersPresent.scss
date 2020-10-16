@@ -4,10 +4,6 @@
 	--sTPB: #{rem(35)};
 	--sPB: #{rem(30px)};
 
-	@include media-breakpoint-up(lg){
-		//--sPB: #{rem(75px)};
-	}
-
 	.section-title{
 		max-width: 960px;
 		margin: 0 auto;
@@ -31,7 +27,6 @@
 
 	}
 
-
 	&__bb-cont{
 		text-align: center;
 		width: 100%;
@@ -49,6 +44,13 @@
 	&__{}
 	&__{}
 	&__{}
+
+	.arrow{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(45);
+		}
+	}
 } // end.sTeachersPresent
 
 .teacherDescr{

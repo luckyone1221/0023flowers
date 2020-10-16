@@ -1,0 +1,30 @@
+mixin sReadyDes()
+	// start sReadyDes
+	+b.SECTION.sReadyDes.section#sReadyDes&attributes(attributes)
+		.container
+			+arrowStrip()
+			+b.section-title.text-center
+				h2 Готовые решения
+			.row
+				+prodItemGalery('hitman', 1, 'ОХОТНИК', 'discount')(class='col-sm-6 col-lg-4')
+					+hitManDescr('ОХОТНИК', 'discount')
+						| Букет для тех, кто с азартом преследует цель. И знает, что порой перед финальным броском необходимо терпеливо выждать в засаде.
+						|
+						br
+						| С воспоминаниями о лесных путешествиях в компании близких по духу.
+				+prodItemGalery('hitman', 2, 'ТОРЕАДОР', '5 600')(class='col-sm-6 col-lg-4')
+					+hitManDescr('ТОРЕАДОР', '5 600')
+						| Букет для пылких духом с искрой и хитринкой в глазах.
+						|
+						br
+						| С воспоминаниями о ярких победах.
+				+prodItem('hitman', 3, 'КОРОЛЬ АРТУР', '5 900', 'NEW')(class='col-sm-6 col-lg-4')
+					+hitManDescr('КОРОЛЬ АРТУР', '5 900')
+						| Для благородных и мудрых лидеров,
+						|
+						br
+						| уверенных в успехе своей команды.
+	// end sReadyDes
+mixin arrowStrip()
+	+b.arrow
+		img(loading="lazy" src="img/@2x/arrow-img.png" alt="")

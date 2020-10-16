@@ -1,0 +1,52 @@
+// start .sSucculents
+.sSucculents {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(125)};
+	}
+	.section-title{
+		h2{
+			font-family: $default-font;
+			font-size: rem(28px);
+			@include media-breakpoint-up(md){
+				font-size: rem(28px);
+			}
+
+
+		}
+	}
+	&__sub-title{
+		font-weight: 600;
+		color: #333;
+		font-size: rem(24px);
+		line-height: 1.35;
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(60);
+		}
+
+		&--mono{
+			font-weight: 300;
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(30);
+				font-size: rem(28px);
+			}
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(30);
+		}
+	}
+
+	.arrow{
+		margin-bottom: rem(30);
+	}
+	&__{}
+	&__{}
+
+} // end.sSucculents

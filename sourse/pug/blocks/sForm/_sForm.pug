@@ -67,3 +67,69 @@ mixin sForm-03()
 				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
 				|
 				a(href="#") политикой конфиденциальности
+
+mixin sForm-05()
+	// start sForm
+	+b.SECTION.sForm--fito.section#sForm&attributes(attributes)
+		+form-wrap
+			+b.section-title.text-center
+				h2 Обсудим фитодизайн Вашего пространства?
+				p Мы перезвоним в течение 1 часа и обсудим все детали
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Как к Вам обращаться
+			label
+				+input('+1 123 456 78 90', 'tel', undefined, 'tel')
+			+e.btn-cont
+				+e.BUTTON.btn(type='submit') Отправить
+			+e.policy
+				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+				|
+				a(href="#") политикой конфиденциальности
+
+mixin sForm-07()
+	// start sForm
+	+b.SECTION.sForm--fito.section#sForm&attributes(attributes)
+		+form-wrap
+			+b.section-title.text-center
+				h2 Сочиним особенный букет?
+				p Мы перезвоним в течение 1 часа и обсудим все детали
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Как к Вам обращаться
+			label
+				+input('+1 123 456 78 90', 'tel', undefined, 'tel')
+			+e.btn-cont
+				+e.BUTTON.btn(type='submit') Отправить
+			+e.policy
+				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+				|
+				a(href="#") политикой конфиденциальности
+
+mixin sForm-08()
+	// start sForm
+	+b.SECTION.sForm--fito.section#sForm&attributes(attributes)
+		+form-wrap
+			+b.section-title.text-center
+				h2 Закажите оформление цветами вашего мероприятия
+				p Мы перезвоним в течение 1 часа и обсудим все детали
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Как к Вам обращаться
+			label
+				+input('+1 123 456 78 90', 'tel', undefined, 'tel')
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Ваш e-mail
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Тип мероприятия
+			label
+				+e.TEXTAREA.input.form-control.has-ph-js()
+				+e.SPAN.title Комментарий
+			+e.btn-cont
+				+e.BUTTON.btn(type='submit') Отправить
+			+e.policy
+				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+				|
+				a(href="#") политикой конфиденциальности

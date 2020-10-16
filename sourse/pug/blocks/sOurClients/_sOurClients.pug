@@ -1,0 +1,21 @@
+mixin sOurClients()
+	// start sOurClients
+	+b.SECTION.sOurClients.section#sOurClients&attributes(attributes)
+		+b.section-title.text-center
+			h2 Наши клиенты
+		+e.slider
+			.swiper-container.clients-slider-js
+				.swiper-wrapper
+					- for (var i = 1; i <= 15; i++)
+						+partnerSlider(i)
+				.clients-prev.clients-prev-js.d-none.d-xl-flex
+					+icon('chevron-left2')
+				.clients-next.clients-next-js.d-none.d-xl-flex
+					+icon('chevron-right2')
+				.clients-pugin.clients-pugin-js.d-md-none
+	// end sOurClients
+
+mixin partnerSlider(imgNum)
+	.swiper-slide
+		+e.img
+			img.swiper-lazy(src="#" data-src=`img/@2x/client-slide-${imgNum}.jpg` alt="")

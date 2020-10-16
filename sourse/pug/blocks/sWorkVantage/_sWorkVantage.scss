@@ -78,4 +78,34 @@
 		line-height: 1.55;
 		font-weight: 300;
 	}
+
+	//08
+	&__img-row{
+		@include roww(30px);
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			@include roww(40px);
+			margin-bottom: rem(60);
+		}
+		@include media-breakpoint-up(xl){
+			@include roww(45px);
+			margin-bottom: rem(100);
+			margin-top: rem(40);
+		}
+	}
+	&__lower-img{
+		position: relative;
+		padding-top: 100%;
+		height: 0;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
 } // end.sWorkVantage

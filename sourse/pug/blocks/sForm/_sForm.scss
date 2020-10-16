@@ -63,10 +63,17 @@
 				//border: 1px solid $input-border-color;
 			}
 
-			input.not-empty + span, input:focus + span{
+			input.not-empty + span,
+			input:focus + span,
+			textarea.not-empty + span,
+			textarea:focus + span{
 				top: 0!important;
 				transform: translateY(-90%)!important;
 				font-size: rem(14);
+			}
+
+			textarea{
+				height: 150px;
 			}
 
 		}
@@ -136,5 +143,17 @@
 				border-radius: rem(24);
 			}
 		}
+	}
+
+	&--fito{
+
+		.form-wrap {
+			border: none;
+			form {
+				background-color: $body-bg;
+				border: none!important;
+			}
+		}
+
 	}
 } // end.sForm

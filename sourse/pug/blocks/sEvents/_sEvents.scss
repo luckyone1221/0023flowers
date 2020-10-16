@@ -1,0 +1,106 @@
+// start .sEvents
+.sEvents {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(50)};
+	}
+
+	.arrow{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(45);
+		}
+	}
+
+	.section-title{
+		max-width: 960px;
+		margin: 0 auto;
+		h2{
+			font-family: $default-font;
+			line-height: 1.2;
+
+			font-size: rem(28px);
+			@include media-breakpoint-up(md){
+				font-size: rem(30px);
+			}
+
+
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(50);
+			}
+		}
+		p{
+			font-weight: 300;
+			font-size: rem(16px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(18px);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(20px);
+			}
+			line-height: 1.55;
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(xl){
+			@include roww(40px);
+		}
+	}
+	&__col{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(50);
+		}
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(100);
+		}
+	}
+	&__item{
+		color: $body-color;
+		&:hover{
+			color: $body-color;
+		}
+		min-height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	&__img{
+		position: relative;
+		height: 0;
+		width: 100%;
+		padding-top: (400/360) * 100%;
+		margin-bottom: rem(20);
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title{
+		font-weight: 700;
+		line-height: 1.35;
+		font-size: rem(16px);
+		margin-bottom: rem(10);
+	}
+	&__descr{
+		margin-bottom: rem(20);
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 1.55;
+	}
+	.prod-col__buy-btn{
+		margin-top: auto;
+	}
+	&__{}
+} // end.sEvents

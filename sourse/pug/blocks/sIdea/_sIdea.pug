@@ -1,0 +1,24 @@
+mixin sIdea(sectionTitle="Идеи оформления интерьера")
+	// start sIdea
+	+b.SECTION.sIdea.section#sIdea&attributes(attributes)
+		.container
+			+arrowStrip()
+			+b.section-title.text-center
+				h2=sectionTitle
+			+e.main-row
+				if block
+					block
+				else
+					+e.deafult-grid
+						+sIdeaItem(1)
+						+sIdeaItem(2)
+						+sIdeaItem(3)
+						+sIdeaItem(4)
+						+sIdeaItem(5)
+						+sIdeaItem(6)
+	// end sIdea
+
+mixin sIdeaItem(imgNum, colClasses)
+	+e.col(class=colClasses)
+		+e.A.img-link(href=`img/@2x/sIdea-${imgNum}.jpg` data-fancybox=`sIdeaImg`)
+			img(loading="lazy" src=`img/@2x/sIdea-${imgNum}.jpg` alt="")

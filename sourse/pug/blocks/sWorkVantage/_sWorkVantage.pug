@@ -37,3 +37,41 @@ mixin sWorkVantageItem(imgNum, title)
 			+e.title=title
 			+e.descr
 				block
+
+mixin sWorkVantage08()
+	// start sWorkVantage
+	+b.SECTION.sWorkVantage.section#sWorkVantage&attributes(attributes)
+		.container
+			+arrowStrip()
+			+b.section-title.text-center
+				h2 Как мы работаем?
+				p Наша цель - приносить радость нашим клиентам с персональным подходом к каждому.
+			+e.row.row
+				+sWorkVantageItem(1 , 'Всегда на связи')
+					| Перезвоним в течение 1 часа.
+					|
+					br
+					| Доступны в WhatsApp 24/7.
+				+sWorkVantageItem(2 , 'Доставка')
+					| Доставка букета до счастливого обладателя:
+					|
+					br
+					| Через 24 часа после заказа - 430 руб.
+					|
+					br
+					| Доставка в день заказа - 550 руб.
+					|
+					br
+					| Доставка за пределы МКАД 10 км - 650 руб.
+				+sWorkVantageItem(3 , 'Каждый букет - особенный')
+					| Мы стремимся к тому, что каждый букет был особенных и выглядел действительно шикарно. Поэтому большая часть букетов стоимостью выше 3 000 руб.
+				+sWorkVantageItem(4 , 'Свежесть')
+					| Все букеты сделаны из свежих цветов. Мы создаем их специально для вас после согласования всех деталей.
+			+e.img-row.row
+				+workVantageImgItem(1)
+				+workVantageImgItem(2)
+			+arrowStrip()
+
+mixin workVantageImgItem(imgNum)
+	.col-sm-6
+		+pic(`work-vant-lower-img-${imgNum}.jpg`)(class="sWorkVantage__lower-img")
