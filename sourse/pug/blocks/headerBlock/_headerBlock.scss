@@ -544,6 +544,23 @@
 			padding: rem(19px) rem(65px);
 		}
 	}
+	//09
+	&__btn-red-rounded{
+		@extend .btn;
+		@extend .btn-danger;
+
+		padding: 18px 60px;
+		border-radius: rem(20);
+		color: $white;
+		font-weight: bold;
+
+		background-color: darken($crimson, 10);
+		border: 1px solid darken($crimson, 10);
+		&:hover{
+			background-color: darken($crimson, 5);
+			border: 1px solid darken($crimson, 5);
+		}
+	}
 
 	//
 	&__vantage{
@@ -592,43 +609,6 @@
 	&__{}
 	&__{}
 	&__{}
-
-	@include media-breakpoint-up(xl) {}
-
-	@include media-breakpoint-up(lg) {}
-
-	@include media-breakpoint-up(md) {}
-
-	@include media-breakpoint-up(sm) {}
-
-	@include media-breakpoint-up(xs) {}
-
-	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
-
-	//
-	@include media-breakpoint-down(xl) {}
-
-	@include media-breakpoint-down(lg) {}
-
-	@include media-breakpoint-down(md) {}
-
-	@include media-breakpoint-down(sm) {}
-
-	@include media-breakpoint-down(xs) {}
-
 }
 
 // end.headerBlock

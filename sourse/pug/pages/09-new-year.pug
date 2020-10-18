@@ -1,0 +1,125 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHitMan/_sHitMan.pug
+include ../blocks/sHitWoman/_sHitWoman.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sConvinuent/_sConvinuent.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sOwner/_sOwner.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPhilocophy/_sPhilocophy.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sSeo/_sSeo.pug
+//-2
+include ../blocks/sHeaderTimer/_sHeaderTimer.pug
+include ../blocks/sTeachersPresent/_sTeachersPresent.pug
+include ../blocks/sTeacherFrame/_sTeacherFrame.pug
+include ../blocks/sMoreFlowers/_sMoreFlowers.pug
+include ../blocks/sWorkVantage/_sWorkVantage.pug
+//-3
+include ../blocks/sWUnusuall/_sWUnusuall.pug
+include ../blocks/sWomanFrame/_sWomanFrame.pug
+include ../blocks/sVase/_sVase.pug
+include ../blocks/sFlowerPot/_sFlowerPot.pug
+include ../blocks/sVegeterian/_sVegeterian.pug
+//-5
+include ../blocks/sFitoDesign/_sFitoDesign.pug
+include ../blocks/sReadyDes/_sReadyDes.pug
+include ../blocks/sPerfect/_sPerfect.pug
+include ../blocks/sIdea/_sIdea.pug
+include ../blocks/sDoubts/_sDoubts.pug
+include ../blocks/sPicturedForm/_sPicturedForm.pug
+include ../blocks/sMoreOptions/_sMoreOptions.pug
+//-7
+include ../blocks/sSucculents/_sSucculents.pug
+//-8
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sOurClients/_sOurClients.pug
+//-9
+include ../blocks/sNYDesign/_sNYDesign.pug
+include ../blocks/sWeMake/_sWeMake.pug
+include ../blocks/sCorporative/_sCorporative.pug
+include ../blocks/sWorkShop/_sWorkShop.pug
+include ../blocks/sExample/_sExample.pug
+include ../blocks/sWhy/_sWhy.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '09-new-year'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+headerBlock()
+		+e.slider
+			.swiper-container.header-slider-js
+				.swiper-wrapper
+					+headerSlide('09-1', 'Расчет и заказ', 'wedding-uniq', 'btnNewYear', 'woman-slide')
+						h4 Новогоднее чудо
+						p
+							| Волшебная атмосфера праздника в Вашем офисе.
+							br
+							| Стильно, качественно, в рамках бюджета.
+				.header-pugin.header-pugin-js
+				.header-prev.header-prev-js.d-none.d-sm-flex
+					+icon('chevron-left2')
+				.header-next.header-next-js.d-none.d-sm-flex
+					+icon('chevron-right2')
+	+breadcrumb('Главная')
+	+sNYDesign()
+	+sWeMake()
+	+sCorporative()
+	+sHeaderTimer-09()
+	+sWorkShop()
+	+sExample()
+	+sWhy()
+	+sOurClients()
+	+sForm-09()
+	+sSeo
+		.container
+			+e.txt.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				h1.text-center Новогоднее оформление помещений со «Зверобоем»
+				p Наша команда профессионалов готова оформить любое помещение по вашим индивидуальным пожеланиям и в сочетании с корпоративным стилем.
+				ul
+					li Вначале мы подробно обсудим и подберем варианты новогоднего оформления помещений под любой бюджет. При необходимости наши специалисты осмотрят объект и проведут замеры.
+					li Затем мы создаем концепцию новогоднего оформления и проводим расчеты.
+					li И, наконец, быстро, качественно и под ключ воплощаем все идеи в вашем помещении и создаем в нем сказку. Вам не нужно будет беспокоиться о монтаже и демонтаже оформления, мы сами все устроим от начала и до конца.
+				br
+				p Наши флористы предлагают следующие авторские композиции для новогоднего оформления.
+				ul
+					li
+						b Сказочные зимние букеты в коробках, корзинах или в кашпо из коры дерева.
+						|
+						| Коробочки могут быть оформлены под подарочную упаковку, что придает букету еще больше праздничного волшебства. Такие композиции легко поставить на ресепшен, обеденный стол, подоконник и любую другую поверхность, они станут прекрасным украшением помещения. За основу для наших зимних букетов мы берем настоящую хвою: нежные ветки голубой ели или нарядного нобилиса, ароматный можжевельник и т. д. Украшениями композиций служат цветы хлопка, которые выглядят как снег, новогодние игрушки, фрукты, корица, шишки, цветы магнолии или суккуленты. Все это придает традиционному новогоднему оформлению уникальность и мечтательность.
+					li
+						b Новогодние композиции из настоящей хвои, оформленные в виде елочек.
+						|
+						| Такие малышки очень компактны, так что их можно поставить даже на офисный стол, плюс они намного легче в уходе, чем спиленные деревца. Подобная композиция выглядит декоративно и ярко, наполняет помещение терпким ароматом живой хвои и навевает ощущение праздника. В качестве украшений для наших елочек мы используем игрушечные шарики, бусы, орешки, дольки апельсинов и пряностей.
+					li
+						b Композиции на ваш вкус.
+						| Оставьте заявку на сайте — и мы перезвоним вам в течение часа, чтобы обсудить индивидуальное новогоднее оформление по вашим пожеланиям. Просто дайте волю своей фантазии, а наши флористы приложат все усилия, чтобы воплотить ее в жизнь. Мы готовы выполнить
+						|
+						a(href='#') оформление цветами мероприятий
+						|
+						| в Москве и области.
+				br
+				h1.text-center Почему стоит заказать креативное оформление на Новый год в «Зверобое»
+				ol
+					li У нас работают только опытные флористы с безупречным вкусом и чувством цвета. Мы составим идеальные композиции, которые будут прекрасно смотреться с любого ракурса и отлично впишутся в ваше помещение.
+					li Услуга новогоднего оформления оказывается под ключ: вам не придется потратить ни одной лишней минуты. Наши специалисты встретятся с вами в офисе в любое удобное время и самостоятельно выполнят все необходимые замеры, закупки, доставку, монтаж.
+					li Мы работаем только с самой свежей хвоей и другими растениями и приступаем к работе над заказом непосредственно перед монтажом. Так мы обеспечиваем нашим цветочным композициям наибольший возможный срок жизни.
+					li Мы осуществляем доставку по Москве и Московской области в любое удобное для вас время, в том числе в день заказа.
+					li У нас три способа оплаты: наличными курьеру, онлайн или на расчетный счет.
+				br
+				p Подарите себе настоящую сказку и закажите праздничный декор в интернет-магазине «Зверобой»!
+			+e.btn-cont.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				+e.btn.go-top-js Наверх
+			+e.green-strip
+				p Наши авторские букеты могут отличаться от картинки, так как все цветы уникальны. В зависимости от сезона мы можем на свое усмотрение заменять цветы. Букет будет таким же красивым и стильным, также останется в рамках указанной на сайте цены.
+	+sContact()
+	+footer()

@@ -1,0 +1,18 @@
+mixin sSubscribe()
+	// start sSubscribe
+	+b.SECTION.sSubscribe.section#sSubscribe&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Подпишись на наши новости и интересные истории
+			+form-wrap
+				+input('Ваш E-mail', 'email')
+				+e.BUTTON.btn(type="submit") Подписаться
+			+e.P.lower-txt Обещаем присылать письма не часто и по делу =)
+			+b.soc-cont
+				+e.A.item(href="#")
+					+icon('fb')
+				+e.A.item(href="#")
+					+icon('instagram')
+
+
+	// end sSubscribe

@@ -1,0 +1,26 @@
+mixin sExample()
+	// start sExample
+	+b.SECTION.sExample.section#sExample&attributes(attributes)
+		+e.container.container
+			+arrowStrip()
+			+b.section-title.text-center
+				h2 Примеры новогоднего оформления
+			+e.slider
+				.swiper-container.example-slider-js
+					.swiper-wrapper
+						- for (var i=1; i<=10; i++)
+							+exampleSlide(i)
+						- for (var i=1; i<=10; i++)
+							+exampleSlide(i)
+				.example-prev.example-prev-js
+					+icon('chevron-left2')
+				.example-next.example-next-js
+					+icon('chevron-right2')
+				.example-pugin.example-pugin-js
+			+arrowStrip()
+	// end sExample
+
+mixin exampleSlide(imgNum)
+	.swiper-slide
+		+e.img
+			img.swiper-lazy(src="#" data-src=`img/@2x/example-slide-${imgNum}.jpg` alt="")

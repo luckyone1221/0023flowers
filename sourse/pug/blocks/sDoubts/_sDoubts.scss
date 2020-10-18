@@ -9,12 +9,7 @@
 		--sPB: #{rem(60)};
 	}
 
-	.arrow{
-		margin-bottom: rem(30);
-		@include media-breakpoint-up(lg){
-			margin-bottom: rem(45);
-		}
-	}
+
 	.section-title{
 		h2{
 			font-family: $default-font;

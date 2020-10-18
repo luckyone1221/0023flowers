@@ -32,3 +32,23 @@ mixin sHeaderTimer-04()
 					span.seconds 09
 				.text-center
 					+e.A.btn(href='#') Выбрать букет
+
+mixin sHeaderTimer-09()
+	// start sHeaderTimer
+	+b.SECTION.sHeaderTimer--09#sHeaderTimer&attributes(attributes)
+		+pic('header-timer-new-year.jpg')(class="sHeaderTimer__bg")
+		+e.bg-snow.bg-snow-js
+		+e.content
+			.container
+				+b.section-title.text-center
+					h2 До Нового года осталось совсем немного
+					p
+						| Желаем Вам радости, волшебства момента и настоящего
+						| праздника в приближающуюся Новогоднюю ночь!
+				+e.timer-box.timer-box-js
+					span.days 00
+					span.hours 00
+					span.minutes 00
+					span.seconds 09
+				.text-center
+					+e.A.btn(href='#') Свяжитесь с нами

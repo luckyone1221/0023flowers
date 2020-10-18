@@ -1,0 +1,114 @@
+// start .sContactPage
+.sContactPage {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(40)};
+		--sTPB: #{rem(90)};
+	}
+
+	.section-title{
+		h2{
+			font-family: $default-font;
+			font-size: rem(24px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(27px);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(30px);
+			}
+		}
+	}
+
+	&__container{
+		max-width: 100%!important;
+		padding: 0!important;
+	}
+	&__row{
+		@include roww(0px);
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(50);
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(100);
+		}
+	}
+	&__map-col{
+		height: auto;
+		min-height: 330px;
+		iframe{
+			width: 100%!important;
+			height: 100%!important;
+		}
+	}
+	//
+	&__txt-col{
+		background-color: $green4;
+		*{
+			color: $white;
+		}
+		a:hover{
+			color: $white;
+			text-decoration: underline;
+		}
+
+		padding: rem(30) 15px;
+		@include media-breakpoint-up(lg){
+			padding: rem(90) rem(45);
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(120) rem(60);
+		}
+	}
+	&__title{
+		font-size: rem(18px);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(md){
+			font-size: rem(22px);
+			margin-bottom: rem(40);
+		}
+
+		font-family: $mono;
+		font-weight: 700;
+	}
+	//txt
+	&__address,
+	&__link-item,
+	&__lower-txt{
+		font-size: rem(16px);
+		@include media-breakpoint-up(md){
+			font-size: rem(18px);
+		}
+		font-family: $default-font;
+		font-weight: 300;
+		line-height: 1.45;
+	}
+
+	&__address,
+	&__links{
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(40);
+		}
+	}
+	&__link-item{
+		font-size: rem(16px);
+		@include media-breakpoint-up(md){
+			font-size: rem(18px);
+		}
+		font-family: $default-font;
+		font-weight: 300;
+		line-height: 1.45;
+		margin-bottom: rem(5);
+	}
+	//
+	.arrow{
+
+	}
+
+	&__{}
+	&__{}
+} // end.sContactPage

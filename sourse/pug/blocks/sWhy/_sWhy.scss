@@ -1,0 +1,62 @@
+// start .sWhy
+.sWhy {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(60)};
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+	}
+
+	.section-title{
+		h2{
+			font-family: $default-font;
+		}
+	}
+
+	&__row{
+		@include media-breakpoint-up(md){
+			@include roww(60px);
+		}
+		padding-bottom: rem(50);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(120);
+		}
+		@include media-breakpoint-up(xl){
+			@include roww(80px);
+		}
+	}
+	&__col{
+		margin-bottom: rem(40);
+	}
+	&__img{
+		width: rem(80px);
+		height: rem(80px);
+		@include media-breakpoint-up(sm){
+			width: rem(100px);
+			height: rem(100px);
+		}
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(25);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title{
+		text-align: center;
+		font-size: 16px;
+		line-height: 1.55;
+		font-weight: 300;
+
+	}
+} // end.sWhy

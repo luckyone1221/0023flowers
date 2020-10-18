@@ -1,0 +1,151 @@
+// start .sBlog
+.sBlog {
+	--sTPB: #{rem(0)};
+
+	--sPT: #{rem(60)};
+	--sPB: #{rem(50)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(80)};
+		--sPB: #{rem(70)};
+	}
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(140)};
+		--sPB: #{rem(125)};
+	}
+
+	&__item{
+		padding-bottom: rem(50);
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(70);
+		}
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(80);
+		}
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(150);
+		}
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+	&__row{
+
+	}
+	&__img-col{
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(35);
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+			margin-right: rem(50);
+			width: 50%;
+		}
+		@include media-breakpoint-up(xl){
+			width: 560px;
+			margin-right: rem(100);
+		}
+	}
+	&__img{
+		position: relative;
+		width: 100%;
+		padding-top: 100%;
+		height: 0;
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		//colage
+		&--colage{
+			box-shadow: none;
+			margin-bottom: 10%;
+		}
+	}
+	&__first-img,
+	&__second-img,
+	&__third-img{
+		box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
+		position: absolute;
+	}
+	&__first-img{
+		width: 61.5%;
+		height: 84%;
+		left: 0;
+		top: 0;
+	}
+	&__second-img{
+		position: absolute;
+		width: 64.5%;
+		height: 40%;
+		left: 20%;
+		bottom: -10%;
+	}
+	&__third-img{
+		position: absolute;
+		width: 40.2%;
+		height: 48.6%;
+		right: -6%;
+		top: 17%;
+	}
+	//end colage
+
+
+	&__txt-col{
+		h2{
+			font-weight: 600;
+			line-height: 1.23;
+
+			font-size: rem(26);
+			margin-bottom: rem(20px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(30);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(37);
+				margin-bottom: rem(34px);
+			}
+			@include media-breakpoint-up(xl){
+				font-size: rem(42);
+			}
+		}
+		p, li{
+			font-size: rem(16px);
+			font-weight: 300;
+			line-height: 1.55;
+			margin-bottom: 0;
+		}
+
+		ul{
+			margin: 0 0 rem(10) 0;
+			padding-left: 20px;
+		}
+		ol{
+			//margin: 0 0 rem(10) 0;
+			//padding-left: 20px;
+		}
+		a{
+			color: $blue2;
+		}
+	}
+	//
+	&__learn-more{
+		font-weight: bold;
+		text-decoration: underline;
+		color: $blue2;
+		&:hover{
+			color: $blue2;
+			text-decoration: none;
+			opacity: .8;
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sBlog

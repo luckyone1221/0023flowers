@@ -1,0 +1,103 @@
+// start .sExample
+.sExample {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(lg){
+		--sTPB: #{rem(60)};
+		--sPT: #{rem(80)};
+		--sPB: #{rem(80)};
+	}
+
+	.section-title{
+		h2{
+			font-weight: 300;
+		}
+	}
+	&__container{
+		@include media-breakpoint-down(lg){
+			max-width: 100%!important;
+			padding: 0!important;
+		}
+	}
+	&__slider{
+		margin-bottom: rem(110);
+		@include media-breakpoint-up(lg){
+			max-width: 860px;
+			margin: 0 auto rem(140) auto;
+		}
+
+		position: relative;
+		.swiper-container{
+			position: static;
+			overflow: visible!important;
+		}
+		.swiper-wrapper{
+			position: static;
+		}
+		.swiper-slide{
+			@include mt();
+			opacity: .5;
+			&-active{
+				opacity: 1;
+			}
+		}
+		//prev, next
+		.example-prev,
+		.example-next{
+			@extend .swiper-controll-frame;
+			background-color: $slider-gray;
+			.icon{
+				stroke-width: 1px;//??
+				stroke: $black;
+			}
+		}
+		.example-prev{
+			left: 30px;
+			@include media-breakpoint-up(xl){
+				left: -70px;
+			}
+		}
+		.example-next{
+			right: 30px;
+			@include media-breakpoint-up(xl){
+				right: -70px;
+			}
+		}
+		//pugin
+		.example-pugin{
+			position: absolute;
+			left: 0;
+			top: 100%;
+			width: 100%;
+
+			@extend .pugin-frame-dark;
+			height: 60px;
+			@include media-breakpoint-up(lg){
+				height: 80px;
+			}
+		}
+	}
+	&__img{
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-top: (55/86) * 100%;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sExample

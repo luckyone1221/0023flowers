@@ -1,0 +1,33 @@
+mixin sWorkShop(imgNum)
+	// start sWorkShop
+	+b.SECTION.sWorkShop.section#sWorkShop&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Как работает мастерская:
+			+e.row.row
+				+workshopItem(1)
+					| Декоратор выезжает в удобное
+					br
+					| для Вас время, консультирует
+					br
+					| по оформлению, обсуждает детали, делает необходимые замеры.
+				+workshopItem(2)
+					| Создаём концепцию оформления, воплощая Ваши пожелания
+					br
+					| в реальность, и делаем
+					br
+					| все расчеты по смете.
+				+workshopItem(3)
+					| Быстро, качественно и точно воплощаем проект. Вам не придётся думать о монтаже и демонтаже новогоднего декора, мы избавим
+					br
+					| Вас от этих хлопот.
+			.text-center
+				+e.btn(href='#') Разработать концепцию
+	// end sWorkShop
+
+mixin workshopItem(imgNum)
+	+e.col.col-md-4
+		+e.img
+			img(loading='lazy' src=`img/svg/work-shop-item-${imgNum}.svg` alt="")
+		+e.descr
+			block

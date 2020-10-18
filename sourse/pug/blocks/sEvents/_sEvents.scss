@@ -8,12 +8,7 @@
 		--sTPB: #{rem(50)};
 	}
 
-	.arrow{
-		margin-bottom: rem(30);
-		@include media-breakpoint-up(lg){
-			margin-bottom: rem(45);
-		}
-	}
+
 
 	.section-title{
 		max-width: 960px;

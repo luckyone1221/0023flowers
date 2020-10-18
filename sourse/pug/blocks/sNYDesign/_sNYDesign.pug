@@ -1,0 +1,21 @@
+mixin sNYDesign()
+	// start sNYDesign
+	+b.SECTION.sNYDesign.section#sNYDesign&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Новогоднее оформление
+			+e.row.row
+				+e.txt-col.col-lg-8.col-md-6
+					p Новогодние праздники — это самая волшебная и любимая многими пора в году. Все в это время напоминает прекрасную сказку из детства: елочки, запах мандаринов и сладостей, яркая иллюминация и многочисленные украшения повсюду. Компания «Зверобой» предлагает привнести волшебство в любой интерьер. Закажите новогоднее оформление торгового зала, ресторана, офиса, кабинета или дома — и ваши сотрудники, клиенты, гости и партнеры будут в отличном настроении, а имидж компании улучшится.
+				+e.imgs-col.col-lg-4.col-md-6
+					+e.img-row.row
+						+NYDesignItem(1)
+						+NYDesignItem(2)
+						+NYDesignItem(3)
+						+NYDesignItem(4)
+	// end sNYDesign
+
+mixin NYDesignItem(imgNum)
+	+e.sub-col.col-6
+		+e.img
+			img(loading='lazy' src=`img/@2x/NYDesign-${imgNum}.jpg` alt="")

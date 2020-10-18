@@ -445,7 +445,7 @@ function eventHandler() {
 		//lazy-load
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 12,
+			loadPrevNextAmount: 100,
 		},
 		spaceBetween: 10,
 		//pagination
@@ -722,6 +722,71 @@ function eventHandler() {
 		freeModeMomentum: true,
 		watchOverflow: true,
 	});
+	//.bg-snow-js
+	let SnowBgConts = document.querySelectorAll('.bg-snow-js');
+	for (let cont of SnowBgConts){
+		for(let i = 1; i<=200; i++){
+			let snow = document.createElement('div');
+			snow.classList.add('snow');
+			cont.appendChild(snow);
+		}
+	}
+	//example slider
+	let exampleSlider = new Swiper($(this).find(".example-slider-js"), {
+		slidesPerView: 1,
+		loop: true,
+		breakpoints: {
+			768: {
+				spaceBetween: 30,
+			},
+			1200: {
+				spaceBetween: 100,
+			},
+		},
+
+		//lazy load
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+		//nav
+		navigation: {
+			nextEl: $(this).find('.example-next-js'),
+			prevEl: $(this).find('.example-prev-js'),
+		},
+		//pagination
+		pagination: {
+			el: $(this).find('.example-pugin-js'),
+			clickable: true,
+		},
+	});
+	//blog bouquet slider
+	$('.sBlogBouquet__slider--js').each(function (){
+		let BlogBouquetSlider = new Swiper($(this).find(".blog-buq-slider-js"), {
+			slidesPerView: 1,
+			loop: true,
+			spaceBetween: 30,
+
+			//lazy load
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 3,
+			},
+			//nav
+			navigation: {
+				nextEl: $(this).find('.blog-buq-next'),
+				prevEl: $(this).find('.blog-buq-prev'),
+			},
+			//pagination
+			pagination: {
+				el: $(this).find('.blog-buq-pugin'),
+				clickable: true,
+			},
+
+
+		});
+	});
+
 
 
 	

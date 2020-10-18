@@ -1,0 +1,14 @@
+mixin sHeaderBlog()
+	// start sHeaderBlog
+	+b.SECTION.sHeaderBlog.section#sHeaderBlog&attributes(attributes)
+		+pic('sHeaderBlog.jpg')(class="sHeaderBlog__bg")
+		.container
+			+b.section-title.text-center
+				h2 Блог Зверобоя
+				p
+					| Делимся интересными историями о растениях,
+					| цветочных путешествиях и о жизни нашей студии.
+			+form-wrap
+				+input('Ваш E-mail', 'email')
+				+e.BUTTON.btn(type="submit") Подписаться
+	// end sHeaderBlog

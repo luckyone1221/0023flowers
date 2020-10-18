@@ -1,0 +1,141 @@
+// start .sWeMake
+.sWeMake {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30px)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40px)};
+		--sTPB: #{rem(100)};
+	}
+
+	.arrow{
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(60);
+		}
+	}
+	.section-title{
+		h2{
+			font-family: $default-font;
+
+		}
+	}
+	&__row{
+
+	}
+} // end.sWeMake
+
+.we-make-col{
+	margin-bottom: rem(40);
+	@include media-breakpoint-up(lg){
+		margin-bottom: rem(90);
+	}
+
+	&__item{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		color: $body-color;
+		&:hover{
+			color: $body-color;
+		}
+	}
+	&__title{
+		padding-bottom: rem(20);
+		font-size: rem(22px);
+		@include media-breakpoint-up(md){
+			font-size: rem(26px);
+		}
+
+		line-height: 1.23;
+		font-weight: 600;
+	}
+	&__img{
+		width: 100%;
+		position: relative;
+		padding-top: (270/360) * 100%;
+		margin-bottom: rem(30);
+
+		img{
+			@include mt();
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		img:first-child{
+			opacity: 1;
+		}
+		img:last-child{
+			opacity: 0;
+		}
+
+		&:hover{
+			img:first-child{
+				opacity: 0;
+			}
+			img:last-child{
+				opacity: 1;
+			}
+		}
+	}
+	&__txt{
+		font-size: rem(16px);
+		@include media-breakpoint-up(md){
+			font-size: rem(18px);
+		}
+		line-height: 1.55;
+		font-weight: 300;
+		margin-bottom: rem(20);
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-success;
+
+		font-size: rem(14px);
+		font-weight: bold;
+		text-transform: none;
+
+		padding: rem(12px) rem(30px);
+		border-radius: rem(100);
+		color: $white;
+		border: 1px solid $black;
+		background-color: darken($toxic-green, 4);
+		&:hover{
+			color: $white;
+			background-color: darken($toxic-green, 2);
+		}
+		margin-top: auto;
+	}
+
+	&--corporative{
+		.we-make-col__title{
+			@include media-breakpoint-up(sm){
+				font-size: rem(16)!important;
+				min-height: 65px;
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(18)!important;
+			}
+			@include media-breakpoint-up(lg){
+				font-size: rem(26)!important;
+				min-height: 82px;
+			}
+		}
+		.we-make-col__txt{
+			br{
+				display: none;
+				@include media-breakpoint-up(lg){
+					display: block;
+				}
+			}
+		}
+
+	}
+}

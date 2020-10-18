@@ -1,0 +1,73 @@
+// start .sNYDesign
+.sNYDesign {
+	--sPT: #{rem(40)};
+	--sPB: #{rem(35)};
+	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(90px)};
+		--sPT: #{rem(45)};
+		--sTPB: #{rem(100px)};
+	}
+
+	.section-title{
+
+		h2{
+			font-family: $default-font;
+			@include media-breakpoint-up(md){
+				font-size: rem(52px);
+			}
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(xl){
+			max-width: 960px;
+			margin: 0 auto!important;
+			@include roww(45px);
+		}
+	}
+	//1
+	&__txt-col{
+		p{
+			font-size: rem(17px);
+			line-height: 1.45;
+			@include media-breakpoint-up(lg){
+				font-size: rem(20px);
+				line-height: 1.55;
+			}
+			font-weight: 300;
+		}
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+		}
+	}
+	&__imgs-col{
+
+	}
+	&__img-row{
+		@include roww(20px);
+	}
+	&__sub-col{
+		margin-bottom: 20px;
+	}
+	&__img{
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-top: 100%;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__{}
+	&__{}
+	&__{}
+} // end.sNYDesign

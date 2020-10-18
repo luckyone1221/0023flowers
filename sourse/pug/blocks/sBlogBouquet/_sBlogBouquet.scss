@@ -1,0 +1,231 @@
+// start .sBlogBouquet
+.sBlogBouquet {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30)};
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(70)};
+		--sPB: #{rem(30)};
+		--sTPB: #{rem(80)};
+	}
+
+	.section-title{
+		h2{
+			line-height: 1.23;
+			font-family: $default-font;
+
+			font-size: rem(26px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(30px);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(36px);
+			}
+
+			margin-bottom: rem(35);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(70);
+			}
+		}
+		p{
+			line-height: 1.55;
+			font-family: $mono;
+			font-weight: 300;
+
+			font-size: rem(16px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(20px);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(25px);
+			}
+		}
+	}
+	//.btn-black-frame
+	&__item-container{
+		padding-bottom: rem(40);
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(40);
+		}
+		@include media-breakpoint-up(lg){
+			max-width: 100%!important;
+			padding: 0 0 rem(80) 0!important;
+		}
+
+		&:last-child{
+			.blured-line{
+				display: none;
+			}
+		}
+	}
+	&__item{
+		position: relative;
+		display: flex;
+		flex-direction: column-reverse;
+		@include media-breakpoint-up(md){
+			flex-direction: row;
+
+			align-self: stretch;
+		}
+
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(sm){
+			padding-bottom: rem(40);
+		}
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(80);
+		}
+
+		.blured-line{
+			display: none;
+			@include media-breakpoint-up(md){
+				display: block;
+			}
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			top: unset;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__txt-col{
+		flex-shrink: 0;
+		*:last-child{
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(md){
+			padding: 0 15px 0 0;
+			width: 50%;
+		}
+		@include media-breakpoint-up(lg){
+			padding: 0 rem(50);
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			//box-shadow: inset 0 0 0 1px red;
+		}
+		@include media-breakpoint-up(xl){
+			padding: 0 rem(84);
+		}
+
+		h4{
+			font-weight: 700;
+			margin-bottom: rem(20);
+			font-size: rem(24px);
+			@include media-breakpoint-up(md){
+				font-size: rem(30px);
+			}
+
+			line-height: 1.45;
+		}
+		p{
+			font-weight: 300;
+			font-family: $mono;
+			font-size: rem(16px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(18px);
+			}
+			@include media-breakpoint-up(lg){
+				font-size: rem(20px);
+			}
+			line-height: 1.55;
+			margin-bottom: rem(30);
+		}
+	}
+	&__btn{
+		@extend .btn-black-frame;
+		border-radius: rem(100);
+		@include media-breakpoint-up(sm){
+			padding-left: rem(30px);
+			padding-right: rem(30px);
+		}
+	}
+	//slider-col
+	&__slider-col{
+		flex-shrink: 0;
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(md){
+			width: 50%;
+			margin-bottom: 0;
+		}
+	}
+	&__slider{
+		.swiper-container{
+			position: relative;
+		}
+		.swiper-wrapper{
+
+		}
+		.swiper-slide{
+
+		}
+		//prev, next
+		.blog-buq-prev,
+		.blog-buq-next{
+			@extend .swiper-controll-frame;
+			background-color: $slider-gray;
+			.icon{
+				stroke-width: 1px;//??
+				stroke: $black;
+			}
+		}
+
+		.blog-buq-prev{
+			left: 30px;
+		}
+		.blog-buq-next{
+			right: 30px;
+		}
+
+		//pugin
+		.blog-buq-pugin{
+			@extend .pugin-frame;
+			height: 70px;
+			width: 100%;
+			position: absolute;
+			z-index: 2;
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	&__img{
+		display: block;
+		width: 100%;
+		padding-top: 100%;
+		height: 0;
+		position: relative;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	//
+	&__lower-txt{
+		max-width: 760px;
+		margin-left: auto;
+		margin-right: auto;
+
+		line-height: 1.55;
+		font-family: $mono;
+		font-weight: 300;
+
+		font-size: rem(16px);
+		@include media-breakpoint-up(sm){
+			font-size: rem(18px);
+		}
+		@include media-breakpoint-up(md){
+			font-size: rem(20px);
+		}
+	}
+	&__{}
+	&__{}
+} // end.sBlogBouquet

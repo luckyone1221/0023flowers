@@ -865,3 +865,10 @@ iframe {
 		border: 1px solid darken($toxic-green, 5);
 	}
 }
+
+.arrow{
+	margin-bottom: rem(30);
+	@include media-breakpoint-up(lg){
+		margin-bottom: rem(45);
+	}
+}

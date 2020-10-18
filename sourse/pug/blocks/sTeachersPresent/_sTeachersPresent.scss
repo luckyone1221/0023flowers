@@ -45,12 +45,7 @@
 	&__{}
 	&__{}
 
-	.arrow{
-		margin-bottom: rem(30);
-		@include media-breakpoint-up(lg){
-			margin-bottom: rem(45);
-		}
-	}
+
 } // end.sTeachersPresent
 
 .teacherDescr{

@@ -1,0 +1,127 @@
+// start .sSubscribe
+.sSubscribe {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(50)};
+	--sTPB: #{rem(35)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(30)};
+		--sPB: #{rem(150)};
+		--sTPB: #{rem(45)};
+	}
+
+	.section-title{
+		@include media-breakpoint-up(xl){
+			max-width: 960px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		h2{
+			font-size: rem(23px);
+			@include media-breakpoint-up(sm){
+				font-size: rem(30px);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(36px);
+			}
+
+			font-family: $default-font;
+			line-height: 1.23;
+		}
+	}
+
+	.form-wrap{
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(40);
+		}
+		form{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__input-wrap{
+			width: 310px;
+			@include media-breakpoint-up(sm){
+				margin-right: rem(10px);
+				margin-left: rem(10px);
+			}
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md){
+				margin-bottom: 0;
+			}
+		}
+		&__input{
+			height: auto;
+			min-height: 0;
+			padding: rem(17px) rem(24px);
+			border: 2px solid $black;
+		}
+		&__btn{
+			@extend .btn-black-frame;
+
+			@include media-breakpoint-up(sm){
+				margin-right: rem(10px);
+				margin-left: rem(10px);
+			}
+			width: 310px;
+			@include media-breakpoint-up(md){
+				width: auto;
+			}
+		}
+	}
+
+	&__lower-txt{
+		text-align: center;
+		font-size: rem(15);
+		line-height: 1.55;
+
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(74);
+		}
+	}
+	//soc
+	.soc-cont{
+		max-width: 180px;
+		margin-left: auto;
+		margin-right: auto;
+
+		padding-top: rem(30);
+		@include media-breakpoint-up(lg){
+			padding-top: rem(74);
+		}
+		border-top: 1px solid $black;
+		justify-content: center;
+
+		&__item{
+			width: rem(47px);
+			height: rem(47px);
+			background-color: $black;
+			&:hover{
+				background-color: $black;
+				box-shadow: 0 0 10px -3px rgba($black, .7);
+			}
+
+			.icon{
+				font-size: rem(47px);
+				margin: 0 5px;
+			}
+		}
+	}
+	&__{}
+
+} // end.sSubscribe
+
+.btn-black-frame{
+	@extend .btn;
+	@extend .btn-dark;
+
+	padding: rem(17px) rem(65px);
+	background-color: $black;
+	border: 2px solid $black;
+
+	text-transform: none;
+	font-size: rem(16px);
+	font-weight: bold;
+}

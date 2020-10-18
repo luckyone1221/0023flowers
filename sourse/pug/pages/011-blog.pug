@@ -1,0 +1,74 @@
+extends layout/main.pug
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sHitMan/_sHitMan.pug
+include ../blocks/sHitWoman/_sHitWoman.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sHowWork/_sHowWork.pug
+include ../blocks/sConvinuent/_sConvinuent.pug
+include ../blocks/sFeedback/_sFeedback.pug
+include ../blocks/sOwner/_sOwner.pug
+include ../blocks/sNews/_sNews.pug
+include ../blocks/sPhilocophy/_sPhilocophy.pug
+include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sSeo/_sSeo.pug
+//-2
+include ../blocks/sHeaderTimer/_sHeaderTimer.pug
+include ../blocks/sTeachersPresent/_sTeachersPresent.pug
+include ../blocks/sTeacherFrame/_sTeacherFrame.pug
+include ../blocks/sMoreFlowers/_sMoreFlowers.pug
+include ../blocks/sWorkVantage/_sWorkVantage.pug
+//-3
+include ../blocks/sWUnusuall/_sWUnusuall.pug
+include ../blocks/sWomanFrame/_sWomanFrame.pug
+include ../blocks/sVase/_sVase.pug
+include ../blocks/sFlowerPot/_sFlowerPot.pug
+include ../blocks/sVegeterian/_sVegeterian.pug
+//-5
+include ../blocks/sFitoDesign/_sFitoDesign.pug
+include ../blocks/sReadyDes/_sReadyDes.pug
+include ../blocks/sPerfect/_sPerfect.pug
+include ../blocks/sIdea/_sIdea.pug
+include ../blocks/sDoubts/_sDoubts.pug
+include ../blocks/sPicturedForm/_sPicturedForm.pug
+include ../blocks/sMoreOptions/_sMoreOptions.pug
+//-7
+include ../blocks/sSucculents/_sSucculents.pug
+//-8
+include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sOurClients/_sOurClients.pug
+//-9
+include ../blocks/sNYDesign/_sNYDesign.pug
+include ../blocks/sWeMake/_sWeMake.pug
+include ../blocks/sCorporative/_sCorporative.pug
+include ../blocks/sWorkShop/_sWorkShop.pug
+include ../blocks/sExample/_sExample.pug
+include ../blocks/sWhy/_sWhy.pug
+//-11
+include ../blocks/sHeaderBlog/_sHeaderBlog.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sSubscribe/_sSubscribe.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '011-blog'
+	title= title
+block pagecontent
+	+header()
+		+top-nav()
+	+sHeaderBlog()
+	+sBlog()
+	+sSubscribe
+	+sSeo
+		.container
+			//-+e.txt.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+			//-+e.btn-cont.fadeIn.wow(data-wow-duration='.4s' data-wow-delay='.3s')
+				+e.btn.go-top-js Наверх
+			+e.green-strip
+				p Наши авторские букеты могут отличаться от картинки, так как все цветы уникальны. В зависимости от сезона мы можем на свое усмотрение заменять цветы. Букет будет таким же красивым и стильным, также останется в рамках указанной на сайте цены.
+	+sContact()
+	+footer()

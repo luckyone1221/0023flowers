@@ -1,0 +1,44 @@
+// start .sCorporative
+.sCorporative {
+	background-color: $white-green;
+
+	--sPT: #{rem(30)};
+	--sPB: #{rem(30px)};
+	--sTPB: #{rem(30)};
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(100)};
+		--sPB: #{rem(40px)};
+		--sTPB: #{rem(70)};
+	}
+
+	.section-title{
+		h2{
+			font-family: $default-font;
+			margin-bottom: rem(20);
+
+			font-size: rem(22);
+			@include media-breakpoint-up(sm){
+				font-size: rem(26);
+			}
+			@include media-breakpoint-up(md){
+				font-size: rem(30);
+			}
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(40);
+				font-size: rem(40);
+			}
+		}
+		p{
+			font-weight: 300;
+			font-size: rem(20px);
+			@include media-breakpoint-up(md){
+				font-size: rem(24px);
+			}
+			line-height: 1.5;
+		}
+	}
+
+	&__{}
+	&__{}
+	&__{}
+} // end.sCorporative

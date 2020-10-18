@@ -133,3 +133,57 @@ mixin sForm-08()
 				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
 				|
 				a(href="#") политикой конфиденциальности
+
+mixin sForm-09()
+	// start sForm
+	+b.SECTION.sForm--fito.section#sForm&attributes(attributes)
+		+arrowStrip()
+		+form-wrap
+			+b.section-title.text-center
+				h2 Закажите новогоднее оформление
+				p Мы перезвоним в течение 1 часа и обсудим все детали
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Как к Вам обращаться
+			label
+				+input('+1 123 456 78 90', 'tel', undefined, 'tel')
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Ваш e-mail
+			label
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Что нужно украсить
+			label
+				+e.TEXTAREA.input.form-control.has-ph-js()
+				+e.SPAN.title Комментарий
+			+e.btn-cont
+				+e.BUTTON.btn(type='submit') Отправить
+			+e.policy
+				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+				|
+				a(href="#") политикой конфиденциальности
+
+mixin sForm-010()
+	// start sForm
+	+b.SECTION.sForm--teacher.section#sForm&attributes(attributes)
+		+b.arrow
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")
+		+form-wrap
+			+b.section-title.text-center
+				h2 Изобретем оригинальный букет?
+				p Оставьте заявку — и мы перезвоним в течение часа, чтобы создать необычный женский букет для вас!
+			label
+				//+input('', 'text', undefined, 'name')
+				+e.INPUT.input.form-control.has-ph-js(type="text" name="name")
+				+e.SPAN.title Как к Вам обращаться
+			label
+				+input('+1 123 456 78 90', 'tel', undefined, 'tel')
+				//+e.SPAN.title +1 123 456 78 90
+			+e.btn-cont
+				+e.BUTTON.btn(type='submit') Отправить
+			+e.policy
+				| Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c
+				|
+				a(href="#") политикой конфиденциальности
+		//-+b.arrow
+			img(loading="lazy" src="img/@2x/arrow-img.png" alt="")

@@ -1,0 +1,19 @@
+mixin sWhy()
+	// start sWhy
+	+b.SECTION.sWhy.section#sWhy&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Почему выбирают нас
+			+e.row.row
+				+sWhyItem(1, 'Бесплатная консультация по проектированию.')
+				+sWhyItem(2, 'Персональный подход.')
+				+sWhyItem(3, 'Команда профессионалов.')
+				+sWhyItem(4, 'Монтаж/демонтаж точно в срок.')
+			+arrowStrip()
+	// end sWhy
+
+mixin sWhyItem(imgNum, titleTxt)
+	+e.col.col-lg-3.col-6
+		+e.img
+			img(loading="lazy" src=`img/svg/why-item-${imgNum}.svg` alt="")
+		+e.title=titleTxt

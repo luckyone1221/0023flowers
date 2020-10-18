@@ -18,15 +18,17 @@
 		}
 	}
 	&__slider{
+		position: relative;
 		padding: rem(30) 0;
 		@include media-breakpoint-up(lg){
 			padding: rem(100) 0;
 		}
 		.swiper-container{
-			position: relative;
+			//position: relative;
+			position: static;
 		}
 		.swiper-wraper{
-
+			position: static;
 		}
 		.swiper-slide{
 			//background-color: red;

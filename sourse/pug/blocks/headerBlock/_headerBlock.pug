@@ -50,6 +50,8 @@ mixin headerSlide(imgNum, btnTxt, contentClasses, btnType='default', slideClass=
 						+e.A.btn-green(href="#")=btnTxt
 					else if btnType == 'btnWedding'
 						+e.A.btn-rounded(href="#")=btnTxt
+					else if btnType == 'btnNewYear'
+						+e.A.btn-red-rounded(href="#")=btnTxt
 
 mixin vantageItem(imgNum, titleTxt)
 	.col-lg-4
