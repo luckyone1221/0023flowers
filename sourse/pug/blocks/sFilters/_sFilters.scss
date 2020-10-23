@@ -1,0 +1,305 @@
+// start .sFilters
+.sFilters {
+  --sTPB: #{rem(35)};
+
+  --sPT: #{rem(30)};
+  --sPB: #{rem(30px)};
+  @include media-breakpoint-up(lg){
+    --sPT: #{rem(40)};
+    --sPB: #{rem(40px)};
+  }
+
+} // end.sFilters
+
+//.filters
+.filters{
+
+  @include media-breakpoint-up(sm){
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  //item
+  &__item{
+    display: none;
+    &.active{
+      display: block;
+    }
+
+    @include media-breakpoint-up(sm){
+      display: block !important;
+    }
+
+    width: 100%;
+    @include media-breakpoint-up(sm){
+      width: calc((100% / 2) - (16px * 1 / 2));
+    }
+    @include media-breakpoint-up(md){
+      width: calc((100% / 3) - (16px * 2 / 3));
+    }
+    @include media-breakpoint-up(xl){
+      width: calc(25% - (16px * 3 / 4));
+    }
+
+    &.allways-visiable{
+      display: block !important;
+    }
+
+    position: relative;
+
+    transition: background-color .3s ease-in-out;
+    background: rgba($light-green,.1);
+    &:hover{
+      background: rgba($light-green,.5);
+    }
+    border: 1px solid $body-color;
+    border-radius: rem(4px);
+    margin-bottom: 10px;
+    @include media-breakpoint-up(sm){
+      background: transparent!important;
+      border: none;
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+  }
+  &__header{
+    cursor: pointer;
+    width: 100%;
+    @include mt();
+
+    @include media-breakpoint-up(sm){
+      background: rgba($light-green,.1);
+      &:hover{
+        background: rgba($light-green,.5);
+      }
+      border: 1px solid $body-color;
+      border-radius: 4px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 3px 15px;
+
+    &:hover{
+      .filters__header-name{
+        color: $secondary;
+      }
+    }
+    &.active{
+      .icon{
+        transform: rotateX(180deg);
+      }
+    }
+
+    .icon{
+      @include mt();
+      margin-left: 16px;
+      font-size: 8px;
+      color: transparent;
+      stroke: $body-color;
+    }
+  }
+  &__header-name{
+    @include mt();
+
+    font-size: 14px;
+    line-height: (32/14);
+    color: $body-color;
+  }
+  &__content{
+    display: none;
+    &.active{
+      display: block;
+    }
+
+    padding: 0 16px 16px 16px;
+    @include media-breakpoint-up(sm){
+      transition: background-color .3s ease-in-out;
+      background: lighten($light-green, 10);
+      &:hover{
+        background: lighten($light-green, 5);
+      }
+
+      border: 1px solid $body-color;
+      box-shadow: 0px 8px 24px rgba(40, 126, 255, 0.1);
+      border-radius: 8px;
+      padding: 16px;
+
+      position: absolute;
+      z-index: 9;
+      left: 0;
+      top: calc(100% + 8px);
+      width: auto;
+      min-width: 100%;
+    }
+  }
+
+  //items
+  &__radio-items{
+    margin-bottom: 12px;
+  }
+  &__radio-item{
+    @include mt();
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+
+    input{
+      display: none;
+    }
+    input:checked + .radio-mark:after{
+      opacity: 1 !important;
+    }
+    input:checked + .radio-mark + .txt{
+      opacity: 1 !important;
+    }
+
+    &:hover{
+      .radio-mark:after{
+        opacity: .5;
+      }
+      //.txt{
+      //  opacity: .5;
+      //}
+    }
+
+    //.radio-mark
+    .radio-mark{
+      margin: 0;
+      color: $green;
+    }
+    .radio-mark:before{
+      border-radius: 4px;
+      border-color: currentColor;
+    }
+    .radio-mark:after{
+      border-radius: 3px;
+      background-color: currentColor;
+    }
+    //txt
+    .txt{
+      @include mt();
+      white-space: nowrap;
+      color: $body-color;
+      font-size: 14px;
+      line-height: 2.3;
+    }
+
+  }
+  &__apply-btn{
+    @extend .btn;
+    @extend .btn-success;
+    text-transform: none;
+    font-weight: bold;
+    border-radius: rem(4);
+
+    min-width: 100% !important;
+    padding: 3px 20px;
+  }
+
+  //crear-btn
+  &__mob-more{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media-breakpoint-up(sm){
+      width: auto;
+      display: block;
+    }
+  }
+
+  &__more-options{
+    @extend .btn;
+    @extend .btn-success;
+    min-width: 165px;
+    padding: 12.5px 10px;
+    text-transform: none;
+    color: $white;
+    border-radius: rem(4);
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @include mt();
+    .icon{
+      @include mt();
+      font-size: 10px;
+      margin-right: rem(12);
+      color: transparent;
+      stroke: $white;
+    }
+    &.active{
+      .icon{
+        transform: rotateX(180deg);
+      }
+    }
+
+    .txt{
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 1;
+    }
+  }
+  &__crear-btn{
+    @extend .btn;
+    @extend .btn-success;
+    padding: 11.5px 10px;
+    border-radius: rem(4);
+    text-transform: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+
+    @include mt();
+    color: $white;
+  }
+  &__{}
+}
+
+.radio-mark-frame{
+  cursor: pointer;
+  //display: flex;
+  //align-items: center;
+
+  font-size: 16px;
+  line-height: 32px;
+  color: $black;
+  position: relative;
+  margin-right: 10px;
+
+  &:before{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid $green;
+  }
+  &:after{
+    @include mt();
+    opacity: 0;
+
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $green;
+
+    position: absolute;
+    z-index: 2;
+    top: 4px;
+    left: 4px;
+  }
+}

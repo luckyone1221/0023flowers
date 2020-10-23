@@ -1,0 +1,74 @@
+mixin sFilters()
+	// start sFilters
+	+b.SECTION.sFilters.section#sFilters&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Подберите свой букет
+			+catalogFilters()
+	// end sFilters
+
+mixin catalogFilters()
+	+b.filters
+		+sortItem('Цвет букета', 'checkbox-box-js allways-visiable')
+			+e.radio-items
+				+checkBoxSortItem('Розовый', 'color1')(style='color: #eb6f8c')
+				+checkBoxSortItem('Белый', 'color2')(style='color: silver')
+				+checkBoxSortItem('Красный', 'color3')(style='color: #ff0000')
+				+checkBoxSortItem('Зеленый', 'color4')(style='color: #4fa85c')
+				+checkBoxSortItem('Синий', 'color5')(style='color: #52a0ff')
+				+checkBoxSortItem('Желтый', 'color6')(style='color: #ffe205')
+			+e.A.apply-btn(href="#") Применить
+		+sortItem('Для кого', 'radio-box-js')
+			+e.radio-items
+				+radioSortItem('Для мужчины','forWhomRadio')(checked)
+				+radioSortItem('Для женщины','forWhomRadio')
+				+radioSortItem('Интерьерный букет','forWhomRadio')
+				+radioSortItem('Живые растения','forWhomRadio')
+				+radioSortItem('Композиции из цеетов','forWhomRadio')
+			+e.A.apply-btn(href="#") Применить
+		+sortItem('Категория праздника', 'radio-box-js')
+			+e.radio-items
+				+radioSortItem('День рождения','partyRadio1')(checked)
+				+radioSortItem('Свадьба','partyRadio2')
+				+radioSortItem('Юбилей','partyRadio3')
+				+radioSortItem('Корпоративное событие','partyRadio4')
+				+radioSortItem('Рождение ребенка','partyRadio5')
+			+e.A.apply-btn(href="#") Применить
+		+sortItem('Размер букета', 'checkbox-box-js')
+			+e.radio-items
+				+checkBoxSortItem('Большой', 'size1')
+				+checkBoxSortItem('Средний', 'size1')
+				+checkBoxSortItem('Маленький', 'size1')
+			+e.A.apply-btn(href="#") Применить
+		+sortItem('Цветы в букете', 'checkbox-box-js')
+			+e.radio-items
+				+checkBoxSortItem('Розы', 'flowers')
+				+checkBoxSortItem('Хризантемы', 'flowers')
+				+checkBoxSortItem('Лилии', 'flowers')
+				+checkBoxSortItem('Ромашки', 'flowers')
+			+e.A.apply-btn(href="#") Применить
+		+e.mob-more
+			+e.more-options.more-options-js.d-sm-none
+				+icon('chevron-down')
+				.txt Развернуть
+			+e.A.crear-btn(href='#') Очистить фильтры
+
+mixin sortItem(headerTxt, itemClasses)
+	+e.item(class=itemClasses)
+		+e.header.filter-header-js
+			+e.header-name.filter-name-js=headerTxt
+			+icon('chevron-down')
+		+e.content.filter-content-js
+			block
+
+mixin checkBoxSortItem(txt, name, labelClass)
+	+e.LABEL.radio-item(class=labelClass)
+		input(type='checkbox' name=name)
+		.radio-mark.radio-mark-frame&attributes(attributes)
+		.txt=txt
+
+mixin radioSortItem(txt, name, labelClass)
+	+e.LABEL.radio-item(class=labelClass)
+		input(type='radio' name=name)&attributes(attributes)
+		.radio-mark.radio-mark-frame
+		.txt=txt

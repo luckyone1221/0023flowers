@@ -779,7 +779,70 @@ function eventHandler() {
 				clickable: true
 			}
 		});
+	}); //filters
+	//desctop filter boxes toggle
+
+	$('.filter-header-js').click(function () {
+		document.body.removeEventListener('click', filterMissClick);
+		var thisHeader = this; //close all except this
+
+		var allHeaders = document.querySelectorAll('.filter-header-js');
+
+		var _iterator2 = _createForOfIteratorHelper(allHeaders),
+				_step2;
+
+		try {
+			for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+				var header = _step2.value;
+
+				if (thisHeader !== header) {
+					$(header).removeClass('active');
+					$(header).parent().find('.filter-content-js').slideUp(function () {
+						$(this).removeClass('active');
+					});
+				}
+			} //toggle this
+
+		} catch (err) {
+			_iterator2.e(err);
+		} finally {
+			_iterator2.f();
+		}
+
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.filter-content-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+		event.stopPropagation();
+		document.body.addEventListener('click', filterMissClick);
 	});
+
+	function filterMissClick() {
+		if (event.target.closest('.filter-content-js')) return;
+		document.body.removeEventListener('click', filterMissClick); //close all
+
+		$('.filter-header-js').removeClass('active');
+		$('.filter-header-js').parent().find('.filter-content-js').slideUp(function () {
+			$(this).removeClass('active');
+		});
+	} //mob
+
+
+	$('.more-options-js').click(function () {
+		var txt = this.querySelector('.txt');
+
+		if (txt.innerHTML.indexOf('Развернуть') >= 0) {
+			txt.innerHTML = 'Свернуть';
+			$(this).addClass('active');
+		} else {
+			txt.innerHTML = 'Развернуть';
+			$(this).removeClass('active');
+		}
+
+		$('.filters__item:not(.allways-visiable)').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //
 }
 
 ;

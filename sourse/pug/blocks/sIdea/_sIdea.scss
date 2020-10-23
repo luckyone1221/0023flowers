@@ -49,23 +49,9 @@
 	&__grid-share-3{
 		display: grid;
 
-		grid-column-gap: 20px;
-		grid-row-gap: 20px;
 		@include media-breakpoint-up(sm){
 			grid-template-columns: repeat(2,1fr);
 			grid-template-rows: repeat(2, 1fr);
-		}
-		@include media-breakpoint-up(md) {
-			grid-column-gap: 30px;
-			grid-row-gap: 30px;
-		}
-		@include media-breakpoint-up(lg) {
-			grid-column-gap: 40px;
-			grid-row-gap: 40px;
-		}
-		@include media-breakpoint-up(xl) {
-			grid-column-gap: 50px;
-			grid-row-gap: 50px;
 		}
 
 		.share-3-col{
