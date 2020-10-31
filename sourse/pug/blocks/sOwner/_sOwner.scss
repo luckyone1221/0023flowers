@@ -9,8 +9,8 @@
 		--sPB: #{rem(60)};
 	}
 	@include media-breakpoint-up(lg){
-		--sPT: #{rem(96)};
-		--sPB: #{rem(126px)};
+		--sPT: #{rem(60)};
+		--sPB: #{rem(80px)};
 	}
 	.container{
 		@include media-breakpoint-down(sm){
@@ -75,30 +75,31 @@
 	.section-title{
 		max-width: 400px;
 		@include media-breakpoint-up(lg){
-			max-width: 460px;
+			//max-width: 460px;
+			max-width: 560px;
 		}
 		color: $black;
 		h2{
 			font-family: $default-font;
 			font-weight: 600;
 
-
 			margin-bottom: rem(30);
-			font-size: rem(30);
+			font-size: rem(22);
 			@include media-breakpoint-up(lg){
 				margin-bottom: rem(45);
-				font-size: rem(32);
+				font-size: rem(25);
 			}
 		}
 		p{
 			font-family: $mono;
-			font-size: rem(18px);
 			line-height: 1.55;
 			font-weight: 300;
 
-			margin-bottom: rem(20);
+			margin-bottom: rem(15);
+			font-size: rem(14px);
 			@include media-breakpoint-up(lg){
-				margin-bottom: rem(27);
+				font-size: rem(16px);
+				margin-bottom: rem(20);
 			}
 		}
 	}

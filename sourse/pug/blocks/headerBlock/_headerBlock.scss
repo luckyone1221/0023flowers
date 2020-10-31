@@ -99,7 +99,8 @@
 	&__content.blue-txt{
 		p{
 			font-size: rem(14px);
-			color: $dark-purple;
+			//color: $dark-purple;
+			color: $white;
 			text-transform: uppercase;
 			font-weight: 700;
 			//text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.0);
@@ -108,7 +109,8 @@
 		h4{
 			font-size: rem(26px);
 			text-align: left;
-			color: $dark-blue;
+			//color: $dark-blue;
+			color: $white;
 			line-height: 1.55;
 			font-weight: 700;
 		}

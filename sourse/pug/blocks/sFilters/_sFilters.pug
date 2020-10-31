@@ -24,7 +24,7 @@ mixin catalogFilters()
 				+radioSortItem('Для женщины','forWhomRadio')
 				+radioSortItem('Интерьерный букет','forWhomRadio')
 				+radioSortItem('Живые растения','forWhomRadio')
-				+radioSortItem('Композиции из цеетов','forWhomRadio')
+				+radioSortItem('Композиции из цветов','forWhomRadio')
 			+e.A.apply-btn(href="#") Применить
 		+sortItem('Категория праздника', 'radio-box-js')
 			+e.radio-items
@@ -46,6 +46,12 @@ mixin catalogFilters()
 				+checkBoxSortItem('Хризантемы', 'flowers')
 				+checkBoxSortItem('Лилии', 'flowers')
 				+checkBoxSortItem('Ромашки', 'flowers')
+			+e.A.apply-btn(href="#") Применить
+		+sortItem('Цена', 'checkbox-box-js')
+			+e.radio-items
+				+checkBoxSortItem('2000 до 4000 руб.', 'price')
+				+checkBoxSortItem('4100 до 7000 руб.', 'price')
+				+checkBoxSortItem('7 000 руб.', 'price')
 			+e.A.apply-btn(href="#") Применить
 		+e.mob-more
 			+e.more-options.more-options-js.d-sm-none

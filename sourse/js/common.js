@@ -459,9 +459,10 @@ function eventHandler() {
 			prevEl: '.clients-next-js',
 		},
 	});
-	window.setTimeout(function (){
-		clientsSlider.update();
-	}, 1000)
+	// window.setTimeout(function (){
+	// 	if (!clientsSlider) return
+	// 	clientsSlider.update();
+	// }, 1000)
 
 	//wow js
 
@@ -843,8 +844,6 @@ function eventHandler() {
 	});
 
 	//
-
-
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

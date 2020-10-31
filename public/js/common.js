@@ -452,10 +452,11 @@ function eventHandler() {
 			nextEl: '.clients-prev-js',
 			prevEl: '.clients-next-js'
 		}
-	});
-	window.setTimeout(function () {
-		clientsSlider.update();
-	}, 1000); //wow js
+	}); // window.setTimeout(function (){
+	// 	if (!clientsSlider) return
+	// 	clientsSlider.update();
+	// }, 1000)
+	//wow js
 	//catalog wow
 
 	var dur = .6;
