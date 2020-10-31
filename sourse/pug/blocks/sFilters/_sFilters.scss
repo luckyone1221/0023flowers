@@ -9,6 +9,45 @@
     --sPB: #{rem(40px)};
   }
 
+  &__filters-cont{
+
+  }
+  &__input-wrap{
+    margin-bottom: 10px;
+    @include media-breakpoint-up(sm){
+      margin-bottom: rem(20);
+    }
+    @include media-breakpoint-up(lg){
+      max-width: calc(50% - 10px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__input{
+    position: relative;
+
+    transition: background-color .3s ease-in-out;
+    background: rgba($light-green,.1);
+    &:hover{
+      background: rgba($light-green,.5);
+      box-shadow: 5px 0 15px 0px rgba($light-green,.5);
+    }
+    padding: 3px 10px;
+    height: auto;
+    min-height: 0;
+    border: 1px solid $body-color !important;
+    border-radius: rem(4px);
+
+    font-size: 14px;
+    line-height: (32/14);
+    color: $body-color;
+  }
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+  &__{}
+
 } // end.sFilters
 
 //.filters

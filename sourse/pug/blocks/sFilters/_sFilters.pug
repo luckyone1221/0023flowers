@@ -4,7 +4,9 @@ mixin sFilters()
 		.container
 			+b.section-title.text-center
 				h2 Подберите свой букет
-			+catalogFilters()
+			+e.filters-cont
+				+input('Поиск по названию', 'text', undefined, 'by_name_search')
+				+catalogFilters()
 	// end sFilters
 
 mixin catalogFilters()
