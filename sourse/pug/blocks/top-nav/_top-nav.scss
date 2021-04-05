@@ -1,17 +1,59 @@
 .top-nav {
-	@include mt;
+	@include mt();
 
 	//mob mnu
 	&__mob-strip{
-		height: rem(64px);
 		background-color: $dark-black;
-
 	}
+	&__m-btn{
+		@extend .btn;
+		@extend .btn-primary;
+		border: 1px solid $white !important;
+		box-shadow: none !important;
+		outline: none !important;
+		color: $white;
+
+		@include mt();
+		&:hover{
+			background-color: $danger;
+			color: $white;
+		}
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: rem(10) rem(16);
+	}
+	&__m-tell{
+		display: flex;
+		align-items: center;
+
+		color: $white;
+		&:hover{
+			opacity: 0.8;
+			color: $white;
+		}
+	}
+	&__mt-img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: rem(30);
+		height: rem(30);
+		margin-right: rem(12);
+
+		img{
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+	&__{}
+
 	&__burger{
 		cursor: pointer;
 		height: 64px;
-		width: 64px;
-		margin-left: auto;
+		width: 32px;
 
 		display: flex;
 		align-items: center;
@@ -60,6 +102,10 @@
 			}
 		}
 	}
+	&__m-row{
+
+	}
+	&__{}
 
 	&__container{
 		display: none;

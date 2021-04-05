@@ -406,6 +406,7 @@ function eventHandler() {
 			$(this).removeClass('not-empty');
 		}
 	}
+
 	//
 	let partnersSlider = new Swiper('.partners-slider-js', {
 		slidesPerView: 'auto',

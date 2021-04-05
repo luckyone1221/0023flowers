@@ -29,8 +29,16 @@
 		<header class="header" id="header">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
-				<div class="top-nav__mob-strip d-xl-none">
-					<div class="top-nav__burger burger-js"><span></span>
+				<div class="top-nav__mob-strip container-fluid d-xl-none">
+					<div class="top-nav__m-row row align-items-center">
+						<div class="col-auto">
+							<div class="top-nav__burger burger-js"><span></span>
+							</div>
+						</div>
+						<div class="col-auto"><a class="top-nav__m-btn link-modal" href="#modal-call">заказать</a>
+						</div>
+						<div class="col-auto ms-auto ms-sm-0"><a class="top-nav__m-tell" href="tel:+74993993071"><span class="top-nav__mt-img"><img loading="lazy" src="img/svg/call-btn.svg" alt=""/></span><span class="d-none d-sm-inline">+7 (499) 399-30-71</span></a>
+						</div>
 					</div>
 				</div>
 				<div class="top-nav__container container mob-mnu-cont-js">
@@ -910,19 +918,18 @@
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						<div class="form-wrap__title form-data h3 ttu mb-3">Обратный звонок
 						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						<p class="after-headline mb-5">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
-					</button>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваше Номер" name="tel" required="required"/>
 					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">заказать
+					</button>
 				</form>
 			</div>
 		</div>

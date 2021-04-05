@@ -1,13 +1,4 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
 	+b.menu-mobile--js.d-lg-none
@@ -17,12 +8,22 @@ mixin mob-mnu()
 			+mnu()
 			.text-right
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		+e.mob-strip.d-xl-none
-			+e.burger.burger-js
-				span
+		+e.mob-strip.container-fluid.d-xl-none
+			+e.m-row.row.align-items-center
+				.col-auto
+					+e.burger.burger-js
+						span
+				.col-auto
+					+e.m-btn.link-modal(href='#modal-call') заказать
+				.col-auto.ms-auto.ms-sm-0
+					+e.m-tell(href='tel:+74993993071')
+						+e.mt-img
+							img(loading="lazy" src="img/svg/call-btn.svg" alt="")
+						span.d-none.d-sm-inline +7 (499) 399-30-71
 		+e.container.container.mob-mnu-cont-js
 			+e.top-row.row
 				+e.address-col.col-xl-4

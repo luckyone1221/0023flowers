@@ -5,11 +5,12 @@ mixin modal()
 	+b.modal-win(id="modal-call" class=" " style="display: none")
 		+form-wrap
 			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
-			+polite()
+				+e.title.form-data.h3.ttu.mb-3 Обратный звонок
+				p.after-headline.mb-5 Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+			+input("Ваше Имя")(required)
+			+input("Ваше Номер", 'tel')(required)
+			+e.BUTTON.btn.btn(type="submit") заказать
+			//-+polite()
 	//
 	+b.m-cart#modal-cart(style="display: none")
 		+form-wrap
