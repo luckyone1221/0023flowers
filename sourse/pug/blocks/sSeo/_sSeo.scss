@@ -13,7 +13,7 @@
 
 	&__txt{
 		margin-bottom: rem(30);
-		h1{
+		h4{
 			margin: rem(30px) 0 rem(10) 0;
 
 			&:first-child{
@@ -22,14 +22,14 @@
 
 			line-height: 28px;
 			font-size: 14px;
-			font-family: $mono;
+			//font-family: $mono;
 			color: $body-color;
 			font-weight: 700;
 		}
 		p, li{
 			color: $black;
 			font-size: 14px;
-			font-family: $mono;
+			//font-family: $mono;
 			line-height: 1.55;
 			font-weight: 400;
 			margin-bottom: rem(4);
